@@ -291,6 +291,46 @@
                   {
                     "type": "SYMBOL",
                     "name": "no_expert"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "gnupg"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "openpgp"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "rfc4880"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "rfc4880bis"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "rfc2440"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "pgp7"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "pgp8"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "compliance"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "min_rsa_length"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "require_compliance"
                   }
                 ]
               },
@@ -1863,6 +1903,170 @@
       "content": {
         "type": "STRING",
         "value": "no-expert"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "gnupg": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "gnupg"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "openpgp": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "openpgp"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "rfc4880": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "rfc4880"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "rfc4880bis": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "rfc4880bis"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "rfc2440": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "rfc2440"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "pgp7": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "pgp7"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "pgp8": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "pgp8"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "compliance": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "compliance"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "FIELD",
+          "name": "mode",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_compliance"
+          }
+        }
+      ]
+    },
+    "_compliance": {
+      "type": "TOKEN",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "gnupg"
+          },
+          {
+            "type": "STRING",
+            "value": "openpgp"
+          },
+          {
+            "type": "STRING",
+            "value": "rfc4880bis"
+          },
+          {
+            "type": "STRING",
+            "value": "rfc4880"
+          },
+          {
+            "type": "STRING",
+            "value": "rfc2440"
+          },
+          {
+            "type": "STRING",
+            "value": "pgp6"
+          },
+          {
+            "type": "STRING",
+            "value": "pgp7"
+          },
+          {
+            "type": "STRING",
+            "value": "pgp8"
+          },
+          {
+            "type": "STRING",
+            "value": "de-vs"
+          }
+        ]
+      }
+    },
+    "min_rsa_length": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "min-rsa-length"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        }
+      ]
+    },
+    "require_compliance": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "require-compliance"
       },
       "named": true,
       "value": "option"

@@ -102,6 +102,17 @@ module.exports = grammar({
             $.no_require_cross_verification,
             $.expert,
             $.no_expert,
+
+            $.gnupg,
+            $.openpgp,
+            $.rfc4880,
+            $.rfc4880bis,
+            $.rfc2440,
+            $.pgp7,
+            $.pgp8,
+            $.compliance,
+            $.min_rsa_length,
+            $.require_compliance,
           ),
         ),
         /\r?\n/
@@ -516,7 +527,53 @@ module.exports = grammar({
 
     // TODO: OpenPGP Options
 
-    // TODO: Compliance Options
+    gnupg: $ =>
+      alias('gnupg', $.option),
+
+    openpgp: $ =>
+      alias('openpgp', $.option),
+
+    rfc4880: $ =>
+      alias('rfc4880', $.option),
+
+    rfc4880bis: $ =>
+      alias('rfc4880bis', $.option),
+
+    rfc2440: $ =>
+      alias('rfc2440', $.option),
+
+    pgp7: $ =>
+      alias('pgp7', $.option),
+
+    pgp8: $ =>
+      alias('pgp8', $.option),
+
+    compliance: $ => seq(
+      alias('compliance', $.option),
+      $._space,
+      field('mode', $._compliance)
+    ),
+
+    _compliance: _ => token(choice(
+      'gnupg',
+      'openpgp',
+      'rfc4880bis',
+      'rfc4880',
+      'rfc2440',
+      'pgp6',
+      'pgp7',
+      'pgp8',
+      'de-vs',
+    )),
+
+    min_rsa_length: $ => seq(
+      alias('min-rsa-length', $.option),
+      $._space,
+      $.number
+    ),
+
+    require_compliance: $ =>
+      alias('require-compliance', $.option),
 
     // TODO: GPG Esoteric Options
 

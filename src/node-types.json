@@ -211,6 +211,21 @@
     }
   },
   {
+    "type": "compliance",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "compress_level",
     "named": true,
     "fields": {},
@@ -290,6 +305,10 @@
           "named": true
         },
         {
+          "type": "compliance",
+          "named": true
+        },
+        {
           "type": "compress_level",
           "named": true
         },
@@ -350,6 +369,10 @@
           "named": true
         },
         {
+          "type": "gnupg",
+          "named": true
+        },
+        {
           "type": "keyid_format",
           "named": true
         },
@@ -395,6 +418,10 @@
         },
         {
           "type": "min_cert_level",
+          "named": true
+        },
+        {
+          "type": "min_rsa_length",
           "named": true
         },
         {
@@ -474,6 +501,18 @@
           "named": true
         },
         {
+          "type": "openpgp",
+          "named": true
+        },
+        {
+          "type": "pgp7",
+          "named": true
+        },
+        {
+          "type": "pgp8",
+          "named": true
+        },
+        {
           "type": "photo_viewer",
           "named": true
         },
@@ -482,11 +521,27 @@
           "named": true
         },
         {
+          "type": "require_compliance",
+          "named": true
+        },
+        {
           "type": "require_cross_verification",
           "named": true
         },
         {
           "type": "require_secmem",
+          "named": true
+        },
+        {
+          "type": "rfc2440",
+          "named": true
+        },
+        {
+          "type": "rfc4880",
+          "named": true
+        },
+        {
+          "type": "rfc4880bis",
           "named": true
         },
         {
@@ -751,6 +806,21 @@
     }
   },
   {
+    "type": "gnupg",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "keyid_format",
     "named": true,
     "fields": {},
@@ -937,6 +1007,25 @@
   },
   {
     "type": "min_cert_level",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "min_rsa_length",
     "named": true,
     "fields": {},
     "children": {
@@ -1240,6 +1329,51 @@
     }
   },
   {
+    "type": "openpgp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "pgp7",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "pgp8",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "photo_viewer",
     "named": true,
     "fields": {},
@@ -1278,6 +1412,21 @@
     }
   },
   {
+    "type": "require_compliance",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "require_cross_verification",
     "named": true,
     "fields": {},
@@ -1294,6 +1443,51 @@
   },
   {
     "type": "require_secmem",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rfc2440",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rfc4880",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rfc4880bis",
     "named": true,
     "fields": {},
     "children": {
