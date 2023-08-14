@@ -345,6 +345,10 @@
           "named": true
         },
         {
+          "type": "disable_signer_uid",
+          "named": true
+        },
+        {
           "type": "display_charset",
           "named": true
         },
@@ -369,7 +373,15 @@
           "named": true
         },
         {
+          "type": "force_ocb",
+          "named": true
+        },
+        {
           "type": "gnupg",
+          "named": true
+        },
+        {
+          "type": "include_key_block",
           "named": true
         },
         {
@@ -465,6 +477,10 @@
           "named": true
         },
         {
+          "type": "no_include_key_block",
+          "named": true
+        },
+        {
           "type": "no_mangle_dos_filenames",
           "named": true
         },
@@ -493,6 +509,10 @@
           "named": true
         },
         {
+          "type": "no_textmode",
+          "named": true
+        },
+        {
           "type": "no_tty",
           "named": true
         },
@@ -502,6 +522,18 @@
         },
         {
           "type": "openpgp",
+          "named": true
+        },
+        {
+          "type": "personal_cipher_preferences",
+          "named": true
+        },
+        {
+          "type": "personal_compress_preferences",
+          "named": true
+        },
+        {
+          "type": "personal_digest_preferences",
           "named": true
         },
         {
@@ -542,6 +574,26 @@
         },
         {
           "type": "rfc4880bis",
+          "named": true
+        },
+        {
+          "type": "s2k_cipher_algo",
+          "named": true
+        },
+        {
+          "type": "s2k_count",
+          "named": true
+        },
+        {
+          "type": "s2k_digest_algo",
+          "named": true
+        },
+        {
+          "type": "s2k_mode",
+          "named": true
+        },
+        {
+          "type": "textmode",
           "named": true
         },
         {
@@ -712,6 +764,21 @@
     }
   },
   {
+    "type": "disable_signer_uid",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "display_charset",
     "named": true,
     "fields": {},
@@ -806,7 +873,37 @@
     }
   },
   {
+    "type": "force_ocb",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "gnupg",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "include_key_block",
     "named": true,
     "fields": {},
     "children": {
@@ -1194,6 +1291,21 @@
     }
   },
   {
+    "type": "no_include_key_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "no_mangle_dos_filenames",
     "named": true,
     "fields": {},
@@ -1299,6 +1411,21 @@
     }
   },
   {
+    "type": "no_textmode",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "no_tty",
     "named": true,
     "fields": {},
@@ -1330,6 +1457,51 @@
   },
   {
     "type": "openpgp",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "personal_cipher_preferences",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "personal_compress_preferences",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "personal_digest_preferences",
     "named": true,
     "fields": {},
     "children": {
@@ -1502,6 +1674,74 @@
     }
   },
   {
+    "type": "s2k_cipher_algo",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "s2k_count",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "s2k_digest_algo",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "s2k_mode",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "string",
     "named": true,
     "fields": {
@@ -1519,6 +1759,21 @@
           }
         ]
       }
+    }
+  },
+  {
+    "type": "textmode",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
     }
   },
   {

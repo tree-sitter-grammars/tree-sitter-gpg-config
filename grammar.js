@@ -18,6 +18,10 @@ const quoted = (q, ...extra) =>
     ))
   ), q);
 
+/** @param word {string} */
+const ci = (word) =>
+  alias(new RegExp(word, 'i'), word);
+
 module.exports = grammar({
   name: 'gpg',
 
@@ -103,6 +107,19 @@ module.exports = grammar({
             $.expert,
             $.no_expert,
 
+            $.textmode,
+            $.no_textmode,
+            $.force_ocb,
+            $.disable_signer_uid,
+            $.include_key_block,
+            $.no_include_key_block,
+            $.personal_cipher_preferences,
+            $.personal_digest_preferences,
+            $.personal_compress_preferences,
+            $.s2k_cipher_algo,
+            $.s2k_digest_algo,
+            $.s2k_mode,
+            $.s2k_count,
             $.gnupg,
             $.openpgp,
             $.rfc4880,
@@ -158,22 +175,22 @@ module.exports = grammar({
     )),
 
     _list_parameter: _ => token(choice(
-      'show-photos',
-      'show-usage',
-      'show-policy-urls',
-      'show-notations',
-      'show-std-notations',
-      'show-user-notations',
-      'show-keyserver-urls',
-      'show-uid-validity',
-      'show-unusable-uids',
-      'show-unusable-subkeys',
-      'show-unusable-sigs',
-      'show-keyring',
-      'show-sig-expire',
-      'show-sig-subpackets',
-      'show-only-fpr-mbox',
-      'sort-sigs',
+      ci('show-photos'),
+      ci('show-usage'),
+      ci('show-policy-urls'),
+      ci('show-notations'),
+      ci('show-std-notations'),
+      ci('show-user-notations'),
+      ci('show-keyserver-urls'),
+      ci('show-uid-validity'),
+      ci('show-unusable-uids'),
+      ci('show-unusable-subkeys'),
+      ci('show-unusable-sigs'),
+      ci('show-keyring'),
+      ci('show-sig-expire'),
+      ci('show-sig-subpackets'),
+      ci('show-only-fpr-mbox'),
+      ci('sort-sigs'),
     )),
 
     verify_options: $ => prec.right(seq(
@@ -187,16 +204,16 @@ module.exports = grammar({
     )),
 
     _verify_parameter: _ => token(choice(
-      'show-photos',
-      'show-usage',
-      'show-policy-urls',
-      'show-notations',
-      'show-std-notations',
-      'show-user-notations',
-      'show-keyserver-urls',
-      'show-uid-validity',
-      'show-unusable-uids',
-      'show-primary-uid-only',
+      ci('show-photos'),
+      ci('show-usage'),
+      ci('show-policy-urls'),
+      ci('show-notations'),
+      ci('show-std-notations'),
+      ci('show-user-notations'),
+      ci('show-keyserver-urls'),
+      ci('show-uid-validity'),
+      ci('show-unusable-uids'),
+      ci('show-primary-uid-only'),
     )),
 
     enable_large_rsa: $ =>
@@ -256,11 +273,11 @@ module.exports = grammar({
     ),
 
     _charset: _ => token(choice(
-      'iso-8859-1',
-      'iso-8859-2',
-      'iso-8859-15',
-      'koi8-r',
-      'utf-8',
+      ci('iso-8859-1'),
+      ci('iso-8859-2'),
+      ci('iso-8859-15'),
+      ci('koi8-r'),
+      ci('utf-8'),
     )),
 
     utf8_strings: $ =>
@@ -323,10 +340,10 @@ module.exports = grammar({
       choice(
         $.key,
         seq(
-          'sensitive:',
+          ci('sensitive:'),
           $.key
         ),
-        'clear'
+        ci('clear')
       )
     ),
 
@@ -337,13 +354,13 @@ module.exports = grammar({
     ),
 
     _model: _ => token(choice(
-      'pgp',
-      'classic',
-      'tofu',
-      'tofu+pgp',
-      'direct',
-      'always',
-      'auto',
+      ci('pgp'),
+      ci('classic'),
+      ci('tofu'),
+      ci('tofu+pgp'),
+      ci('direct'),
+      ci('always'),
+      ci('auto'),
     )),
 
     always_trust: $ =>
@@ -366,15 +383,15 @@ module.exports = grammar({
     )),
 
     _mechanism: _ => token(choice(
-      'cert',
-      'dane',
-      'wkd',
-      'ldap',
-      'ntds',
-      'keyserver',
-      'local',
-      'nodefault',
-      'clear',
+      ci('cert'),
+      ci('dane'),
+      ci('wkd'),
+      ci('ldap'),
+      ci('ntds'),
+      ci('keyserver'),
+      ci('local'),
+      ci('nodefault'),
+      ci('clear'),
     )),
 
     no_auto_key_locate: $ =>
@@ -399,11 +416,11 @@ module.exports = grammar({
     ),
 
     _keyid_format: _ => token(choice(
-      'none',
-      'short',
-      '0xshort',
-      'long',
-      '0xlong',
+      ci('none'),
+      ci('short'),
+      ci('0xshort'),
+      ci('long'),
+      ci('0xlong'),
     )),
 
     keyserver: $ => seq(
@@ -448,11 +465,11 @@ module.exports = grammar({
       alias('no-auto-check-trustdb', $.option),
 
     _tofu_policy: _ => token(choice(
-      'auto',
-      'good',
-      'unknown',
-      'bad',
-      'ask',
+      ci('auto'),
+      ci('good'),
+      ci('unknown'),
+      ci('bad'),
+      ci('ask'),
     )),
 
     agent_program: $ => seq(
@@ -525,7 +542,85 @@ module.exports = grammar({
 
     // TODO: GPG Input and Output
 
-    // TODO: OpenPGP Options
+    textmode: $ =>
+      alias('textmode', $.option),
+
+    no_textmode: $ =>
+      alias('no-textmode', $.option),
+
+    force_ocb: $ =>
+      alias(choice('force-ocb', 'force-aead'), $.option),
+
+    disable_signer_uid: $ =>
+      alias('disable-signer-uid', $.option),
+
+    include_key_block: $ =>
+      alias('include-key-block', $.option),
+
+    no_include_key_block: $ =>
+      alias('no-include-key-block', $.option),
+
+    personal_cipher_preferences: $ => seq(
+      alias('personal-cipher-preferences', $.option),
+      $._space,
+      field('algorithm', $._cipher_algo),
+      repeat(seq(
+        optional(','),
+        field('algorithm', $._cipher_algo)
+      ))
+    ),
+
+    personal_digest_preferences: $ => seq(
+      alias('personal-digest-preferences', $.option),
+      $._space,
+      field('algorithm', $._hash_algo),
+      repeat(seq(
+        optional(','),
+        field('algorithm', $._hash_algo)
+      ))
+    ),
+
+    personal_compress_preferences: $ => seq(
+      alias('personal-compress-preferences', $.option),
+      $._space,
+      field('algorithm', $._compression_algo),
+      repeat(seq(
+        optional(','),
+        field('algorithm', $._compression_algo)
+      ))
+    ),
+
+    s2k_cipher_algo: $ => seq(
+      alias('s2k-cipher-algo', $.option),
+      $._space,
+      field('algorithm', $._cipher_algo),
+      repeat(seq(
+        optional(','),
+        field('algorithm', $._cipher_algo)
+      ))
+    ),
+
+    s2k_digest_algo: $ => seq(
+      alias('s2k-digest-algo', $.option),
+      $._space,
+      field('algorithm', $._hash_algo),
+      repeat(seq(
+        optional(','),
+        field('algorithm', $._hash_algo)
+      ))
+    ),
+
+    s2k_mode: $ => seq(
+      alias('s2k-mode', $.option),
+      $._space,
+      alias(/[013]/, $.number)
+    ),
+
+    s2k_count: $ => seq(
+      alias('s2k-count', $.option),
+      $._space,
+      $.number
+    ),
 
     gnupg: $ =>
       alias('gnupg', $.option),
@@ -555,15 +650,15 @@ module.exports = grammar({
     ),
 
     _compliance: _ => token(choice(
-      'gnupg',
-      'openpgp',
-      'rfc4880bis',
-      'rfc4880',
-      'rfc2440',
-      'pgp6',
-      'pgp7',
-      'pgp8',
-      'de-vs',
+      ci('gnupg'),
+      ci('openpgp'),
+      ci('rfc4880bis'),
+      ci('rfc4880'),
+      ci('rfc2440'),
+      ci('pgp6'),
+      ci('pgp7'),
+      ci('pgp8'),
+      ci('de-vs'),
     )),
 
     min_rsa_length: $ => seq(
@@ -592,6 +687,46 @@ module.exports = grammar({
     ),
 
     comment: _ => /#.*/,
+
+    _pubkey_algo: _ => token(choice(
+      ci('RSA'),
+      ci('ELG'),
+      ci('DSA'),
+      ci('ECDH'),
+      ci('ECDSA'),
+      ci('EDDSA'),
+      ci('none'),
+    )),
+
+    _cipher_algo: _ => token(choice(
+      ci('CAST5'),
+      ci('AES'),
+      ci('AES192'),
+      ci('AES256'),
+      ci('TWOFISH'),
+      ci('CAMELLIA128'),
+      ci('CAMELLIA192'),
+      ci('CAMELLIA256'),
+      ci('none'),
+    )),
+
+    _hash_algo: _ => token(choice(
+      ci('SHA1'),
+      ci('RIPEMD160'),
+      ci('SHA256'),
+      ci('SHA384'),
+      ci('SHA512'),
+      ci('SHA224'),
+      ci('none'),
+    )),
+
+    _compression_algo: _ => token(choice(
+      ci('Uncompressed'),
+      ci('ZIP'),
+      ci('ZLIB'),
+      ci('BZIP2'),
+      ci('none'),
+    )),
 
     _space: _ => /[ \t]/,
   }

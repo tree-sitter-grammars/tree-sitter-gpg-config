@@ -294,6 +294,58 @@
                   },
                   {
                     "type": "SYMBOL",
+                    "name": "textmode"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "no_textmode"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "force_ocb"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "disable_signer_uid"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "include_key_block"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "no_include_key_block"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "personal_cipher_preferences"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "personal_digest_preferences"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "personal_compress_preferences"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "s2k_cipher_algo"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "s2k_digest_algo"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "s2k_mode"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "s2k_count"
+                  },
+                  {
+                    "type": "SYMBOL",
                     "name": "gnupg"
                   },
                   {
@@ -490,67 +542,147 @@
         "type": "CHOICE",
         "members": [
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-photos"
+            },
+            "named": false,
             "value": "show-photos"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-usage"
+            },
+            "named": false,
             "value": "show-usage"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-policy-urls"
+            },
+            "named": false,
             "value": "show-policy-urls"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-notations"
+            },
+            "named": false,
             "value": "show-notations"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-std-notations"
+            },
+            "named": false,
             "value": "show-std-notations"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-user-notations"
+            },
+            "named": false,
             "value": "show-user-notations"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-keyserver-urls"
+            },
+            "named": false,
             "value": "show-keyserver-urls"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-uid-validity"
+            },
+            "named": false,
             "value": "show-uid-validity"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-unusable-uids"
+            },
+            "named": false,
             "value": "show-unusable-uids"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-unusable-subkeys"
+            },
+            "named": false,
             "value": "show-unusable-subkeys"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-unusable-sigs"
+            },
+            "named": false,
             "value": "show-unusable-sigs"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-keyring"
+            },
+            "named": false,
             "value": "show-keyring"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-sig-expire"
+            },
+            "named": false,
             "value": "show-sig-expire"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-sig-subpackets"
+            },
+            "named": false,
             "value": "show-sig-subpackets"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-only-fpr-mbox"
+            },
+            "named": false,
             "value": "show-only-fpr-mbox"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "sort-sigs"
+            },
+            "named": false,
             "value": "sort-sigs"
           }
         ]
@@ -620,43 +752,93 @@
         "type": "CHOICE",
         "members": [
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-photos"
+            },
+            "named": false,
             "value": "show-photos"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-usage"
+            },
+            "named": false,
             "value": "show-usage"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-policy-urls"
+            },
+            "named": false,
             "value": "show-policy-urls"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-notations"
+            },
+            "named": false,
             "value": "show-notations"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-std-notations"
+            },
+            "named": false,
             "value": "show-std-notations"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-user-notations"
+            },
+            "named": false,
             "value": "show-user-notations"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-keyserver-urls"
+            },
+            "named": false,
             "value": "show-keyserver-urls"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-uid-validity"
+            },
+            "named": false,
             "value": "show-uid-validity"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-unusable-uids"
+            },
+            "named": false,
             "value": "show-unusable-uids"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-primary-uid-only"
+            },
+            "named": false,
             "value": "show-primary-uid-only"
           }
         ]
@@ -948,23 +1130,48 @@
         "type": "CHOICE",
         "members": [
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "iso-8859-1"
+            },
+            "named": false,
             "value": "iso-8859-1"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "iso-8859-2"
+            },
+            "named": false,
             "value": "iso-8859-2"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "iso-8859-15"
+            },
+            "named": false,
             "value": "iso-8859-15"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "koi8-r"
+            },
+            "named": false,
             "value": "koi8-r"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "utf-8"
+            },
+            "named": false,
             "value": "utf-8"
           }
         ]
@@ -1199,7 +1406,12 @@
               "type": "SEQ",
               "members": [
                 {
-                  "type": "STRING",
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "PATTERN",
+                    "value": "sensitive:"
+                  },
+                  "named": false,
                   "value": "sensitive:"
                 },
                 {
@@ -1209,7 +1421,12 @@
               ]
             },
             {
-              "type": "STRING",
+              "type": "ALIAS",
+              "content": {
+                "type": "PATTERN",
+                "value": "clear"
+              },
+              "named": false,
               "value": "clear"
             }
           ]
@@ -1248,31 +1465,66 @@
         "type": "CHOICE",
         "members": [
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "pgp"
+            },
+            "named": false,
             "value": "pgp"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "classic"
+            },
+            "named": false,
             "value": "classic"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "tofu"
+            },
+            "named": false,
             "value": "tofu"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "tofu+pgp"
+            },
+            "named": false,
             "value": "tofu+pgp"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "direct"
+            },
+            "named": false,
             "value": "direct"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "always"
+            },
+            "named": false,
             "value": "always"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "auto"
+            },
+            "named": false,
             "value": "auto"
           }
         ]
@@ -1391,39 +1643,84 @@
         "type": "CHOICE",
         "members": [
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "cert"
+            },
+            "named": false,
             "value": "cert"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "dane"
+            },
+            "named": false,
             "value": "dane"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "wkd"
+            },
+            "named": false,
             "value": "wkd"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "ldap"
+            },
+            "named": false,
             "value": "ldap"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "ntds"
+            },
+            "named": false,
             "value": "ntds"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "keyserver"
+            },
+            "named": false,
             "value": "keyserver"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "local"
+            },
+            "named": false,
             "value": "local"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "nodefault"
+            },
+            "named": false,
             "value": "nodefault"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "clear"
+            },
+            "named": false,
             "value": "clear"
           }
         ]
@@ -1506,23 +1803,48 @@
         "type": "CHOICE",
         "members": [
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "none"
+            },
+            "named": false,
             "value": "none"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "short"
+            },
+            "named": false,
             "value": "short"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "0xshort"
+            },
+            "named": false,
             "value": "0xshort"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "long"
+            },
+            "named": false,
             "value": "long"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "0xlong"
+            },
+            "named": false,
             "value": "0xlong"
           }
         ]
@@ -1675,23 +1997,48 @@
         "type": "CHOICE",
         "members": [
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "auto"
+            },
+            "named": false,
             "value": "auto"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "good"
+            },
+            "named": false,
             "value": "good"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "unknown"
+            },
+            "named": false,
             "value": "unknown"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "bad"
+            },
+            "named": false,
             "value": "bad"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "ask"
+            },
+            "named": false,
             "value": "ask"
           }
         ]
@@ -1907,6 +2254,388 @@
       "named": true,
       "value": "option"
     },
+    "textmode": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "textmode"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "no_textmode": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "no-textmode"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "force_ocb": {
+      "type": "ALIAS",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "force-ocb"
+          },
+          {
+            "type": "STRING",
+            "value": "force-aead"
+          }
+        ]
+      },
+      "named": true,
+      "value": "option"
+    },
+    "disable_signer_uid": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "disable-signer-uid"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "include_key_block": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "include-key-block"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "no_include_key_block": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "no-include-key-block"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "personal_cipher_preferences": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "personal-cipher-preferences"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "FIELD",
+          "name": "algorithm",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_cipher_algo"
+          }
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": ","
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              },
+              {
+                "type": "FIELD",
+                "name": "algorithm",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_cipher_algo"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "personal_digest_preferences": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "personal-digest-preferences"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "FIELD",
+          "name": "algorithm",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_hash_algo"
+          }
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": ","
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              },
+              {
+                "type": "FIELD",
+                "name": "algorithm",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_hash_algo"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "personal_compress_preferences": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "personal-compress-preferences"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "FIELD",
+          "name": "algorithm",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_compression_algo"
+          }
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": ","
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              },
+              {
+                "type": "FIELD",
+                "name": "algorithm",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_compression_algo"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "s2k_cipher_algo": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "s2k-cipher-algo"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "FIELD",
+          "name": "algorithm",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_cipher_algo"
+          }
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": ","
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              },
+              {
+                "type": "FIELD",
+                "name": "algorithm",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_cipher_algo"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "s2k_digest_algo": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "s2k-digest-algo"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "FIELD",
+          "name": "algorithm",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_hash_algo"
+          }
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": ","
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              },
+              {
+                "type": "FIELD",
+                "name": "algorithm",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_hash_algo"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "s2k_mode": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "s2k-mode"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "PATTERN",
+            "value": "[013]"
+          },
+          "named": true,
+          "value": "number"
+        }
+      ]
+    },
+    "s2k_count": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "s2k-count"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        }
+      ]
+    },
     "gnupg": {
       "type": "ALIAS",
       "content": {
@@ -2002,39 +2731,84 @@
         "type": "CHOICE",
         "members": [
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "gnupg"
+            },
+            "named": false,
             "value": "gnupg"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "openpgp"
+            },
+            "named": false,
             "value": "openpgp"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "rfc4880bis"
+            },
+            "named": false,
             "value": "rfc4880bis"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "rfc4880"
+            },
+            "named": false,
             "value": "rfc4880"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "rfc2440"
+            },
+            "named": false,
             "value": "rfc2440"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "pgp6"
+            },
+            "named": false,
             "value": "pgp6"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "pgp7"
+            },
+            "named": false,
             "value": "pgp7"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "pgp8"
+            },
+            "named": false,
             "value": "pgp8"
           },
           {
-            "type": "STRING",
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "de-vs"
+            },
+            "named": false,
             "value": "de-vs"
           }
         ]
@@ -2165,6 +2939,290 @@
     "comment": {
       "type": "PATTERN",
       "value": "#.*"
+    },
+    "_pubkey_algo": {
+      "type": "TOKEN",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "RSA"
+            },
+            "named": false,
+            "value": "RSA"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "ELG"
+            },
+            "named": false,
+            "value": "ELG"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "DSA"
+            },
+            "named": false,
+            "value": "DSA"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "ECDH"
+            },
+            "named": false,
+            "value": "ECDH"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "ECDSA"
+            },
+            "named": false,
+            "value": "ECDSA"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "EDDSA"
+            },
+            "named": false,
+            "value": "EDDSA"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "none"
+            },
+            "named": false,
+            "value": "none"
+          }
+        ]
+      }
+    },
+    "_cipher_algo": {
+      "type": "TOKEN",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "CAST5"
+            },
+            "named": false,
+            "value": "CAST5"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "AES"
+            },
+            "named": false,
+            "value": "AES"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "AES192"
+            },
+            "named": false,
+            "value": "AES192"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "AES256"
+            },
+            "named": false,
+            "value": "AES256"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "TWOFISH"
+            },
+            "named": false,
+            "value": "TWOFISH"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "CAMELLIA128"
+            },
+            "named": false,
+            "value": "CAMELLIA128"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "CAMELLIA192"
+            },
+            "named": false,
+            "value": "CAMELLIA192"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "CAMELLIA256"
+            },
+            "named": false,
+            "value": "CAMELLIA256"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "none"
+            },
+            "named": false,
+            "value": "none"
+          }
+        ]
+      }
+    },
+    "_hash_algo": {
+      "type": "TOKEN",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "SHA1"
+            },
+            "named": false,
+            "value": "SHA1"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "RIPEMD160"
+            },
+            "named": false,
+            "value": "RIPEMD160"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "SHA256"
+            },
+            "named": false,
+            "value": "SHA256"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "SHA384"
+            },
+            "named": false,
+            "value": "SHA384"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "SHA512"
+            },
+            "named": false,
+            "value": "SHA512"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "SHA224"
+            },
+            "named": false,
+            "value": "SHA224"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "none"
+            },
+            "named": false,
+            "value": "none"
+          }
+        ]
+      }
+    },
+    "_compression_algo": {
+      "type": "TOKEN",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "Uncompressed"
+            },
+            "named": false,
+            "value": "Uncompressed"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "ZIP"
+            },
+            "named": false,
+            "value": "ZIP"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "ZLIB"
+            },
+            "named": false,
+            "value": "ZLIB"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "BZIP2"
+            },
+            "named": false,
+            "value": "BZIP2"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "none"
+            },
+            "named": false,
+            "value": "none"
+          }
+        ]
+      }
     },
     "_space": {
       "type": "PATTERN",
