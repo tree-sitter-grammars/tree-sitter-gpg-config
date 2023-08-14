@@ -125,7 +125,26 @@ module.exports = grammar({
             $.try_all_secrets,
             $.skip_hidden_recipients,
             $.no_skip_hidden_recipients,
-
+            $.armor,
+            $.no_armor,
+            $.output,
+            $.max_output,
+            $.chunk_size,
+            $.input_size_hint,
+            $.key_origin,
+            $.import_options,
+            // TODO: $.import_filter,
+            // TODO: $.export_filter,
+            $.export_options,
+            $.with_colons,
+            $.legacy_list_mode,
+            $.with_fingerprint,
+            $.with_subkey_fingerprint,
+            $.with_icao_spelling,
+            $.with_keygrip,
+            $.with_key_origin,
+            $.with_wkd_hash,
+            $.with_secret,
             $.textmode,
             $.no_textmode,
             $.force_ocb,
@@ -617,7 +636,7 @@ module.exports = grammar({
     ungroup: $ => seq(
       alias('ungroup', $.option),
       $._space,
-      $.string,
+      $.string
     ),
 
     no_groups: $ =>
@@ -626,19 +645,19 @@ module.exports = grammar({
     local_user: $ => seq(
       alias('local-user', $.option),
       $._space,
-      $.string,
+      $.string
     ),
 
     sender: $ => seq(
       alias('sender', $.option),
       $._space,
-      $.string,
+      $.string
     ),
 
     try_secret_name: $ => seq(
       alias('try-secret-name', $.option),
       $._space,
-      $.string,
+      $.string
     ),
 
     try_all_secrets: $ =>
@@ -650,7 +669,134 @@ module.exports = grammar({
     no_skip_hidden_recipients: $ =>
       alias('no-skip-hidden-recipients', $.option),
 
-    // TODO: GPG Input and Output
+    armor: $ =>
+      alias('armor', $.option),
+
+    no_armor: $ =>
+      alias('no-armor', $.option),
+
+    output: $ => seq(
+      alias('output', $.option),
+      $._space,
+      $.string
+    ),
+
+    max_output: $ => seq(
+      alias('max-output', $.option),
+      $._space,
+      $.number
+    ),
+
+    chunk_size: $ => seq(
+      alias('chunk-size', $.option),
+      $._space,
+      $.number
+    ),
+
+    input_size_hint: $ => seq(
+      alias('input-size-hint', $.option),
+      $._space,
+      $.number
+    ),
+
+    key_origin: $ => seq(
+      alias('key-origin', $.option),
+      $._space,
+      field('origin', $._origin),
+      optional(seq(',', $.url))
+    ),
+
+    _origin: _ => token(choice(
+      ci('self'),
+      ci('file'),
+      ci('url'),
+      ci('wkd'),
+      ci('dane'),
+      ci('ks-pref'),
+      ci('ks'),
+      ci('unknown'),
+    )),
+
+    import_options: $ => prec.right(seq(
+      alias('import-options', $.option),
+      $._space,
+      field('parameter', $._import_parameter),
+      repeat(seq(
+        optional(','),
+        field('parameter', $._import_parameter)
+      ))
+    )),
+
+    _import_parameter: _ => token(choice(
+      ci('import-local-sigs'),
+      ci('keep-ownertrust'),
+      ci('repair-pks-subkey-bug'),
+      ci('import-show'),
+      ci('show-only'),
+      ci('import-export'),
+      ci('merge-only'),
+      ci('import-clean'),
+      ci('self-sigs-only'),
+      ci('repair-keys'),
+      ci('bulk-import'),
+      ci('import-minimal'),
+      ci('restore'),
+      ci('import-restore'),
+    )),
+
+    // TODO: import_filter
+
+    // TODO: export_filter
+
+    export_options: $ => prec.right(seq(
+      alias('export-options', $.option),
+      $._space,
+      field('parameter', $._export_parameter),
+      repeat(seq(
+        optional(','),
+        field('parameter', $._export_parameter)
+      ))
+    )),
+
+    _export_parameter: _ => token(choice(
+      ci('export-local-sigs'),
+      ci('export-attributes'),
+      ci('export-sensitive-revkeys'),
+      ci('backup'),
+      ci('export-backup'),
+      ci('export-clean'),
+      ci('export-minimal'),
+      ci('export-revocs'),
+      ci('export-dane'),
+      ci('mode1003'),
+    )),
+
+    with_colons: $ =>
+      alias('with-colons', $.option),
+
+    legacy_list_mode: $ =>
+      alias('legacy-list-mode', $.option),
+
+    with_fingerprint: $ =>
+      alias('with-fingerprint', $.option),
+
+    with_subkey_fingerprint: $ =>
+      alias('with-subkey-fingerprint', $.option),
+
+    with_icao_spelling: $ =>
+      alias('with-icao-spelling', $.option),
+
+    with_keygrip: $ =>
+      alias('with-keygrip', $.option),
+
+    with_key_origin: $ =>
+      alias('with-key-origin', $.option),
+
+    with_wkd_hash: $ =>
+      alias('with-wkd-hash', $.option),
+
+    with_secret: $ =>
+      alias('with-secret', $.option),
 
     textmode: $ =>
       alias('textmode', $.option),

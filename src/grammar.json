@@ -358,6 +358,78 @@
                   },
                   {
                     "type": "SYMBOL",
+                    "name": "armor"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "no_armor"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "output"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "max_output"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "chunk_size"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "input_size_hint"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "key_origin"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "import_options"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "export_options"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "with_colons"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "legacy_list_mode"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "with_fingerprint"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "with_subkey_fingerprint"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "with_icao_spelling"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "with_keygrip"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "with_key_origin"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "with_wkd_hash"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "with_secret"
+                  },
+                  {
+                    "type": "SYMBOL",
                     "name": "textmode"
                   },
                   {
@@ -2668,6 +2740,668 @@
       "content": {
         "type": "STRING",
         "value": "no-skip-hidden-recipients"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "armor": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "armor"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "no_armor": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "no-armor"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "output": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "output"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "max_output": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "max-output"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        }
+      ]
+    },
+    "chunk_size": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "chunk-size"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        }
+      ]
+    },
+    "input_size_hint": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "input-size-hint"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        }
+      ]
+    },
+    "key_origin": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "key-origin"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "FIELD",
+          "name": "origin",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_origin"
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": ","
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "url"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "_origin": {
+      "type": "TOKEN",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "self"
+            },
+            "named": false,
+            "value": "self"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "file"
+            },
+            "named": false,
+            "value": "file"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "url"
+            },
+            "named": false,
+            "value": "url"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "wkd"
+            },
+            "named": false,
+            "value": "wkd"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "dane"
+            },
+            "named": false,
+            "value": "dane"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "ks-pref"
+            },
+            "named": false,
+            "value": "ks-pref"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "ks"
+            },
+            "named": false,
+            "value": "ks"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "unknown"
+            },
+            "named": false,
+            "value": "unknown"
+          }
+        ]
+      }
+    },
+    "import_options": {
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "import-options"
+            },
+            "named": true,
+            "value": "option"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_space"
+          },
+          {
+            "type": "FIELD",
+            "name": "parameter",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_import_parameter"
+            }
+          },
+          {
+            "type": "REPEAT",
+            "content": {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "STRING",
+                      "value": ","
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                },
+                {
+                  "type": "FIELD",
+                  "name": "parameter",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_import_parameter"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "_import_parameter": {
+      "type": "TOKEN",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "import-local-sigs"
+            },
+            "named": false,
+            "value": "import-local-sigs"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "keep-ownertrust"
+            },
+            "named": false,
+            "value": "keep-ownertrust"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "repair-pks-subkey-bug"
+            },
+            "named": false,
+            "value": "repair-pks-subkey-bug"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "import-show"
+            },
+            "named": false,
+            "value": "import-show"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "show-only"
+            },
+            "named": false,
+            "value": "show-only"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "import-export"
+            },
+            "named": false,
+            "value": "import-export"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "merge-only"
+            },
+            "named": false,
+            "value": "merge-only"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "import-clean"
+            },
+            "named": false,
+            "value": "import-clean"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "self-sigs-only"
+            },
+            "named": false,
+            "value": "self-sigs-only"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "repair-keys"
+            },
+            "named": false,
+            "value": "repair-keys"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "bulk-import"
+            },
+            "named": false,
+            "value": "bulk-import"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "import-minimal"
+            },
+            "named": false,
+            "value": "import-minimal"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "restore"
+            },
+            "named": false,
+            "value": "restore"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "import-restore"
+            },
+            "named": false,
+            "value": "import-restore"
+          }
+        ]
+      }
+    },
+    "export_options": {
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "STRING",
+              "value": "export-options"
+            },
+            "named": true,
+            "value": "option"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_space"
+          },
+          {
+            "type": "FIELD",
+            "name": "parameter",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_export_parameter"
+            }
+          },
+          {
+            "type": "REPEAT",
+            "content": {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "STRING",
+                      "value": ","
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                },
+                {
+                  "type": "FIELD",
+                  "name": "parameter",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_export_parameter"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "_export_parameter": {
+      "type": "TOKEN",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "export-local-sigs"
+            },
+            "named": false,
+            "value": "export-local-sigs"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "export-attributes"
+            },
+            "named": false,
+            "value": "export-attributes"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "export-sensitive-revkeys"
+            },
+            "named": false,
+            "value": "export-sensitive-revkeys"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "backup"
+            },
+            "named": false,
+            "value": "backup"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "export-backup"
+            },
+            "named": false,
+            "value": "export-backup"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "export-clean"
+            },
+            "named": false,
+            "value": "export-clean"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "export-minimal"
+            },
+            "named": false,
+            "value": "export-minimal"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "export-revocs"
+            },
+            "named": false,
+            "value": "export-revocs"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "export-dane"
+            },
+            "named": false,
+            "value": "export-dane"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "mode1003"
+            },
+            "named": false,
+            "value": "mode1003"
+          }
+        ]
+      }
+    },
+    "with_colons": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "with-colons"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "legacy_list_mode": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "legacy-list-mode"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "with_fingerprint": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "with-fingerprint"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "with_subkey_fingerprint": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "with-subkey-fingerprint"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "with_icao_spelling": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "with-icao-spelling"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "with_keygrip": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "with-keygrip"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "with_key_origin": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "with-key-origin"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "with_wkd_hash": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "with-wkd-hash"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "with_secret": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "with-secret"
       },
       "named": true,
       "value": "option"

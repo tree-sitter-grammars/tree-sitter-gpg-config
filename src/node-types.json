@@ -53,6 +53,21 @@
     }
   },
   {
+    "type": "armor",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "ask_cert_level",
     "named": true,
     "fields": {},
@@ -192,6 +207,25 @@
     }
   },
   {
+    "type": "chunk_size",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "completes_needed",
     "named": true,
     "fields": {},
@@ -265,6 +299,10 @@
           "named": true
         },
         {
+          "type": "armor",
+          "named": true
+        },
+        {
           "type": "ask_cert_level",
           "named": true
         },
@@ -294,6 +332,10 @@
         },
         {
           "type": "bzip2_decompress_lowmem",
+          "named": true
+        },
+        {
+          "type": "chunk_size",
           "named": true
         },
         {
@@ -377,6 +419,10 @@
           "named": true
         },
         {
+          "type": "export_options",
+          "named": true
+        },
+        {
           "type": "force_ocb",
           "named": true
         },
@@ -401,7 +447,19 @@
           "named": true
         },
         {
+          "type": "import_options",
+          "named": true
+        },
+        {
           "type": "include_key_block",
+          "named": true
+        },
+        {
+          "type": "input_size_hint",
+          "named": true
+        },
+        {
+          "type": "key_origin",
           "named": true
         },
         {
@@ -414,6 +472,10 @@
         },
         {
           "type": "keyserver",
+          "named": true
+        },
+        {
+          "type": "legacy_list_mode",
           "named": true
         },
         {
@@ -453,11 +515,19 @@
           "named": true
         },
         {
+          "type": "max_output",
+          "named": true
+        },
+        {
           "type": "min_cert_level",
           "named": true
         },
         {
           "type": "min_rsa_length",
+          "named": true
+        },
+        {
+          "type": "no_armor",
           "named": true
         },
         {
@@ -558,6 +628,10 @@
         },
         {
           "type": "openpgp",
+          "named": true
+        },
+        {
+          "type": "output",
           "named": true
         },
         {
@@ -690,6 +764,38 @@
         },
         {
           "type": "verify_options",
+          "named": true
+        },
+        {
+          "type": "with_colons",
+          "named": true
+        },
+        {
+          "type": "with_fingerprint",
+          "named": true
+        },
+        {
+          "type": "with_icao_spelling",
+          "named": true
+        },
+        {
+          "type": "with_key_origin",
+          "named": true
+        },
+        {
+          "type": "with_keygrip",
+          "named": true
+        },
+        {
+          "type": "with_secret",
+          "named": true
+        },
+        {
+          "type": "with_subkey_fingerprint",
+          "named": true
+        },
+        {
+          "type": "with_wkd_hash",
           "named": true
         }
       ]
@@ -960,6 +1066,21 @@
     }
   },
   {
+    "type": "export_options",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "force_ocb",
     "named": true,
     "fields": {},
@@ -1083,6 +1204,21 @@
     }
   },
   {
+    "type": "import_options",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "include_key_block",
     "named": true,
     "fields": {},
@@ -1092,6 +1228,44 @@
       "types": [
         {
           "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "input_size_hint",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "key_origin",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        },
+        {
+          "type": "url",
           "named": true
         }
       ]
@@ -1145,6 +1319,21 @@
         },
         {
           "type": "url",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "legacy_list_mode",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
           "named": true
         }
       ]
@@ -1302,6 +1491,25 @@
     }
   },
   {
+    "type": "max_output",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "min_cert_level",
     "named": true,
     "fields": {},
@@ -1332,6 +1540,21 @@
           "type": "number",
           "named": true
         },
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "no_armor",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
         {
           "type": "option",
           "named": true
@@ -1709,6 +1932,25 @@
       "types": [
         {
           "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "output",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
@@ -2264,6 +2506,126 @@
   },
   {
     "type": "verify_options",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "with_colons",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "with_fingerprint",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "with_icao_spelling",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "with_key_origin",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "with_keygrip",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "with_secret",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "with_subkey_fingerprint",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "with_wkd_hash",
     "named": true,
     "fields": {},
     "children": {
