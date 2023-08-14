@@ -130,11 +130,21 @@ module.exports = grammar({
             $.compliance,
             $.min_rsa_length,
             $.require_compliance,
+
+            $.unknown_option
           ),
         ),
         /\r?\n/
       )
     ),
+
+    unknown_option: $ => prec(-1, seq(
+      alias(/[a-z0-9-]+/, $.option),
+      optional(seq(
+        $._space,
+        alias(/.+/, $.string)
+      ))
+    )),
 
     // GPG Configuration Options
 

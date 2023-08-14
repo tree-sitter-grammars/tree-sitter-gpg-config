@@ -383,6 +383,10 @@
                   {
                     "type": "SYMBOL",
                     "name": "require_compliance"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "unknown_option"
                   }
                 ]
               },
@@ -394,6 +398,50 @@
           {
             "type": "PATTERN",
             "value": "\\r?\\n"
+          }
+        ]
+      }
+    },
+    "unknown_option": {
+      "type": "PREC",
+      "value": -1,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "[a-z0-9-]+"
+            },
+            "named": true,
+            "value": "option"
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "_space"
+                  },
+                  {
+                    "type": "ALIAS",
+                    "content": {
+                      "type": "PATTERN",
+                      "value": ".+"
+                    },
+                    "named": true,
+                    "value": "string"
+                  }
+                ]
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
           }
         ]
       }

@@ -613,6 +613,10 @@
           "named": true
         },
         {
+          "type": "unknown_option",
+          "named": true
+        },
+        {
           "type": "utf8_strings",
           "named": true
         },
@@ -1839,6 +1843,25 @@
         },
         {
           "type": "option",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "unknown_option",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "option",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         }
       ]
