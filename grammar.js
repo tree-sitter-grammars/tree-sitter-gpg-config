@@ -18,7 +18,10 @@ const quoted = (q, ...extra) =>
     ))
   ), q);
 
-/** @param word {string} */
+/**
+ * Case-insensitive
+ * @param word {string}
+ */
 const ci = (word) =>
   alias(new RegExp(word, 'i'), word);
 
@@ -106,6 +109,22 @@ module.exports = grammar({
             $.no_require_cross_verification,
             $.expert,
             $.no_expert,
+            $.recipient,
+            $.hidden_recipient,
+            $.recipient_file,
+            $.hidden_recipient_file,
+            $.encrypt_to,
+            $.hidden_encrypt_to,
+            $.no_encrypt_to,
+            $.group,
+            $.ungroup,
+            $.no_groups,
+            $.local_user,
+            $.sender,
+            $.try_secret_name,
+            $.try_all_secrets,
+            $.skip_hidden_recipients,
+            $.no_skip_hidden_recipients,
 
             $.textmode,
             $.no_textmode,
@@ -548,7 +567,88 @@ module.exports = grammar({
     no_expert: $ =>
       alias('no-expert', $.option),
 
-    // TODO: GPG Key related Options
+    recipient: $ => seq(
+      alias('recipient', $.option),
+      $._space,
+      $.string
+    ),
+
+    hidden_recipient: $ => seq(
+      alias('hidden-recipient', $.option),
+      $._space,
+      $.string
+    ),
+
+    recipient_file: $ => seq(
+      alias('recipient-file', $.option),
+      $._space,
+      $.string
+    ),
+
+    hidden_recipient_file: $ => seq(
+      alias('hidden-recipient-file', $.option),
+      $._space,
+      $.string
+    ),
+
+    encrypt_to: $ => seq(
+      alias('encrypt-to', $.option),
+      $._space,
+      $.string
+    ),
+
+    hidden_encrypt_to: $ => seq(
+      alias('hidden-encrypt-to', $.option),
+      $._space,
+      $.string
+    ),
+
+    no_encrypt_to: $ =>
+      alias('no-encrypt-to', $.option),
+
+    group: $ => seq(
+      alias('group', $.option),
+      $._space,
+      field('name', $.string),
+      token.immediate('='),
+      field('value', $.string)
+    ),
+
+    ungroup: $ => seq(
+      alias('ungroup', $.option),
+      $._space,
+      $.string,
+    ),
+
+    no_groups: $ =>
+      alias('no-groups', $.option),
+
+    local_user: $ => seq(
+      alias('local-user', $.option),
+      $._space,
+      $.string,
+    ),
+
+    sender: $ => seq(
+      alias('sender', $.option),
+      $._space,
+      $.string,
+    ),
+
+    try_secret_name: $ => seq(
+      alias('try-secret-name', $.option),
+      $._space,
+      $.string,
+    ),
+
+    try_all_secrets: $ =>
+      alias('try-all-secrets', $.option),
+
+    skip_hidden_recipients: $ =>
+      alias('skip-hidden-recipients', $.option),
+
+    no_skip_hidden_recipients: $ =>
+      alias('no-skip-hidden-recipients', $.option),
 
     // TODO: GPG Input and Output
 

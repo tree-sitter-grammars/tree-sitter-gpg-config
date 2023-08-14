@@ -294,6 +294,70 @@
                   },
                   {
                     "type": "SYMBOL",
+                    "name": "recipient"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "hidden_recipient"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "recipient_file"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "hidden_recipient_file"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "encrypt_to"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "hidden_encrypt_to"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "no_encrypt_to"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "group"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "ungroup"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "no_groups"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "local_user"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "sender"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "try_secret_name"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "try_all_secrets"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "skip_hidden_recipients"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "no_skip_hidden_recipients"
+                  },
+                  {
+                    "type": "SYMBOL",
                     "name": "textmode"
                   },
                   {
@@ -2298,6 +2362,312 @@
       "content": {
         "type": "STRING",
         "value": "no-expert"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "recipient": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "recipient"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "hidden_recipient": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "hidden-recipient"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "recipient_file": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "recipient-file"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "hidden_recipient_file": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "hidden-recipient-file"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "encrypt_to": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "encrypt-to"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "hidden_encrypt_to": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "hidden-encrypt-to"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "no_encrypt_to": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "no-encrypt-to"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "group": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "group"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
+        },
+        {
+          "type": "IMMEDIATE_TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "="
+          }
+        },
+        {
+          "type": "FIELD",
+          "name": "value",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
+        }
+      ]
+    },
+    "ungroup": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "ungroup"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "no_groups": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "no-groups"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "local_user": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "local-user"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "sender": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "sender"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "try_secret_name": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "STRING",
+            "value": "try-secret-name"
+          },
+          "named": true,
+          "value": "option"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "try_all_secrets": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "try-all-secrets"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "skip_hidden_recipients": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "skip-hidden-recipients"
+      },
+      "named": true,
+      "value": "option"
+    },
+    "no_skip_hidden_recipients": {
+      "type": "ALIAS",
+      "content": {
+        "type": "STRING",
+        "value": "no-skip-hidden-recipients"
       },
       "named": true,
       "value": "option"
