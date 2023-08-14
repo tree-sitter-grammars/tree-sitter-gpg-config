@@ -18,511 +18,7 @@
                   },
                   {
                     "type": "SYMBOL",
-                    "name": "default_key"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "default_recipient"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "default_recipient_self"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_default_recipient"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "verbose"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_tty"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "list_options"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "verify_options"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "enable_large_rsa"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "disable_large_rsa"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "enable_dsa2"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "disable_dsa2"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "photo_viewer"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "exec_path"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "keyring"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "primary_keyring"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "trustdb_name"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "display_charset"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "utf8_strings"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_utf8_strings"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "compress_level"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "bzip2_compress_level"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_compress"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "bzip2_decompress_lowmem"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "mangle_dos_filenames"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_mangle_dos_filenames"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "ask_cert_level"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_ask_cert_level"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "default_cert_level"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "min_cert_level"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "trusted_key"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "add_desig_revoker"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "trust_model"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "always_trust"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "assert_signer"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "auto_key_locate"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_auto_key_locate"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "auto_key_import"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_auto_key_import"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "auto_key_retrieve"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_auto_key_retrieve"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "keyid_format"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "keyserver"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "completes_needed"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "marginals_needed"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "tofu_default_policy"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "max_cert_depth"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_sig_cache"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "auto_check_trustdb"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_auto_check_trustdb"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "agent_program"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "dirmngr_program"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "disable_dirmngr"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_autostart"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "lock_once"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "lock_multiple"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "lock_never"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "exit_on_status_write_error"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "limit_card_insert_tries"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_random_seed_file"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_greeting"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_secmem_warning"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_permission_warning"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "require_secmem"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_require_secmem"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "require_cross_verification"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_require_cross_verification"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "expert"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_expert"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "recipient"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "hidden_recipient"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "recipient_file"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "hidden_recipient_file"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "encrypt_to"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "hidden_encrypt_to"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_encrypt_to"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "group"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "ungroup"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_groups"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "local_user"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "sender"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "try_secret_name"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "try_all_secrets"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "skip_hidden_recipients"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_skip_hidden_recipients"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "armor"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_armor"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "output"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "max_output"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "chunk_size"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "input_size_hint"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "key_origin"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "import_options"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "export_options"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "with_colons"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "legacy_list_mode"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "with_fingerprint"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "with_subkey_fingerprint"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "with_icao_spelling"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "with_keygrip"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "with_key_origin"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "with_wkd_hash"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "with_secret"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "textmode"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_textmode"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "force_ocb"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "disable_signer_uid"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "include_key_block"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "no_include_key_block"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "personal_cipher_preferences"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "personal_digest_preferences"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "personal_compress_preferences"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "s2k_cipher_algo"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "s2k_digest_algo"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "s2k_mode"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "s2k_count"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "gnupg"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "openpgp"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "rfc4880"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "rfc4880bis"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "rfc2440"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "pgp7"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "pgp8"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "compliance"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "min_rsa_length"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "require_compliance"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "unknown_option"
+                    "name": "option"
                   }
                 ]
               },
@@ -538,20 +34,532 @@
         ]
       }
     },
-    "unknown_option": {
+    "option": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_default_key"
+        },
+        {
+          "type": "STRING",
+          "value": "default-recipient"
+        },
+        {
+          "type": "STRING",
+          "value": "default-recipient-self"
+        },
+        {
+          "type": "STRING",
+          "value": "no-default-recipient"
+        },
+        {
+          "type": "STRING",
+          "value": "verbose"
+        },
+        {
+          "type": "STRING",
+          "value": "no-tty"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_list_options"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_verify_options"
+        },
+        {
+          "type": "STRING",
+          "value": "enable-large-rsa"
+        },
+        {
+          "type": "STRING",
+          "value": "disable-large-rsa"
+        },
+        {
+          "type": "STRING",
+          "value": "enable-dsa2"
+        },
+        {
+          "type": "STRING",
+          "value": "disable-dsa2"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_photo_viewer"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_exec_path"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_keyring"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_primary_keyring"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_trustdb_name"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_display_charset"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_utf8_strings"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_no_utf8_strings"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_compress_level"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_bzip2_compress_level"
+        },
+        {
+          "type": "STRING",
+          "value": "no-compress"
+        },
+        {
+          "type": "STRING",
+          "value": "bzip2-decompress-lowmem"
+        },
+        {
+          "type": "STRING",
+          "value": "mangle-dos-filenames"
+        },
+        {
+          "type": "STRING",
+          "value": "no-mangle-dos-filenames"
+        },
+        {
+          "type": "STRING",
+          "value": "ask-cert-level"
+        },
+        {
+          "type": "STRING",
+          "value": "no-ask-cert-level"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_default_cert_level"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_min_cert_level"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_trusted_key"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_add_desig_revoker"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_trust_model"
+        },
+        {
+          "type": "STRING",
+          "value": "always-trust"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_assert_signer"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_auto_key_locate"
+        },
+        {
+          "type": "STRING",
+          "value": "no-auto-key-locate"
+        },
+        {
+          "type": "STRING",
+          "value": "auto-key-import"
+        },
+        {
+          "type": "STRING",
+          "value": "no-auto-key-import"
+        },
+        {
+          "type": "STRING",
+          "value": "auto-key-retrieve"
+        },
+        {
+          "type": "STRING",
+          "value": "no-auto-key-retrieve"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_keyid_format"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_keyserver"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_completes_needed"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_marginals_needed"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_tofu_default_policy"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_max_cert_depth"
+        },
+        {
+          "type": "STRING",
+          "value": "no-sig-cache"
+        },
+        {
+          "type": "STRING",
+          "value": "auto-check-trustdb"
+        },
+        {
+          "type": "STRING",
+          "value": "no-auto-check-trustdb"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_agent_program"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_dirmngr_program"
+        },
+        {
+          "type": "STRING",
+          "value": "disable-dirmngr"
+        },
+        {
+          "type": "STRING",
+          "value": "no-autostart"
+        },
+        {
+          "type": "STRING",
+          "value": "lock-once"
+        },
+        {
+          "type": "STRING",
+          "value": "lock-multiple"
+        },
+        {
+          "type": "STRING",
+          "value": "lock-never"
+        },
+        {
+          "type": "STRING",
+          "value": "exit-on-status-write-error"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_limit_card_insert_tries"
+        },
+        {
+          "type": "STRING",
+          "value": "no-random-seed-file"
+        },
+        {
+          "type": "STRING",
+          "value": "no-greeting"
+        },
+        {
+          "type": "STRING",
+          "value": "no-secmem-warning"
+        },
+        {
+          "type": "STRING",
+          "value": "no-permission-warning"
+        },
+        {
+          "type": "STRING",
+          "value": "require-secmem"
+        },
+        {
+          "type": "STRING",
+          "value": "no-require-secmem"
+        },
+        {
+          "type": "STRING",
+          "value": "require-cross-verification"
+        },
+        {
+          "type": "STRING",
+          "value": "no-require-cross-verification"
+        },
+        {
+          "type": "STRING",
+          "value": "expert"
+        },
+        {
+          "type": "STRING",
+          "value": "no-expert"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_recipient"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_hidden_recipient"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_recipient_file"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_hidden_recipient_file"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_encrypt_to"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_hidden_encrypt_to"
+        },
+        {
+          "type": "STRING",
+          "value": "no-encrypt-to"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_group"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_ungroup"
+        },
+        {
+          "type": "STRING",
+          "value": "no-groups"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_local_user"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_sender"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_try_secret_name"
+        },
+        {
+          "type": "STRING",
+          "value": "try-all-secrets"
+        },
+        {
+          "type": "STRING",
+          "value": "skip-hidden-recipients"
+        },
+        {
+          "type": "STRING",
+          "value": "no-skip-hidden-recipients"
+        },
+        {
+          "type": "STRING",
+          "value": "armor"
+        },
+        {
+          "type": "STRING",
+          "value": "no-armor"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_output"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_max_output"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_chunk_size"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_input_size_hint"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_key_origin"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_import_options"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_export_options"
+        },
+        {
+          "type": "STRING",
+          "value": "with-colons"
+        },
+        {
+          "type": "STRING",
+          "value": "legacy-list-mode"
+        },
+        {
+          "type": "STRING",
+          "value": "with-fingerprint"
+        },
+        {
+          "type": "STRING",
+          "value": "with-subkey-fingerprint"
+        },
+        {
+          "type": "STRING",
+          "value": "with-icao-spelling"
+        },
+        {
+          "type": "STRING",
+          "value": "with-keygrip"
+        },
+        {
+          "type": "STRING",
+          "value": "with-key-origin"
+        },
+        {
+          "type": "STRING",
+          "value": "with-wkd-hash"
+        },
+        {
+          "type": "STRING",
+          "value": "with-secret"
+        },
+        {
+          "type": "STRING",
+          "value": "textmode"
+        },
+        {
+          "type": "STRING",
+          "value": "no-textmode"
+        },
+        {
+          "type": "STRING",
+          "value": "force-ocb"
+        },
+        {
+          "type": "STRING",
+          "value": "force-aead"
+        },
+        {
+          "type": "STRING",
+          "value": "disable-signer-uid"
+        },
+        {
+          "type": "STRING",
+          "value": "include-key-block"
+        },
+        {
+          "type": "STRING",
+          "value": "no-include-key-block"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_personal_cipher_preferences"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_personal_digest_preferences"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_personal_compress_preferences"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_s2k_cipher_algo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_s2k_digest_algo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_s2k_mode"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_s2k_count"
+        },
+        {
+          "type": "STRING",
+          "value": "gnupg"
+        },
+        {
+          "type": "STRING",
+          "value": "openpgp"
+        },
+        {
+          "type": "STRING",
+          "value": "rfc4880"
+        },
+        {
+          "type": "STRING",
+          "value": "rfc4880bis"
+        },
+        {
+          "type": "STRING",
+          "value": "rfc2440"
+        },
+        {
+          "type": "STRING",
+          "value": "pgp7"
+        },
+        {
+          "type": "STRING",
+          "value": "pgp8"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_compliance"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_min_rsa_length"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_require_compliance"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_unknown_option"
+        }
+      ]
+    },
+    "_unknown_option": {
       "type": "PREC",
       "value": -1,
       "content": {
         "type": "SEQ",
         "members": [
           {
-            "type": "ALIAS",
-            "content": {
-              "type": "PATTERN",
-              "value": "[a-z0-9-]+"
-            },
-            "named": true,
-            "value": "option"
+            "type": "PATTERN",
+            "value": "[a-z0-9-]+"
           },
           {
             "type": "CHOICE",
@@ -582,17 +590,12 @@
         ]
       }
     },
-    "default_key": {
+    "_default_key": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "default-key"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "default-key"
         },
         {
           "type": "SYMBOL",
@@ -604,17 +607,12 @@
         }
       ]
     },
-    "default_recipient": {
+    "_default_recipient": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "default-recipient"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "default-recipient"
         },
         {
           "type": "SYMBOL",
@@ -626,56 +624,15 @@
         }
       ]
     },
-    "default_recipient_self": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "default-recipient-self"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "no_default_recipient": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-default-recipient"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "verbose": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "verbose"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "no_tty": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-tty"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "list_options": {
+    "_list_options": {
       "type": "PREC_RIGHT",
       "value": 0,
       "content": {
         "type": "SEQ",
         "members": [
           {
-            "type": "ALIAS",
-            "content": {
-              "type": "STRING",
-              "value": "list-options"
-            },
-            "named": true,
-            "value": "option"
+            "type": "STRING",
+            "value": "list-options"
           },
           {
             "type": "SYMBOL",
@@ -872,20 +829,15 @@
         ]
       }
     },
-    "verify_options": {
+    "_verify_options": {
       "type": "PREC_RIGHT",
       "value": 0,
       "content": {
         "type": "SEQ",
         "members": [
           {
-            "type": "ALIAS",
-            "content": {
-              "type": "STRING",
-              "value": "verify-options"
-            },
-            "named": true,
-            "value": "option"
+            "type": "STRING",
+            "value": "verify-options"
           },
           {
             "type": "SYMBOL",
@@ -1028,53 +980,12 @@
         ]
       }
     },
-    "enable_large_rsa": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "enable-large-rsa"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "disable_large_rsa": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "disable-large-rsa"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "enable_dsa2": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "enable-dsa2"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "disable_dsa2": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "disable-dsa2"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "photo_viewer": {
+    "_photo_viewer": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "photo-viewer"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "photo-viewer"
         },
         {
           "type": "SYMBOL",
@@ -1194,17 +1105,12 @@
       "type": "PATTERN",
       "value": "%[iIkKftTvVU%]"
     },
-    "exec_path": {
+    "_exec_path": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "exec-path"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "exec-path"
         },
         {
           "type": "SYMBOL",
@@ -1216,17 +1122,12 @@
         }
       ]
     },
-    "keyring": {
+    "_keyring": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "keyring"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "keyring"
         },
         {
           "type": "SYMBOL",
@@ -1238,17 +1139,12 @@
         }
       ]
     },
-    "primary_keyring": {
+    "_primary_keyring": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "primary-keyring"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "primary-keyring"
         },
         {
           "type": "SYMBOL",
@@ -1260,17 +1156,12 @@
         }
       ]
     },
-    "trustdb_name": {
+    "_trustdb_name": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "trustdb-name"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "trustdb-name"
         },
         {
           "type": "SYMBOL",
@@ -1282,17 +1173,12 @@
         }
       ]
     },
-    "display_charset": {
+    "_display_charset": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "display-charset"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "display-charset"
         },
         {
           "type": "SYMBOL",
@@ -1303,12 +1189,12 @@
           "name": "charset",
           "content": {
             "type": "SYMBOL",
-            "name": "_charset"
+            "name": "_charset_value"
           }
         }
       ]
     },
-    "_charset": {
+    "_charset_value": {
       "type": "TOKEN",
       "content": {
         "type": "CHOICE",
@@ -1361,35 +1247,20 @@
         ]
       }
     },
-    "utf8_strings": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "utf8-strings"
-      },
-      "named": true,
-      "value": "option"
+    "_utf8_strings": {
+      "type": "STRING",
+      "value": "utf8-strings"
     },
-    "no_utf8_strings": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-utf8-strings"
-      },
-      "named": true,
-      "value": "option"
+    "_no_utf8_strings": {
+      "type": "STRING",
+      "value": "no-utf8-strings"
     },
-    "compress_level": {
+    "_compress_level": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "compress-level"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "compress-level"
         },
         {
           "type": "SYMBOL",
@@ -1406,17 +1277,12 @@
         }
       ]
     },
-    "bzip2_compress_level": {
+    "_bzip2_compress_level": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "bzip2-compress-level"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "bzip2-compress-level"
         },
         {
           "type": "SYMBOL",
@@ -1433,71 +1299,12 @@
         }
       ]
     },
-    "no_compress": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-compress"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "bzip2_decompress_lowmem": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "bzip2-decompress-lowmem"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "mangle_dos_filenames": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "mangle-dos-filenames"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "no_mangle_dos_filenames": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-mangle-dos-filenames"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "ask_cert_level": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "ask-cert-level"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "no_ask_cert_level": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-ask-cert-level"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "default_cert_level": {
+    "_default_cert_level": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "default-cert-level"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "default-cert-level"
         },
         {
           "type": "SYMBOL",
@@ -1514,17 +1321,12 @@
         }
       ]
     },
-    "min_cert_level": {
+    "_min_cert_level": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "min-cert-level"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "min-cert-level"
         },
         {
           "type": "SYMBOL",
@@ -1541,17 +1343,12 @@
         }
       ]
     },
-    "trusted_key": {
+    "_trusted_key": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "trusted-key"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "trusted-key"
         },
         {
           "type": "SYMBOL",
@@ -1563,17 +1360,12 @@
         }
       ]
     },
-    "add_desig_revoker": {
+    "_add_desig_revoker": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "add-desig-revoker"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "add-desig-revoker"
         },
         {
           "type": "SYMBOL",
@@ -1617,17 +1409,12 @@
         }
       ]
     },
-    "trust_model": {
+    "_trust_model": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "trust-model"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "trust-model"
         },
         {
           "type": "SYMBOL",
@@ -1714,26 +1501,12 @@
         ]
       }
     },
-    "always_trust": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "always-trust"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "assert_signer": {
+    "_assert_signer": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "assert-signer"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "assert-signer"
         },
         {
           "type": "SYMBOL",
@@ -1745,20 +1518,15 @@
         }
       ]
     },
-    "auto_key_locate": {
+    "_auto_key_locate": {
       "type": "PREC_RIGHT",
       "value": 0,
       "content": {
         "type": "SEQ",
         "members": [
           {
-            "type": "ALIAS",
-            "content": {
-              "type": "STRING",
-              "value": "auto-key-locate"
-            },
-            "named": true,
-            "value": "option"
+            "type": "STRING",
+            "value": "auto-key-locate"
           },
           {
             "type": "SYMBOL",
@@ -1772,7 +1540,7 @@
               "members": [
                 {
                   "type": "SYMBOL",
-                  "name": "_mechanism"
+                  "name": "_key_locate_value"
                 },
                 {
                   "type": "SYMBOL",
@@ -1806,7 +1574,7 @@
                     "members": [
                       {
                         "type": "SYMBOL",
-                        "name": "_mechanism"
+                        "name": "_key_locate_value"
                       },
                       {
                         "type": "SYMBOL",
@@ -1821,7 +1589,7 @@
         ]
       }
     },
-    "_mechanism": {
+    "_key_locate_value": {
       "type": "TOKEN",
       "content": {
         "type": "CHOICE",
@@ -1910,62 +1678,12 @@
         ]
       }
     },
-    "no_auto_key_locate": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-auto-key-locate"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "auto_key_import": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "auto-key-import"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "no_auto_key_import": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-auto-key-import"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "auto_key_retrieve": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "auto-key-retrieve"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "no_auto_key_retrieve": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-auto-key-retrieve"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "keyid_format": {
+    "_keyid_format": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "keyid-format"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "keyid-format"
         },
         {
           "type": "SYMBOL",
@@ -1976,12 +1694,12 @@
           "name": "format",
           "content": {
             "type": "SYMBOL",
-            "name": "_keyid_format"
+            "name": "_keyid_format_value"
           }
         }
       ]
     },
-    "_keyid_format": {
+    "_keyid_format_value": {
       "type": "TOKEN",
       "content": {
         "type": "CHOICE",
@@ -2034,17 +1752,12 @@
         ]
       }
     },
-    "keyserver": {
+    "_keyserver": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "keyserver"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "keyserver"
         },
         {
           "type": "SYMBOL",
@@ -2056,17 +1769,12 @@
         }
       ]
     },
-    "completes_needed": {
+    "_completes_needed": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "completes-needed"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "completes-needed"
         },
         {
           "type": "SYMBOL",
@@ -2078,17 +1786,12 @@
         }
       ]
     },
-    "marginals_needed": {
+    "_marginals_needed": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "marginals-needed"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "marginals-needed"
         },
         {
           "type": "SYMBOL",
@@ -2100,17 +1803,12 @@
         }
       ]
     },
-    "tofu_default_policy": {
+    "_tofu_default_policy": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "tofu-default-policy"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "tofu-default-policy"
         },
         {
           "type": "SYMBOL",
@@ -2121,61 +1819,12 @@
           "name": "policy",
           "content": {
             "type": "SYMBOL",
-            "name": "_tofu_policy"
+            "name": "_tofu_policy_value"
           }
         }
       ]
     },
-    "max_cert_depth": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "max-cert-depth"
-          },
-          "named": true,
-          "value": "option"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_space"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "number"
-        }
-      ]
-    },
-    "no_sig_cache": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-sig-cache"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "auto_check_trustdb": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "auto-check-trustdb"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "no_auto_check_trustdb": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-auto-check-trustdb"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "_tofu_policy": {
+    "_tofu_policy_value": {
       "type": "TOKEN",
       "content": {
         "type": "CHOICE",
@@ -2228,115 +1877,12 @@
         ]
       }
     },
-    "agent_program": {
+    "_max_cert_depth": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "agent-program"
-          },
-          "named": true,
-          "value": "option"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_space"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "string"
-        }
-      ]
-    },
-    "dirmngr_program": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "dirmngr-program"
-          },
-          "named": true,
-          "value": "option"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_space"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "string"
-        }
-      ]
-    },
-    "disable_dirmngr": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "disable-dirmngr"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "no_autostart": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-autostart"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "lock_once": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "lock-once"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "lock_multiple": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "lock-multiple"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "lock_never": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "lock-never"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "exit_on_status_write_error": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "exit-on-status-write-error"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "limit_card_insert_tries": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "limit-card-insert-tries"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "max-cert-depth"
         },
         {
           "type": "SYMBOL",
@@ -2348,107 +1894,12 @@
         }
       ]
     },
-    "no_random_seed_file": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-random-seed-file"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "no_greeting": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-greeting"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "no_secmem_warning": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-secmem-warning"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "no_permission_warning": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-permission-warning"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "require_secmem": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "require-secmem"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "no_require_secmem": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-require-secmem"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "require_cross_verification": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "require-cross-verification"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "no_require_cross_verification": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-require-cross-verification"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "expert": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "expert"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "no_expert": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-expert"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "recipient": {
+    "_agent_program": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "recipient"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "agent-program"
         },
         {
           "type": "SYMBOL",
@@ -2460,17 +1911,12 @@
         }
       ]
     },
-    "hidden_recipient": {
+    "_dirmngr_program": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "hidden-recipient"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "dirmngr-program"
         },
         {
           "type": "SYMBOL",
@@ -2482,17 +1928,29 @@
         }
       ]
     },
-    "recipient_file": {
+    "_limit_card_insert_tries": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "recipient-file"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "limit-card-insert-tries"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        }
+      ]
+    },
+    "_recipient": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "recipient"
         },
         {
           "type": "SYMBOL",
@@ -2504,17 +1962,12 @@
         }
       ]
     },
-    "hidden_recipient_file": {
+    "_hidden_recipient": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "hidden-recipient-file"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "hidden-recipient"
         },
         {
           "type": "SYMBOL",
@@ -2526,17 +1979,12 @@
         }
       ]
     },
-    "encrypt_to": {
+    "_recipient_file": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "encrypt-to"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "recipient-file"
         },
         {
           "type": "SYMBOL",
@@ -2548,17 +1996,12 @@
         }
       ]
     },
-    "hidden_encrypt_to": {
+    "_hidden_recipient_file": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "hidden-encrypt-to"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "hidden-recipient-file"
         },
         {
           "type": "SYMBOL",
@@ -2570,26 +2013,46 @@
         }
       ]
     },
-    "no_encrypt_to": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-encrypt-to"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "group": {
+    "_encrypt_to": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "group"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "encrypt-to"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "_hidden_encrypt_to": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "hidden-encrypt-to"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "_group": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "group"
         },
         {
           "type": "SYMBOL",
@@ -2620,17 +2083,12 @@
         }
       ]
     },
-    "ungroup": {
+    "_ungroup": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "ungroup"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "ungroup"
         },
         {
           "type": "SYMBOL",
@@ -2642,26 +2100,12 @@
         }
       ]
     },
-    "no_groups": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-groups"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "local_user": {
+    "_local_user": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "local-user"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "local-user"
         },
         {
           "type": "SYMBOL",
@@ -2673,17 +2117,12 @@
         }
       ]
     },
-    "sender": {
+    "_sender": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "sender"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "sender"
         },
         {
           "type": "SYMBOL",
@@ -2695,17 +2134,12 @@
         }
       ]
     },
-    "try_secret_name": {
+    "_try_secret_name": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "try-secret-name"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "try-secret-name"
         },
         {
           "type": "SYMBOL",
@@ -2717,62 +2151,12 @@
         }
       ]
     },
-    "try_all_secrets": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "try-all-secrets"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "skip_hidden_recipients": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "skip-hidden-recipients"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "no_skip_hidden_recipients": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-skip-hidden-recipients"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "armor": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "armor"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "no_armor": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-armor"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "output": {
+    "_output": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "output"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "output"
         },
         {
           "type": "SYMBOL",
@@ -2784,17 +2168,12 @@
         }
       ]
     },
-    "max_output": {
+    "_max_output": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "max-output"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "max-output"
         },
         {
           "type": "SYMBOL",
@@ -2806,17 +2185,12 @@
         }
       ]
     },
-    "chunk_size": {
+    "_chunk_size": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "chunk-size"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "chunk-size"
         },
         {
           "type": "SYMBOL",
@@ -2828,17 +2202,12 @@
         }
       ]
     },
-    "input_size_hint": {
+    "_input_size_hint": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "input-size-hint"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "input-size-hint"
         },
         {
           "type": "SYMBOL",
@@ -2850,17 +2219,12 @@
         }
       ]
     },
-    "key_origin": {
+    "_key_origin": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "key-origin"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "key-origin"
         },
         {
           "type": "SYMBOL",
@@ -2871,7 +2235,7 @@
           "name": "origin",
           "content": {
             "type": "SYMBOL",
-            "name": "_origin"
+            "name": "_origin_value"
           }
         },
         {
@@ -2897,7 +2261,7 @@
         }
       ]
     },
-    "_origin": {
+    "_origin_value": {
       "type": "TOKEN",
       "content": {
         "type": "CHOICE",
@@ -2977,20 +2341,15 @@
         ]
       }
     },
-    "import_options": {
+    "_import_options": {
       "type": "PREC_RIGHT",
       "value": 0,
       "content": {
         "type": "SEQ",
         "members": [
           {
-            "type": "ALIAS",
-            "content": {
-              "type": "STRING",
-              "value": "import-options"
-            },
-            "named": true,
-            "value": "option"
+            "type": "STRING",
+            "value": "import-options"
           },
           {
             "type": "SYMBOL",
@@ -3169,20 +2528,15 @@
         ]
       }
     },
-    "export_options": {
+    "_export_options": {
       "type": "PREC_RIGHT",
       "value": 0,
       "content": {
         "type": "SEQ",
         "members": [
           {
-            "type": "ALIAS",
-            "content": {
-              "type": "STRING",
-              "value": "export-options"
-            },
-            "named": true,
-            "value": "option"
+            "type": "STRING",
+            "value": "export-options"
           },
           {
             "type": "SYMBOL",
@@ -3325,161 +2679,12 @@
         ]
       }
     },
-    "with_colons": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "with-colons"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "legacy_list_mode": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "legacy-list-mode"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "with_fingerprint": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "with-fingerprint"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "with_subkey_fingerprint": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "with-subkey-fingerprint"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "with_icao_spelling": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "with-icao-spelling"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "with_keygrip": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "with-keygrip"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "with_key_origin": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "with-key-origin"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "with_wkd_hash": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "with-wkd-hash"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "with_secret": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "with-secret"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "textmode": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "textmode"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "no_textmode": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-textmode"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "force_ocb": {
-      "type": "ALIAS",
-      "content": {
-        "type": "CHOICE",
-        "members": [
-          {
-            "type": "STRING",
-            "value": "force-ocb"
-          },
-          {
-            "type": "STRING",
-            "value": "force-aead"
-          }
-        ]
-      },
-      "named": true,
-      "value": "option"
-    },
-    "disable_signer_uid": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "disable-signer-uid"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "include_key_block": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "include-key-block"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "no_include_key_block": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "no-include-key-block"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "personal_cipher_preferences": {
+    "_personal_cipher_preferences": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "personal-cipher-preferences"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "personal-cipher-preferences"
         },
         {
           "type": "SYMBOL",
@@ -3523,17 +2728,12 @@
         }
       ]
     },
-    "personal_digest_preferences": {
+    "_personal_digest_preferences": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "personal-digest-preferences"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "personal-digest-preferences"
         },
         {
           "type": "SYMBOL",
@@ -3577,17 +2777,12 @@
         }
       ]
     },
-    "personal_compress_preferences": {
+    "_personal_compress_preferences": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "personal-compress-preferences"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "personal-compress-preferences"
         },
         {
           "type": "SYMBOL",
@@ -3631,17 +2826,12 @@
         }
       ]
     },
-    "s2k_cipher_algo": {
+    "_s2k_cipher_algo": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "s2k-cipher-algo"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "s2k-cipher-algo"
         },
         {
           "type": "SYMBOL",
@@ -3685,17 +2875,12 @@
         }
       ]
     },
-    "s2k_digest_algo": {
+    "_s2k_digest_algo": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "s2k-digest-algo"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "s2k-digest-algo"
         },
         {
           "type": "SYMBOL",
@@ -3739,17 +2924,12 @@
         }
       ]
     },
-    "s2k_mode": {
+    "_s2k_mode": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "s2k-mode"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "s2k-mode"
         },
         {
           "type": "SYMBOL",
@@ -3766,17 +2946,12 @@
         }
       ]
     },
-    "s2k_count": {
+    "_s2k_count": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "s2k-count"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "s2k-count"
         },
         {
           "type": "SYMBOL",
@@ -3788,80 +2963,12 @@
         }
       ]
     },
-    "gnupg": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "gnupg"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "openpgp": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "openpgp"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "rfc4880": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "rfc4880"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "rfc4880bis": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "rfc4880bis"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "rfc2440": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "rfc2440"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "pgp7": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "pgp7"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "pgp8": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "pgp8"
-      },
-      "named": true,
-      "value": "option"
-    },
-    "compliance": {
+    "_compliance": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "compliance"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "compliance"
         },
         {
           "type": "SYMBOL",
@@ -3872,12 +2979,12 @@
           "name": "mode",
           "content": {
             "type": "SYMBOL",
-            "name": "_compliance"
+            "name": "_compliance_value"
           }
         }
       ]
     },
-    "_compliance": {
+    "_compliance_value": {
       "type": "TOKEN",
       "content": {
         "type": "CHOICE",
@@ -3966,17 +3073,12 @@
         ]
       }
     },
-    "min_rsa_length": {
+    "_min_rsa_length": {
       "type": "SEQ",
       "members": [
         {
-          "type": "ALIAS",
-          "content": {
-            "type": "STRING",
-            "value": "min-rsa-length"
-          },
-          "named": true,
-          "value": "option"
+          "type": "STRING",
+          "value": "min-rsa-length"
         },
         {
           "type": "SYMBOL",
@@ -3988,14 +3090,9 @@
         }
       ]
     },
-    "require_compliance": {
-      "type": "ALIAS",
-      "content": {
-        "type": "STRING",
-        "value": "require-compliance"
-      },
-      "named": true,
-      "value": "option"
+    "_require_compliance": {
+      "type": "STRING",
+      "value": "require-compliance"
     },
     "key": {
       "type": "PATTERN",

@@ -38,146 +38,151 @@ module.exports = grammar({
         optional(
           choice(
             $.comment,
-            $.default_key,
-            $.default_recipient,
-            $.default_recipient_self,
-            $.no_default_recipient,
-            $.verbose,
-            $.no_tty,
-            // TODO: $.list_filter,
-            $.list_options,
-            $.verify_options,
-            $.enable_large_rsa,
-            $.disable_large_rsa,
-            $.enable_dsa2,
-            $.disable_dsa2,
-            $.photo_viewer,
-            $.exec_path,
-            $.keyring,
-            $.primary_keyring,
-            $.trustdb_name,
-            $.display_charset,
-            $.utf8_strings,
-            $.no_utf8_strings,
-            $.compress_level,
-            $.bzip2_compress_level,
-            $.no_compress,
-            $.bzip2_decompress_lowmem,
-            $.mangle_dos_filenames,
-            $.no_mangle_dos_filenames,
-            $.ask_cert_level,
-            $.no_ask_cert_level,
-            $.default_cert_level,
-            $.min_cert_level,
-            $.trusted_key,
-            $.add_desig_revoker,
-            $.trust_model,
-            $.always_trust,
-            $.assert_signer,
-            $.auto_key_locate,
-            $.no_auto_key_locate,
-            $.auto_key_import,
-            $.no_auto_key_import,
-            $.auto_key_retrieve,
-            $.no_auto_key_retrieve,
-            $.keyid_format,
-            $.keyserver,
-            // TODO: $.keyserver_options,
-            $.completes_needed,
-            $.marginals_needed,
-            $.tofu_default_policy,
-            $.max_cert_depth,
-            $.no_sig_cache,
-            $.auto_check_trustdb,
-            $.no_auto_check_trustdb,
-            $.agent_program,
-            $.dirmngr_program,
-            $.disable_dirmngr,
-            $.no_autostart,
-            $.lock_once,
-            $.lock_multiple,
-            $.lock_never,
-            $.exit_on_status_write_error,
-            $.limit_card_insert_tries,
-            $.no_random_seed_file,
-            $.no_greeting,
-            $.no_secmem_warning,
-            $.no_permission_warning,
-            $.require_secmem,
-            $.no_require_secmem,
-            $.require_cross_verification,
-            $.no_require_cross_verification,
-            $.expert,
-            $.no_expert,
-            $.recipient,
-            $.hidden_recipient,
-            $.recipient_file,
-            $.hidden_recipient_file,
-            $.encrypt_to,
-            $.hidden_encrypt_to,
-            $.no_encrypt_to,
-            $.group,
-            $.ungroup,
-            $.no_groups,
-            $.local_user,
-            $.sender,
-            $.try_secret_name,
-            $.try_all_secrets,
-            $.skip_hidden_recipients,
-            $.no_skip_hidden_recipients,
-            $.armor,
-            $.no_armor,
-            $.output,
-            $.max_output,
-            $.chunk_size,
-            $.input_size_hint,
-            $.key_origin,
-            $.import_options,
-            // TODO: $.import_filter,
-            // TODO: $.export_filter,
-            $.export_options,
-            $.with_colons,
-            $.legacy_list_mode,
-            $.with_fingerprint,
-            $.with_subkey_fingerprint,
-            $.with_icao_spelling,
-            $.with_keygrip,
-            $.with_key_origin,
-            $.with_wkd_hash,
-            $.with_secret,
-            $.textmode,
-            $.no_textmode,
-            $.force_ocb,
-            $.disable_signer_uid,
-            $.include_key_block,
-            $.no_include_key_block,
-            $.personal_cipher_preferences,
-            $.personal_digest_preferences,
-            $.personal_compress_preferences,
-            $.s2k_cipher_algo,
-            $.s2k_digest_algo,
-            $.s2k_mode,
-            $.s2k_count,
-            $.gnupg,
-            $.openpgp,
-            $.rfc4880,
-            $.rfc4880bis,
-            $.rfc2440,
-            $.pgp7,
-            $.pgp8,
-            $.compliance,
-            $.min_rsa_length,
-            $.require_compliance,
-
-            $.unknown_option
+            $.option
           ),
         ),
         /\r?\n/
       )
     ),
 
-    unknown_option: $ => prec(-1, seq(
-      alias(/[a-z0-9-]+/, $.option),
+    option: $ => choice(
+      $._default_key,
+      'default-recipient',
+      'default-recipient-self',
+      'no-default-recipient',
+      'verbose',
+      'no-tty',
+      // TODO: $._list_filter,
+      $._list_options,
+      $._verify_options,
+      'enable-large-rsa',
+      'disable-large-rsa',
+      'enable-dsa2',
+      'disable-dsa2',
+      $._photo_viewer,
+      $._exec_path,
+      $._keyring,
+      $._primary_keyring,
+      $._trustdb_name,
+      $._display_charset,
+      $._utf8_strings,
+      $._no_utf8_strings,
+      $._compress_level,
+      $._bzip2_compress_level,
+      'no-compress',
+      'bzip2-decompress-lowmem',
+      'mangle-dos-filenames',
+      'no-mangle-dos-filenames',
+      'ask-cert-level',
+      'no-ask-cert-level',
+      $._default_cert_level,
+      $._min_cert_level,
+      $._trusted_key,
+      $._add_desig_revoker,
+      $._trust_model,
+      'always-trust',
+      $._assert_signer,
+      $._auto_key_locate,
+      'no-auto-key-locate',
+      'auto-key-import',
+      'no-auto-key-import',
+      'auto-key-retrieve',
+      'no-auto-key-retrieve',
+      $._keyid_format,
+      $._keyserver,
+      // TODO: $._keyserver_options,
+      $._completes_needed,
+      $._marginals_needed,
+      $._tofu_default_policy,
+      $._max_cert_depth,
+      'no-sig-cache',
+      'auto-check-trustdb',
+      'no-auto-check-trustdb',
+      $._agent_program,
+      $._dirmngr_program,
+      'disable-dirmngr',
+      'no-autostart',
+      'lock-once',
+      'lock-multiple',
+      'lock-never',
+      'exit-on-status-write-error',
+      $._limit_card_insert_tries,
+      'no-random-seed-file',
+      'no-greeting',
+      'no-secmem-warning',
+      'no-permission-warning',
+      'require-secmem',
+      'no-require-secmem',
+      'require-cross-verification',
+      'no-require-cross-verification',
+      'expert',
+      'no-expert',
+      $._recipient,
+      $._hidden_recipient,
+      $._recipient_file,
+      $._hidden_recipient_file,
+      $._encrypt_to,
+      $._hidden_encrypt_to,
+      'no-encrypt-to',
+      $._group,
+      $._ungroup,
+      'no-groups',
+      $._local_user,
+      $._sender,
+      $._try_secret_name,
+      'try-all-secrets',
+      'skip-hidden-recipients',
+      'no-skip-hidden-recipients',
+      'armor',
+      'no-armor',
+      $._output,
+      $._max_output,
+      $._chunk_size,
+      $._input_size_hint,
+      $._key_origin,
+      $._import_options,
+      // TODO: $._import_filter,
+      // TODO: $._export_filter,
+      $._export_options,
+      'with-colons',
+      'legacy-list-mode',
+      'with-fingerprint',
+      'with-subkey-fingerprint',
+      'with-icao-spelling',
+      'with-keygrip',
+      'with-key-origin',
+      'with-wkd-hash',
+      'with-secret',
+      'textmode',
+      'no-textmode',
+      'force-ocb',
+      'force-aead',
+      'disable-signer-uid',
+      'include-key-block',
+      'no-include-key-block',
+      $._personal_cipher_preferences,
+      $._personal_digest_preferences,
+      $._personal_compress_preferences,
+      $._s2k_cipher_algo,
+      $._s2k_digest_algo,
+      $._s2k_mode,
+      $._s2k_count,
+      'gnupg',
+      'openpgp',
+      'rfc4880',
+      'rfc4880bis',
+      'rfc2440',
+      'pgp7',
+      'pgp8',
+      $._compliance,
+      $._min_rsa_length,
+      $._require_compliance,
+
+      $._unknown_option
+    ),
+
+    _unknown_option: $ => prec(-1, seq(
+      /[a-z0-9-]+/,
       optional(seq(
         $._space,
         alias(/.+/, $.string)
@@ -186,34 +191,22 @@ module.exports = grammar({
 
     // GPG Configuration Options
 
-    default_key: $ => seq(
-      alias('default-key', $.option),
+    _default_key: $ => seq(
+      'default-key',
       $._space,
       $.key
     ),
 
-    default_recipient: $ => seq(
-      alias('default-recipient', $.option),
+    _default_recipient: $ => seq(
+      'default-recipient',
       $._space,
       $.string
     ),
 
-    default_recipient_self: $ =>
-      alias('default-recipient-self', $.option),
-
-    no_default_recipient: $ =>
-      alias('no-default-recipient', $.option),
-
-    verbose: $ =>
-      alias('verbose', $.option),
-
-    no_tty: $ =>
-      alias('no-tty', $.option),
-
     // TODO: list_filter
 
-    list_options: $ => prec.right(seq(
-      alias('list-options', $.option),
+    _list_options: $ => prec.right(seq(
+      'list-options',
       $._space,
       field('parameter', $._list_parameter),
       repeat(seq(
@@ -241,8 +234,8 @@ module.exports = grammar({
       ci('sort-sigs'),
     )),
 
-    verify_options: $ => prec.right(seq(
-      alias('verify-options', $.option),
+    _verify_options: $ => prec.right(seq(
+      'verify-options',
       $._space,
       field('parameter', $._verify_parameter),
       repeat(seq(
@@ -264,20 +257,8 @@ module.exports = grammar({
       ci('show-primary-uid-only'),
     )),
 
-    enable_large_rsa: $ =>
-      alias('enable-large-rsa', $.option),
-
-    disable_large_rsa: $ =>
-      alias('disable-large-rsa', $.option),
-
-    enable_dsa2: $ =>
-      alias('enable-dsa2', $.option),
-
-    disable_dsa2: $ =>
-      alias('disable-dsa2', $.option),
-
-    photo_viewer: $ => seq(
-      alias('photo-viewer', $.option),
+    _photo_viewer: $ => seq(
+      'photo-viewer',
       $._space,
       alias($._command, $.string)
     ),
@@ -290,37 +271,37 @@ module.exports = grammar({
 
     format: _ => /%[iIkKftTvVU%]/,
 
-    exec_path: $ => seq(
-      alias('exec-path', $.option),
+    _exec_path: $ => seq(
+      'exec-path',
       $._space,
       $.string
     ),
 
-    keyring: $ => seq(
-      alias('keyring', $.option),
+    _keyring: $ => seq(
+      'keyring',
       $._space,
       $.string
     ),
 
-    primary_keyring: $ => seq(
-      alias('primary-keyring', $.option),
+    _primary_keyring: $ => seq(
+      'primary-keyring',
       $._space,
       $.string
     ),
 
-    trustdb_name: $ => seq(
-      alias('trustdb-name', $.option),
+    _trustdb_name: $ => seq(
+      'trustdb-name',
       $._space,
       $.string
     ),
 
-    display_charset: $ => seq(
-      alias('display-charset', $.option),
+    _display_charset: $ => seq(
+      'display-charset',
       $._space,
-      field('charset', $._charset)
+      field('charset', $._charset_value)
     ),
 
-    _charset: _ => token(choice(
+    _charset_value: _ => token(choice(
       ci('iso-8859-1'),
       ci('iso-8859-2'),
       ci('iso-8859-15'),
@@ -328,62 +309,42 @@ module.exports = grammar({
       ci('utf-8'),
     )),
 
-    utf8_strings: $ =>
-      alias('utf8-strings', $.option),
+    _utf8_strings: _ => 'utf8-strings',
 
-    no_utf8_strings: $ =>
-      alias('no-utf8-strings', $.option),
+    _no_utf8_strings: _ => 'no-utf8-strings',
 
-    compress_level: $ => seq(
-      alias('compress-level', $.option),
+    _compress_level: $ => seq(
+      'compress-level',
       $._space,
       alias(/-1|[0-9]/, $.number)
     ),
 
-    bzip2_compress_level: $ => seq(
-      alias('bzip2-compress-level', $.option),
+    _bzip2_compress_level: $ => seq(
+      'bzip2-compress-level',
       $._space,
       alias(/-1|[0-9]/, $.number)
     ),
 
-    no_compress: $ =>
-      alias('no-compress', $.option),
-
-    bzip2_decompress_lowmem: $ =>
-      alias('bzip2-decompress-lowmem', $.option),
-
-    mangle_dos_filenames: $ =>
-      alias('mangle-dos-filenames', $.option),
-
-    no_mangle_dos_filenames: $ =>
-      alias('no-mangle-dos-filenames', $.option),
-
-    ask_cert_level: $ =>
-      alias('ask-cert-level', $.option),
-
-    no_ask_cert_level: $ =>
-      alias('no-ask-cert-level', $.option),
-
-    default_cert_level: $ => seq(
-      alias('default-cert-level', $.option),
+    _default_cert_level: $ => seq(
+      'default-cert-level',
       $._space,
       alias(/[0-3]/, $.number)
     ),
 
-    min_cert_level: $ => seq(
-      alias('min-cert-level', $.option),
+    _min_cert_level: $ => seq(
+      'min-cert-level',
       $._space,
       alias(/[0-3]/, $.number)
     ),
 
-    trusted_key: $ => seq(
-      alias('trusted-key', $.option),
+    _trusted_key: $ => seq(
+      'trusted-key',
       $._space,
       $.key
     ),
 
-    add_desig_revoker: $ => seq(
-      alias('add-desig-revoker', $.option),
+    _add_desig_revoker: $ => seq(
+      'add-desig-revoker',
       $._space,
       choice(
         $.key,
@@ -395,8 +356,8 @@ module.exports = grammar({
       )
     ),
 
-    trust_model: $ => seq(
-      alias('trust-model', $.option),
+    _trust_model: $ => seq(
+      'trust-model',
       $._space,
       field('model', $._model)
     ),
@@ -411,26 +372,23 @@ module.exports = grammar({
       ci('auto'),
     )),
 
-    always_trust: $ =>
-      alias('always-trust', $.option),
-
-    assert_signer: $ => seq(
-      alias('assert-signer', $.option),
+    _assert_signer: $ => seq(
+      'assert-signer',
       $._space,
       $.string
     ),
 
-    auto_key_locate: $ => prec.right(seq(
-      alias('auto-key-locate', $.option),
+    _auto_key_locate: $ => prec.right(seq(
+      'auto-key-locate',
       $._space,
-      field('mechanism', choice($._mechanism, $.url)),
+      field('mechanism', choice($._key_locate_value, $.url)),
       repeat(seq(
         optional(','),
-        field('mechanism', choice($._mechanism, $.url))
+        field('mechanism', choice($._key_locate_value, $.url))
       ))
     )),
 
-    _mechanism: _ => token(choice(
+    _key_locate_value: _ => token(choice(
       ci('cert'),
       ci('dane'),
       ci('wkd'),
@@ -442,28 +400,13 @@ module.exports = grammar({
       ci('clear'),
     )),
 
-    no_auto_key_locate: $ =>
-      alias('no-auto-key-locate', $.option),
-
-    auto_key_import: $ =>
-      alias('auto-key-import', $.option),
-
-    no_auto_key_import: $ =>
-      alias('no-auto-key-import', $.option),
-
-    auto_key_retrieve: $ =>
-      alias('auto-key-retrieve', $.option),
-
-    no_auto_key_retrieve: $ =>
-      alias('no-auto-key-retrieve', $.option),
-
-    keyid_format: $ => seq(
-      alias('keyid-format', $.option),
+    _keyid_format: $ => seq(
+      'keyid-format',
       $._space,
-      field('format', $._keyid_format)
+      field('format', $._keyid_format_value)
     ),
 
-    _keyid_format: _ => token(choice(
+    _keyid_format_value: _ => token(choice(
       ci('none'),
       ci('short'),
       ci('0xshort'),
@@ -471,48 +414,33 @@ module.exports = grammar({
       ci('0xlong'),
     )),
 
-    keyserver: $ => seq(
-      alias('keyserver', $.option),
+    _keyserver: $ => seq(
+      'keyserver',
       $._space,
       $.url
     ),
 
     // TODO: keyserver_options
 
-    completes_needed: $ => seq(
-      alias('completes-needed', $.option),
+    _completes_needed: $ => seq(
+      'completes-needed',
       $._space,
       $.number,
     ),
 
-    marginals_needed: $ => seq(
-      alias('marginals-needed', $.option),
+    _marginals_needed: $ => seq(
+      'marginals-needed',
       $._space,
       $.number,
     ),
 
-    tofu_default_policy: $ => seq(
-      alias('tofu-default-policy', $.option),
+    _tofu_default_policy: $ => seq(
+      'tofu-default-policy',
       $._space,
-      field('policy', $._tofu_policy)
+      field('policy', $._tofu_policy_value)
     ),
 
-    max_cert_depth: $ => seq(
-      alias('max-cert-depth', $.option),
-      $._space,
-      $.number,
-    ),
-
-    no_sig_cache: $ =>
-      alias('no-sig-cache', $.option),
-
-    auto_check_trustdb: $ =>
-      alias('auto-check-trustdb', $.option),
-
-    no_auto_check_trustdb: $ =>
-      alias('no-auto-check-trustdb', $.option),
-
-    _tofu_policy: _ => token(choice(
+    _tofu_policy_value: _ => token(choice(
       ci('auto'),
       ci('good'),
       ci('unknown'),
@@ -520,193 +448,130 @@ module.exports = grammar({
       ci('ask'),
     )),
 
-    agent_program: $ => seq(
-      alias('agent-program', $.option),
-      $._space,
-      $.string
-    ),
-
-    dirmngr_program: $ => seq(
-      alias('dirmngr-program', $.option),
-      $._space,
-      $.string
-    ),
-
-    disable_dirmngr: $ =>
-      alias('disable-dirmngr', $.option),
-
-    no_autostart: $ =>
-      alias('no-autostart', $.option),
-
-    lock_once: $ =>
-      alias('lock-once', $.option),
-
-    lock_multiple: $ =>
-      alias('lock-multiple', $.option),
-
-    lock_never: $ =>
-      alias('lock-never', $.option),
-
-    exit_on_status_write_error: $ =>
-      alias('exit-on-status-write-error', $.option),
-
-    limit_card_insert_tries: $ => seq(
-      alias('limit-card-insert-tries', $.option),
+    _max_cert_depth: $ => seq(
+      'max-cert-depth',
       $._space,
       $.number,
     ),
 
-    no_random_seed_file: $ =>
-      alias('no-random-seed-file', $.option),
-
-    no_greeting: $ =>
-      alias('no-greeting', $.option),
-
-    no_secmem_warning: $ =>
-      alias('no-secmem-warning', $.option),
-
-    no_permission_warning: $ =>
-      alias('no-permission-warning', $.option),
-
-    require_secmem: $ =>
-      alias('require-secmem', $.option),
-
-    no_require_secmem: $ =>
-      alias('no-require-secmem', $.option),
-
-    require_cross_verification: $ =>
-      alias('require-cross-verification', $.option),
-
-    no_require_cross_verification: $ =>
-      alias('no-require-cross-verification', $.option),
-
-    expert: $ =>
-      alias('expert', $.option),
-
-    no_expert: $ =>
-      alias('no-expert', $.option),
-
-    recipient: $ => seq(
-      alias('recipient', $.option),
+    _agent_program: $ => seq(
+      'agent-program',
       $._space,
       $.string
     ),
 
-    hidden_recipient: $ => seq(
-      alias('hidden-recipient', $.option),
+    _dirmngr_program: $ => seq(
+      'dirmngr-program',
       $._space,
       $.string
     ),
 
-    recipient_file: $ => seq(
-      alias('recipient-file', $.option),
+    _limit_card_insert_tries: $ => seq(
+      'limit-card-insert-tries',
+      $._space,
+      $.number
+    ),
+
+    _recipient: $ => seq(
+      'recipient',
       $._space,
       $.string
     ),
 
-    hidden_recipient_file: $ => seq(
-      alias('hidden-recipient-file', $.option),
+    _hidden_recipient: $ => seq(
+      'hidden-recipient',
       $._space,
       $.string
     ),
 
-    encrypt_to: $ => seq(
-      alias('encrypt-to', $.option),
+    _recipient_file: $ => seq(
+      'recipient-file',
       $._space,
       $.string
     ),
 
-    hidden_encrypt_to: $ => seq(
-      alias('hidden-encrypt-to', $.option),
+    _hidden_recipient_file: $ => seq(
+      'hidden-recipient-file',
       $._space,
       $.string
     ),
 
-    no_encrypt_to: $ =>
-      alias('no-encrypt-to', $.option),
+    _encrypt_to: $ => seq(
+      'encrypt-to',
+      $._space,
+      $.string
+    ),
 
-    group: $ => seq(
-      alias('group', $.option),
+    _hidden_encrypt_to: $ => seq(
+      'hidden-encrypt-to',
+      $._space,
+      $.string
+    ),
+
+    _group: $ => seq(
+      'group',
       $._space,
       field('name', $.string),
       token.immediate('='),
       field('value', $.string)
     ),
 
-    ungroup: $ => seq(
-      alias('ungroup', $.option),
+    _ungroup: $ => seq(
+      'ungroup',
       $._space,
       $.string
     ),
 
-    no_groups: $ =>
-      alias('no-groups', $.option),
-
-    local_user: $ => seq(
-      alias('local-user', $.option),
+    _local_user: $ => seq(
+      'local-user',
       $._space,
       $.string
     ),
 
-    sender: $ => seq(
-      alias('sender', $.option),
+    _sender: $ => seq(
+      'sender',
       $._space,
       $.string
     ),
 
-    try_secret_name: $ => seq(
-      alias('try-secret-name', $.option),
+    _try_secret_name: $ => seq(
+      'try-secret-name',
       $._space,
       $.string
     ),
 
-    try_all_secrets: $ =>
-      alias('try-all-secrets', $.option),
-
-    skip_hidden_recipients: $ =>
-      alias('skip-hidden-recipients', $.option),
-
-    no_skip_hidden_recipients: $ =>
-      alias('no-skip-hidden-recipients', $.option),
-
-    armor: $ =>
-      alias('armor', $.option),
-
-    no_armor: $ =>
-      alias('no-armor', $.option),
-
-    output: $ => seq(
-      alias('output', $.option),
+    _output: $ => seq(
+      'output',
       $._space,
       $.string
     ),
 
-    max_output: $ => seq(
-      alias('max-output', $.option),
+    _max_output: $ => seq(
+      'max-output',
       $._space,
       $.number
     ),
 
-    chunk_size: $ => seq(
-      alias('chunk-size', $.option),
+    _chunk_size: $ => seq(
+      'chunk-size',
       $._space,
       $.number
     ),
 
-    input_size_hint: $ => seq(
-      alias('input-size-hint', $.option),
+    _input_size_hint: $ => seq(
+      'input-size-hint',
       $._space,
       $.number
     ),
 
-    key_origin: $ => seq(
-      alias('key-origin', $.option),
+    _key_origin: $ => seq(
+      'key-origin',
       $._space,
-      field('origin', $._origin),
+      field('origin', $._origin_value),
       optional(seq(',', $.url))
     ),
 
-    _origin: _ => token(choice(
+    _origin_value: _ => token(choice(
       ci('self'),
       ci('file'),
       ci('url'),
@@ -717,8 +582,8 @@ module.exports = grammar({
       ci('unknown'),
     )),
 
-    import_options: $ => prec.right(seq(
-      alias('import-options', $.option),
+    _import_options: $ => prec.right(seq(
+      'import-options',
       $._space,
       field('parameter', $._import_parameter),
       repeat(seq(
@@ -748,8 +613,8 @@ module.exports = grammar({
 
     // TODO: export_filter
 
-    export_options: $ => prec.right(seq(
-      alias('export-options', $.option),
+    _export_options: $ => prec.right(seq(
+      'export-options',
       $._space,
       field('parameter', $._export_parameter),
       repeat(seq(
@@ -771,53 +636,8 @@ module.exports = grammar({
       ci('mode1003'),
     )),
 
-    with_colons: $ =>
-      alias('with-colons', $.option),
-
-    legacy_list_mode: $ =>
-      alias('legacy-list-mode', $.option),
-
-    with_fingerprint: $ =>
-      alias('with-fingerprint', $.option),
-
-    with_subkey_fingerprint: $ =>
-      alias('with-subkey-fingerprint', $.option),
-
-    with_icao_spelling: $ =>
-      alias('with-icao-spelling', $.option),
-
-    with_keygrip: $ =>
-      alias('with-keygrip', $.option),
-
-    with_key_origin: $ =>
-      alias('with-key-origin', $.option),
-
-    with_wkd_hash: $ =>
-      alias('with-wkd-hash', $.option),
-
-    with_secret: $ =>
-      alias('with-secret', $.option),
-
-    textmode: $ =>
-      alias('textmode', $.option),
-
-    no_textmode: $ =>
-      alias('no-textmode', $.option),
-
-    force_ocb: $ =>
-      alias(choice('force-ocb', 'force-aead'), $.option),
-
-    disable_signer_uid: $ =>
-      alias('disable-signer-uid', $.option),
-
-    include_key_block: $ =>
-      alias('include-key-block', $.option),
-
-    no_include_key_block: $ =>
-      alias('no-include-key-block', $.option),
-
-    personal_cipher_preferences: $ => seq(
-      alias('personal-cipher-preferences', $.option),
+    _personal_cipher_preferences: $ => seq(
+      'personal-cipher-preferences',
       $._space,
       field('algorithm', $._cipher_algo),
       repeat(seq(
@@ -826,8 +646,8 @@ module.exports = grammar({
       ))
     ),
 
-    personal_digest_preferences: $ => seq(
-      alias('personal-digest-preferences', $.option),
+    _personal_digest_preferences: $ => seq(
+      'personal-digest-preferences',
       $._space,
       field('algorithm', $._hash_algo),
       repeat(seq(
@@ -836,8 +656,8 @@ module.exports = grammar({
       ))
     ),
 
-    personal_compress_preferences: $ => seq(
-      alias('personal-compress-preferences', $.option),
+    _personal_compress_preferences: $ => seq(
+      'personal-compress-preferences',
       $._space,
       field('algorithm', $._compression_algo),
       repeat(seq(
@@ -846,8 +666,8 @@ module.exports = grammar({
       ))
     ),
 
-    s2k_cipher_algo: $ => seq(
-      alias('s2k-cipher-algo', $.option),
+    _s2k_cipher_algo: $ => seq(
+      's2k-cipher-algo',
       $._space,
       field('algorithm', $._cipher_algo),
       repeat(seq(
@@ -856,8 +676,8 @@ module.exports = grammar({
       ))
     ),
 
-    s2k_digest_algo: $ => seq(
-      alias('s2k-digest-algo', $.option),
+    _s2k_digest_algo: $ => seq(
+      's2k-digest-algo',
       $._space,
       field('algorithm', $._hash_algo),
       repeat(seq(
@@ -866,46 +686,25 @@ module.exports = grammar({
       ))
     ),
 
-    s2k_mode: $ => seq(
-      alias('s2k-mode', $.option),
+    _s2k_mode: $ => seq(
+      's2k-mode',
       $._space,
       alias(/[013]/, $.number)
     ),
 
-    s2k_count: $ => seq(
-      alias('s2k-count', $.option),
+    _s2k_count: $ => seq(
+      's2k-count',
       $._space,
       $.number
     ),
 
-    gnupg: $ =>
-      alias('gnupg', $.option),
-
-    openpgp: $ =>
-      alias('openpgp', $.option),
-
-    rfc4880: $ =>
-      alias('rfc4880', $.option),
-
-    rfc4880bis: $ =>
-      alias('rfc4880bis', $.option),
-
-    rfc2440: $ =>
-      alias('rfc2440', $.option),
-
-    pgp7: $ =>
-      alias('pgp7', $.option),
-
-    pgp8: $ =>
-      alias('pgp8', $.option),
-
-    compliance: $ => seq(
-      alias('compliance', $.option),
+    _compliance: $ => seq(
+      'compliance',
       $._space,
-      field('mode', $._compliance)
+      field('mode', $._compliance_value)
     ),
 
-    _compliance: _ => token(choice(
+    _compliance_value: _ => token(choice(
       ci('gnupg'),
       ci('openpgp'),
       ci('rfc4880bis'),
@@ -917,14 +716,13 @@ module.exports = grammar({
       ci('de-vs'),
     )),
 
-    min_rsa_length: $ => seq(
-      alias('min-rsa-length', $.option),
+    _min_rsa_length: $ => seq(
+      'min-rsa-length',
       $._space,
       $.number
     ),
 
-    require_compliance: $ =>
-      alias('require-compliance', $.option),
+    _require_compliance: _ => 'require-compliance',
 
     // TODO: GPG Esoteric Options
 

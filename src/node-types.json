@@ -1,284 +1,5 @@
 [
   {
-    "type": "add_desig_revoker",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "key",
-          "named": true
-        },
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "agent_program",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "always_trust",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "armor",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "ask_cert_level",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "assert_signer",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "auto_check_trustdb",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "auto_key_import",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "auto_key_locate",
-    "named": true,
-    "fields": {
-      "mechanism": {
-        "multiple": true,
-        "required": true,
-        "types": [
-          {
-            "type": "url",
-            "named": true
-          }
-        ]
-      }
-    },
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "auto_key_retrieve",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "bzip2_compress_level",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "bzip2_decompress_lowmem",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "chunk_size",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "completes_needed",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "compliance",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "compress_level",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "config",
     "named": true,
     "fields": {},
@@ -287,533 +8,10 @@
       "required": false,
       "types": [
         {
-          "type": "add_desig_revoker",
-          "named": true
-        },
-        {
-          "type": "agent_program",
-          "named": true
-        },
-        {
-          "type": "always_trust",
-          "named": true
-        },
-        {
-          "type": "armor",
-          "named": true
-        },
-        {
-          "type": "ask_cert_level",
-          "named": true
-        },
-        {
-          "type": "assert_signer",
-          "named": true
-        },
-        {
-          "type": "auto_check_trustdb",
-          "named": true
-        },
-        {
-          "type": "auto_key_import",
-          "named": true
-        },
-        {
-          "type": "auto_key_locate",
-          "named": true
-        },
-        {
-          "type": "auto_key_retrieve",
-          "named": true
-        },
-        {
-          "type": "bzip2_compress_level",
-          "named": true
-        },
-        {
-          "type": "bzip2_decompress_lowmem",
-          "named": true
-        },
-        {
-          "type": "chunk_size",
-          "named": true
-        },
-        {
           "type": "comment",
           "named": true
         },
         {
-          "type": "completes_needed",
-          "named": true
-        },
-        {
-          "type": "compliance",
-          "named": true
-        },
-        {
-          "type": "compress_level",
-          "named": true
-        },
-        {
-          "type": "default_cert_level",
-          "named": true
-        },
-        {
-          "type": "default_key",
-          "named": true
-        },
-        {
-          "type": "default_recipient",
-          "named": true
-        },
-        {
-          "type": "default_recipient_self",
-          "named": true
-        },
-        {
-          "type": "dirmngr_program",
-          "named": true
-        },
-        {
-          "type": "disable_dirmngr",
-          "named": true
-        },
-        {
-          "type": "disable_dsa2",
-          "named": true
-        },
-        {
-          "type": "disable_large_rsa",
-          "named": true
-        },
-        {
-          "type": "disable_signer_uid",
-          "named": true
-        },
-        {
-          "type": "display_charset",
-          "named": true
-        },
-        {
-          "type": "enable_dsa2",
-          "named": true
-        },
-        {
-          "type": "enable_large_rsa",
-          "named": true
-        },
-        {
-          "type": "encrypt_to",
-          "named": true
-        },
-        {
-          "type": "exec_path",
-          "named": true
-        },
-        {
-          "type": "exit_on_status_write_error",
-          "named": true
-        },
-        {
-          "type": "expert",
-          "named": true
-        },
-        {
-          "type": "export_options",
-          "named": true
-        },
-        {
-          "type": "force_ocb",
-          "named": true
-        },
-        {
-          "type": "gnupg",
-          "named": true
-        },
-        {
-          "type": "group",
-          "named": true
-        },
-        {
-          "type": "hidden_encrypt_to",
-          "named": true
-        },
-        {
-          "type": "hidden_recipient",
-          "named": true
-        },
-        {
-          "type": "hidden_recipient_file",
-          "named": true
-        },
-        {
-          "type": "import_options",
-          "named": true
-        },
-        {
-          "type": "include_key_block",
-          "named": true
-        },
-        {
-          "type": "input_size_hint",
-          "named": true
-        },
-        {
-          "type": "key_origin",
-          "named": true
-        },
-        {
-          "type": "keyid_format",
-          "named": true
-        },
-        {
-          "type": "keyring",
-          "named": true
-        },
-        {
-          "type": "keyserver",
-          "named": true
-        },
-        {
-          "type": "legacy_list_mode",
-          "named": true
-        },
-        {
-          "type": "limit_card_insert_tries",
-          "named": true
-        },
-        {
-          "type": "list_options",
-          "named": true
-        },
-        {
-          "type": "local_user",
-          "named": true
-        },
-        {
-          "type": "lock_multiple",
-          "named": true
-        },
-        {
-          "type": "lock_never",
-          "named": true
-        },
-        {
-          "type": "lock_once",
-          "named": true
-        },
-        {
-          "type": "mangle_dos_filenames",
-          "named": true
-        },
-        {
-          "type": "marginals_needed",
-          "named": true
-        },
-        {
-          "type": "max_cert_depth",
-          "named": true
-        },
-        {
-          "type": "max_output",
-          "named": true
-        },
-        {
-          "type": "min_cert_level",
-          "named": true
-        },
-        {
-          "type": "min_rsa_length",
-          "named": true
-        },
-        {
-          "type": "no_armor",
-          "named": true
-        },
-        {
-          "type": "no_ask_cert_level",
-          "named": true
-        },
-        {
-          "type": "no_auto_check_trustdb",
-          "named": true
-        },
-        {
-          "type": "no_auto_key_import",
-          "named": true
-        },
-        {
-          "type": "no_auto_key_locate",
-          "named": true
-        },
-        {
-          "type": "no_auto_key_retrieve",
-          "named": true
-        },
-        {
-          "type": "no_autostart",
-          "named": true
-        },
-        {
-          "type": "no_compress",
-          "named": true
-        },
-        {
-          "type": "no_default_recipient",
-          "named": true
-        },
-        {
-          "type": "no_encrypt_to",
-          "named": true
-        },
-        {
-          "type": "no_expert",
-          "named": true
-        },
-        {
-          "type": "no_greeting",
-          "named": true
-        },
-        {
-          "type": "no_groups",
-          "named": true
-        },
-        {
-          "type": "no_include_key_block",
-          "named": true
-        },
-        {
-          "type": "no_mangle_dos_filenames",
-          "named": true
-        },
-        {
-          "type": "no_permission_warning",
-          "named": true
-        },
-        {
-          "type": "no_random_seed_file",
-          "named": true
-        },
-        {
-          "type": "no_require_cross_verification",
-          "named": true
-        },
-        {
-          "type": "no_require_secmem",
-          "named": true
-        },
-        {
-          "type": "no_secmem_warning",
-          "named": true
-        },
-        {
-          "type": "no_sig_cache",
-          "named": true
-        },
-        {
-          "type": "no_skip_hidden_recipients",
-          "named": true
-        },
-        {
-          "type": "no_textmode",
-          "named": true
-        },
-        {
-          "type": "no_tty",
-          "named": true
-        },
-        {
-          "type": "no_utf8_strings",
-          "named": true
-        },
-        {
-          "type": "openpgp",
-          "named": true
-        },
-        {
-          "type": "output",
-          "named": true
-        },
-        {
-          "type": "personal_cipher_preferences",
-          "named": true
-        },
-        {
-          "type": "personal_compress_preferences",
-          "named": true
-        },
-        {
-          "type": "personal_digest_preferences",
-          "named": true
-        },
-        {
-          "type": "pgp7",
-          "named": true
-        },
-        {
-          "type": "pgp8",
-          "named": true
-        },
-        {
-          "type": "photo_viewer",
-          "named": true
-        },
-        {
-          "type": "primary_keyring",
-          "named": true
-        },
-        {
-          "type": "recipient",
-          "named": true
-        },
-        {
-          "type": "recipient_file",
-          "named": true
-        },
-        {
-          "type": "require_compliance",
-          "named": true
-        },
-        {
-          "type": "require_cross_verification",
-          "named": true
-        },
-        {
-          "type": "require_secmem",
-          "named": true
-        },
-        {
-          "type": "rfc2440",
-          "named": true
-        },
-        {
-          "type": "rfc4880",
-          "named": true
-        },
-        {
-          "type": "rfc4880bis",
-          "named": true
-        },
-        {
-          "type": "s2k_cipher_algo",
-          "named": true
-        },
-        {
-          "type": "s2k_count",
-          "named": true
-        },
-        {
-          "type": "s2k_digest_algo",
-          "named": true
-        },
-        {
-          "type": "s2k_mode",
-          "named": true
-        },
-        {
-          "type": "sender",
-          "named": true
-        },
-        {
-          "type": "skip_hidden_recipients",
-          "named": true
-        },
-        {
-          "type": "textmode",
-          "named": true
-        },
-        {
-          "type": "tofu_default_policy",
-          "named": true
-        },
-        {
-          "type": "trust_model",
-          "named": true
-        },
-        {
-          "type": "trustdb_name",
-          "named": true
-        },
-        {
-          "type": "trusted_key",
-          "named": true
-        },
-        {
-          "type": "try_all_secrets",
-          "named": true
-        },
-        {
-          "type": "try_secret_name",
-          "named": true
-        },
-        {
-          "type": "ungroup",
-          "named": true
-        },
-        {
-          "type": "unknown_option",
-          "named": true
-        },
-        {
-          "type": "utf8_strings",
-          "named": true
-        },
-        {
-          "type": "verbose",
-          "named": true
-        },
-        {
-          "type": "verify_options",
-          "named": true
-        },
-        {
-          "type": "with_colons",
-          "named": true
-        },
-        {
-          "type": "with_fingerprint",
-          "named": true
-        },
-        {
-          "type": "with_icao_spelling",
-          "named": true
-        },
-        {
-          "type": "with_key_origin",
-          "named": true
-        },
-        {
-          "type": "with_keygrip",
-          "named": true
-        },
-        {
-          "type": "with_secret",
-          "named": true
-        },
-        {
-          "type": "with_subkey_fingerprint",
-          "named": true
-        },
-        {
-          "type": "with_wkd_hash",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "default_cert_level",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "number",
-          "named": true
-        },
-        {
           "type": "option",
           "named": true
         }
@@ -821,302 +19,22 @@
     }
   },
   {
-    "type": "default_key",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "key",
-          "named": true
-        },
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "default_recipient",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "default_recipient_self",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "dirmngr_program",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "disable_dirmngr",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "disable_dsa2",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "disable_large_rsa",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "disable_signer_uid",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "display_charset",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "enable_dsa2",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "enable_large_rsa",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "encrypt_to",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "exec_path",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "exit_on_status_write_error",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "expert",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "export_options",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "force_ocb",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "gnupg",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "group",
+    "type": "option",
     "named": true,
     "fields": {
+      "mechanism": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "url",
+            "named": true
+          }
+        ]
+      },
       "name": {
         "multiple": false,
-        "required": true,
+        "required": false,
         "types": [
           {
             "type": "string",
@@ -1126,7 +44,7 @@
       },
       "value": {
         "multiple": false,
-        "required": true,
+        "required": false,
         "types": [
           {
             "type": "string",
@@ -1137,1163 +55,22 @@
     },
     "children": {
       "multiple": false,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "hidden_encrypt_to",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
+          "type": "key",
           "named": true
         },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "hidden_recipient",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "hidden_recipient_file",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "import_options",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "include_key_block",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "input_size_hint",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
         {
           "type": "number",
           "named": true
         },
         {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "key_origin",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
+          "type": "string",
           "named": true
         },
         {
           "type": "url",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "keyid_format",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "keyring",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "keyserver",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "url",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "legacy_list_mode",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "limit_card_insert_tries",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "list_options",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "local_user",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "lock_multiple",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "lock_never",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "lock_once",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "mangle_dos_filenames",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "marginals_needed",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "max_cert_depth",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "max_output",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "min_cert_level",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "min_rsa_length",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_armor",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_ask_cert_level",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_auto_check_trustdb",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_auto_key_import",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_auto_key_locate",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_auto_key_retrieve",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_autostart",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_compress",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_default_recipient",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_encrypt_to",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_expert",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_greeting",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_groups",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_include_key_block",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_mangle_dos_filenames",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_permission_warning",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_random_seed_file",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_require_cross_verification",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_require_secmem",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_secmem_warning",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_sig_cache",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_skip_hidden_recipients",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_textmode",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_tty",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "no_utf8_strings",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "openpgp",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "output",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "personal_cipher_preferences",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "personal_compress_preferences",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "personal_digest_preferences",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "pgp7",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "pgp8",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "photo_viewer",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "primary_keyring",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "recipient",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "recipient_file",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "require_compliance",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "require_cross_verification",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "require_secmem",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "rfc2440",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "rfc4880",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "rfc4880bis",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "s2k_cipher_algo",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "s2k_count",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "s2k_digest_algo",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "s2k_mode",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "sender",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "skip_hidden_recipients",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
           "named": true
         }
       ]
@@ -2320,326 +97,6 @@
     }
   },
   {
-    "type": "textmode",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "tofu_default_policy",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "trust_model",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "trustdb_name",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "trusted_key",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "key",
-          "named": true
-        },
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "try_all_secrets",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "try_secret_name",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "ungroup",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "unknown_option",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "utf8_strings",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "verbose",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "verify_options",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "with_colons",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "with_fingerprint",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "with_icao_spelling",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "with_key_origin",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "with_keygrip",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "with_secret",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "with_subkey_fingerprint",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "with_wkd_hash",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "option",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "\"",
     "named": false
   },
@@ -2660,6 +117,58 @@
     "named": false
   },
   {
+    "type": "add-desig-revoker",
+    "named": false
+  },
+  {
+    "type": "agent-program",
+    "named": false
+  },
+  {
+    "type": "always-trust",
+    "named": false
+  },
+  {
+    "type": "armor",
+    "named": false
+  },
+  {
+    "type": "ask-cert-level",
+    "named": false
+  },
+  {
+    "type": "assert-signer",
+    "named": false
+  },
+  {
+    "type": "auto-check-trustdb",
+    "named": false
+  },
+  {
+    "type": "auto-key-import",
+    "named": false
+  },
+  {
+    "type": "auto-key-locate",
+    "named": false
+  },
+  {
+    "type": "auto-key-retrieve",
+    "named": false
+  },
+  {
+    "type": "bzip2-compress-level",
+    "named": false
+  },
+  {
+    "type": "bzip2-decompress-lowmem",
+    "named": false
+  },
+  {
+    "type": "chunk-size",
+    "named": false
+  },
+  {
     "type": "clear",
     "named": false
   },
@@ -2668,27 +177,467 @@
     "named": true
   },
   {
+    "type": "completes-needed",
+    "named": false
+  },
+  {
+    "type": "compliance",
+    "named": false
+  },
+  {
+    "type": "compress-level",
+    "named": false
+  },
+  {
+    "type": "default-cert-level",
+    "named": false
+  },
+  {
+    "type": "default-key",
+    "named": false
+  },
+  {
+    "type": "default-recipient",
+    "named": false
+  },
+  {
+    "type": "default-recipient-self",
+    "named": false
+  },
+  {
+    "type": "dirmngr-program",
+    "named": false
+  },
+  {
+    "type": "disable-dirmngr",
+    "named": false
+  },
+  {
+    "type": "disable-dsa2",
+    "named": false
+  },
+  {
+    "type": "disable-large-rsa",
+    "named": false
+  },
+  {
+    "type": "disable-signer-uid",
+    "named": false
+  },
+  {
+    "type": "display-charset",
+    "named": false
+  },
+  {
+    "type": "enable-dsa2",
+    "named": false
+  },
+  {
+    "type": "enable-large-rsa",
+    "named": false
+  },
+  {
+    "type": "encrypt-to",
+    "named": false
+  },
+  {
+    "type": "exec-path",
+    "named": false
+  },
+  {
+    "type": "exit-on-status-write-error",
+    "named": false
+  },
+  {
+    "type": "expert",
+    "named": false
+  },
+  {
+    "type": "export-options",
+    "named": false
+  },
+  {
+    "type": "force-aead",
+    "named": false
+  },
+  {
+    "type": "force-ocb",
+    "named": false
+  },
+  {
     "type": "format",
     "named": true
+  },
+  {
+    "type": "gnupg",
+    "named": false
+  },
+  {
+    "type": "group",
+    "named": false
+  },
+  {
+    "type": "hidden-encrypt-to",
+    "named": false
+  },
+  {
+    "type": "hidden-recipient",
+    "named": false
+  },
+  {
+    "type": "hidden-recipient-file",
+    "named": false
+  },
+  {
+    "type": "import-options",
+    "named": false
+  },
+  {
+    "type": "include-key-block",
+    "named": false
+  },
+  {
+    "type": "input-size-hint",
+    "named": false
   },
   {
     "type": "key",
     "named": true
   },
   {
+    "type": "key-origin",
+    "named": false
+  },
+  {
+    "type": "keyid-format",
+    "named": false
+  },
+  {
+    "type": "keyring",
+    "named": false
+  },
+  {
+    "type": "keyserver",
+    "named": false
+  },
+  {
+    "type": "legacy-list-mode",
+    "named": false
+  },
+  {
+    "type": "limit-card-insert-tries",
+    "named": false
+  },
+  {
+    "type": "list-options",
+    "named": false
+  },
+  {
+    "type": "local-user",
+    "named": false
+  },
+  {
+    "type": "lock-multiple",
+    "named": false
+  },
+  {
+    "type": "lock-never",
+    "named": false
+  },
+  {
+    "type": "lock-once",
+    "named": false
+  },
+  {
+    "type": "mangle-dos-filenames",
+    "named": false
+  },
+  {
+    "type": "marginals-needed",
+    "named": false
+  },
+  {
+    "type": "max-cert-depth",
+    "named": false
+  },
+  {
+    "type": "max-output",
+    "named": false
+  },
+  {
+    "type": "min-cert-level",
+    "named": false
+  },
+  {
+    "type": "min-rsa-length",
+    "named": false
+  },
+  {
+    "type": "no-armor",
+    "named": false
+  },
+  {
+    "type": "no-ask-cert-level",
+    "named": false
+  },
+  {
+    "type": "no-auto-check-trustdb",
+    "named": false
+  },
+  {
+    "type": "no-auto-key-import",
+    "named": false
+  },
+  {
+    "type": "no-auto-key-locate",
+    "named": false
+  },
+  {
+    "type": "no-auto-key-retrieve",
+    "named": false
+  },
+  {
+    "type": "no-autostart",
+    "named": false
+  },
+  {
+    "type": "no-compress",
+    "named": false
+  },
+  {
+    "type": "no-default-recipient",
+    "named": false
+  },
+  {
+    "type": "no-encrypt-to",
+    "named": false
+  },
+  {
+    "type": "no-expert",
+    "named": false
+  },
+  {
+    "type": "no-greeting",
+    "named": false
+  },
+  {
+    "type": "no-groups",
+    "named": false
+  },
+  {
+    "type": "no-include-key-block",
+    "named": false
+  },
+  {
+    "type": "no-mangle-dos-filenames",
+    "named": false
+  },
+  {
+    "type": "no-permission-warning",
+    "named": false
+  },
+  {
+    "type": "no-random-seed-file",
+    "named": false
+  },
+  {
+    "type": "no-require-cross-verification",
+    "named": false
+  },
+  {
+    "type": "no-require-secmem",
+    "named": false
+  },
+  {
+    "type": "no-secmem-warning",
+    "named": false
+  },
+  {
+    "type": "no-sig-cache",
+    "named": false
+  },
+  {
+    "type": "no-skip-hidden-recipients",
+    "named": false
+  },
+  {
+    "type": "no-textmode",
+    "named": false
+  },
+  {
+    "type": "no-tty",
+    "named": false
+  },
+  {
     "type": "number",
     "named": true
   },
   {
-    "type": "option",
-    "named": true
+    "type": "openpgp",
+    "named": false
+  },
+  {
+    "type": "output",
+    "named": false
+  },
+  {
+    "type": "personal-cipher-preferences",
+    "named": false
+  },
+  {
+    "type": "personal-compress-preferences",
+    "named": false
+  },
+  {
+    "type": "personal-digest-preferences",
+    "named": false
+  },
+  {
+    "type": "pgp7",
+    "named": false
+  },
+  {
+    "type": "pgp8",
+    "named": false
+  },
+  {
+    "type": "photo-viewer",
+    "named": false
+  },
+  {
+    "type": "primary-keyring",
+    "named": false
+  },
+  {
+    "type": "recipient",
+    "named": false
+  },
+  {
+    "type": "recipient-file",
+    "named": false
+  },
+  {
+    "type": "require-cross-verification",
+    "named": false
+  },
+  {
+    "type": "require-secmem",
+    "named": false
+  },
+  {
+    "type": "rfc2440",
+    "named": false
+  },
+  {
+    "type": "rfc4880",
+    "named": false
+  },
+  {
+    "type": "rfc4880bis",
+    "named": false
+  },
+  {
+    "type": "s2k-cipher-algo",
+    "named": false
+  },
+  {
+    "type": "s2k-count",
+    "named": false
+  },
+  {
+    "type": "s2k-digest-algo",
+    "named": false
+  },
+  {
+    "type": "s2k-mode",
+    "named": false
+  },
+  {
+    "type": "sender",
+    "named": false
   },
   {
     "type": "sensitive:",
     "named": false
   },
   {
+    "type": "skip-hidden-recipients",
+    "named": false
+  },
+  {
+    "type": "textmode",
+    "named": false
+  },
+  {
+    "type": "tofu-default-policy",
+    "named": false
+  },
+  {
+    "type": "trust-model",
+    "named": false
+  },
+  {
+    "type": "trustdb-name",
+    "named": false
+  },
+  {
+    "type": "trusted-key",
+    "named": false
+  },
+  {
+    "type": "try-all-secrets",
+    "named": false
+  },
+  {
+    "type": "try-secret-name",
+    "named": false
+  },
+  {
+    "type": "ungroup",
+    "named": false
+  },
+  {
     "type": "url",
     "named": true
+  },
+  {
+    "type": "verbose",
+    "named": false
+  },
+  {
+    "type": "verify-options",
+    "named": false
+  },
+  {
+    "type": "with-colons",
+    "named": false
+  },
+  {
+    "type": "with-fingerprint",
+    "named": false
+  },
+  {
+    "type": "with-icao-spelling",
+    "named": false
+  },
+  {
+    "type": "with-key-origin",
+    "named": false
+  },
+  {
+    "type": "with-keygrip",
+    "named": false
+  },
+  {
+    "type": "with-secret",
+    "named": false
+  },
+  {
+    "type": "with-subkey-fingerprint",
+    "named": false
+  },
+  {
+    "type": "with-wkd-hash",
+    "named": false
   }
 ]
