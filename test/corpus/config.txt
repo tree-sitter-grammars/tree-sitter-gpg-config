@@ -1,0 +1,25 @@
+================================================================================
+Some options
+================================================================================
+
+# Taken from my gpg.conf
+
+default-key 8A2DEA1DBAEBCA9E
+keyserver hkps://keyserver.ubuntu.com
+no-greeting
+photo-viewer "display %i"
+weak-digest SHA1
+
+--------------------------------------------------------------------------------
+
+(config
+  (comment)
+  (option
+    (key))
+  (option
+    (url))
+  (option)
+  (option
+    (string
+      (format)))
+  (option))
