@@ -900,51 +900,8 @@
         {
           "type": "SYMBOL",
           "name": "_chuid"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_unknown_option"
         }
       ]
-    },
-    "_unknown_option": {
-      "type": "PREC",
-      "value": -1,
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "PATTERN",
-            "value": "[a-z0-9-]+"
-          },
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SEQ",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "_space"
-                  },
-                  {
-                    "type": "ALIAS",
-                    "content": {
-                      "type": "PATTERN",
-                      "value": ".+"
-                    },
-                    "named": true,
-                    "value": "string"
-                  }
-                ]
-              },
-              {
-                "type": "BLANK"
-              }
-            ]
-          }
-        ]
-      }
     },
     "_default_key": {
       "type": "SEQ",

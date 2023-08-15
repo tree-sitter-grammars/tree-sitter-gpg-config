@@ -275,16 +275,7 @@ module.exports = grammar({
       $._default_preference_list,
       $._default_keyserver_url,
       $._chuid,
-      $._unknown_option
     ),
-
-    _unknown_option: $ => prec(-1, seq(
-      /[a-z0-9-]+/,
-      optional(seq(
-        $._space,
-        alias(/.+/, $.string)
-      ))
-    )),
 
     // Configuration options
 
