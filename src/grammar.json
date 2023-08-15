@@ -546,6 +546,362 @@
           "name": "_require_compliance"
         },
         {
+          "type": "STRING",
+          "value": "list-only"
+        },
+        {
+          "type": "STRING",
+          "value": "interactive"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_debug_level"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_debug"
+        },
+        {
+          "type": "STRING",
+          "value": "debug-all"
+        },
+        {
+          "type": "STRING",
+          "value": "debug-iolbf"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_debug_set_iobuf_size"
+        },
+        {
+          "type": "STRING",
+          "value": "debug-allow-large-chunks"
+        },
+        {
+          "type": "STRING",
+          "value": "debug-ignore-expiration"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_faked_system_time"
+        },
+        {
+          "type": "STRING",
+          "value": "full-timestrings"
+        },
+        {
+          "type": "STRING",
+          "value": "enable-progress-filter"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_status_fd"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_status_file"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_logger_fd"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_logger_file"
+        },
+        {
+          "type": "STRING",
+          "value": "log-time"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_status_fd"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_comment"
+        },
+        {
+          "type": "STRING",
+          "value": "no-comments"
+        },
+        {
+          "type": "STRING",
+          "value": "emit-version"
+        },
+        {
+          "type": "STRING",
+          "value": "no-emit-version"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_known_notation"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_sig_policy_url"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_cert_policy_url"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_set_policy_url"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_sig_keyserver_url"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_set_filename"
+        },
+        {
+          "type": "STRING",
+          "value": "for-your-eyes-only"
+        },
+        {
+          "type": "STRING",
+          "value": "no-for-your-eyes-only"
+        },
+        {
+          "type": "STRING",
+          "value": "use-embedded-filename"
+        },
+        {
+          "type": "STRING",
+          "value": "no-use-embedded-filename"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_cipher_algo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_digest_algo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_compress_algo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_cert_digest_algo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_disable_cipher_algo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_disable_pubkey_algo"
+        },
+        {
+          "type": "STRING",
+          "value": "throw-keyids"
+        },
+        {
+          "type": "STRING",
+          "value": "no-throw-keyids"
+        },
+        {
+          "type": "STRING",
+          "value": "not-dash-escaped"
+        },
+        {
+          "type": "STRING",
+          "value": "escape-from-lines"
+        },
+        {
+          "type": "STRING",
+          "value": "no-escape-from-lines"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_passphrase_repeat"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_passphrase_fd"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_passphrase_file"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_passphrase"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_pinentry_mode"
+        },
+        {
+          "type": "STRING",
+          "value": "no-symkey-cache"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_request_origin"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_command_fd"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_command_file"
+        },
+        {
+          "type": "STRING",
+          "value": "allow-non-selfsigned-uid"
+        },
+        {
+          "type": "STRING",
+          "value": "no-allow-non-selfsigned-uid"
+        },
+        {
+          "type": "STRING",
+          "value": "allow-freeform-uid"
+        },
+        {
+          "type": "STRING",
+          "value": "ignore-time-conflict"
+        },
+        {
+          "type": "STRING",
+          "value": "ignore-valid-from"
+        },
+        {
+          "type": "STRING",
+          "value": "ignore-crc-error"
+        },
+        {
+          "type": "STRING",
+          "value": "ignore-mdc-error"
+        },
+        {
+          "type": "STRING",
+          "value": "allow-old-cipher-algos"
+        },
+        {
+          "type": "STRING",
+          "value": "allow-weak-digest-algos"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_weak_digest"
+        },
+        {
+          "type": "STRING",
+          "value": "allow-weak-key-signatures"
+        },
+        {
+          "type": "STRING",
+          "value": "override-compliance-check"
+        },
+        {
+          "type": "STRING",
+          "value": "no-default-keyring"
+        },
+        {
+          "type": "STRING",
+          "value": "no-keyring"
+        },
+        {
+          "type": "STRING",
+          "value": "skip-verify"
+        },
+        {
+          "type": "STRING",
+          "value": "with-key-data"
+        },
+        {
+          "type": "STRING",
+          "value": "list-signatures"
+        },
+        {
+          "type": "STRING",
+          "value": "list-sigs"
+        },
+        {
+          "type": "STRING",
+          "value": "fast-list-mode"
+        },
+        {
+          "type": "STRING",
+          "value": "show-session-key"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_override_session_key"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_override_session_key_fd"
+        },
+        {
+          "type": "STRING",
+          "value": "ask-sig-expire"
+        },
+        {
+          "type": "STRING",
+          "value": "no-ask-sig-expire"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_default_sig_expire"
+        },
+        {
+          "type": "STRING",
+          "value": "ask-cert-expire"
+        },
+        {
+          "type": "STRING",
+          "value": "no-ask-cert-expire"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_default_cert_expire"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_default_new_key_algo"
+        },
+        {
+          "type": "STRING",
+          "value": "no-auto-trust-new-key"
+        },
+        {
+          "type": "STRING",
+          "value": "force-sign-key"
+        },
+        {
+          "type": "STRING",
+          "value": "forbid-gen-key"
+        },
+        {
+          "type": "STRING",
+          "value": "enable-special-filenames"
+        },
+        {
+          "type": "STRING",
+          "value": "preserve-permissions"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_default_preference_list"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_default_keyserver_url"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_chuid"
+        },
+        {
           "type": "SYMBOL",
           "name": "_unknown_option"
         }
@@ -1019,7 +1375,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "format"
+                  "name": "_command_format"
                 }
               ]
             }
@@ -1050,7 +1406,7 @@
                     },
                     {
                       "type": "SYMBOL",
-                      "name": "format"
+                      "name": "_command_format"
                     }
                   ]
                 }
@@ -1087,7 +1443,7 @@
                     },
                     {
                       "type": "SYMBOL",
-                      "name": "format"
+                      "name": "_command_format"
                     }
                   ]
                 }
@@ -1101,9 +1457,14 @@
         }
       ]
     },
-    "format": {
-      "type": "PATTERN",
-      "value": "%[iIkKftTvVU%]"
+    "_command_format": {
+      "type": "ALIAS",
+      "content": {
+        "type": "PATTERN",
+        "value": "%[iIkKftTvVU%]"
+      },
+      "named": true,
+      "value": "format"
     },
     "_exec_path": {
       "type": "SEQ",
@@ -1186,7 +1547,7 @@
         },
         {
           "type": "FIELD",
-          "name": "charset",
+          "name": "parameter",
           "content": {
             "type": "SYMBOL",
             "name": "_charset_value"
@@ -1422,7 +1783,7 @@
         },
         {
           "type": "FIELD",
-          "name": "model",
+          "name": "parameter",
           "content": {
             "type": "SYMBOL",
             "name": "_model"
@@ -1534,7 +1895,7 @@
           },
           {
             "type": "FIELD",
-            "name": "mechanism",
+            "name": "parameter",
             "content": {
               "type": "CHOICE",
               "members": [
@@ -1568,7 +1929,7 @@
                 },
                 {
                   "type": "FIELD",
-                  "name": "mechanism",
+                  "name": "parameter",
                   "content": {
                     "type": "CHOICE",
                     "members": [
@@ -1691,7 +2052,7 @@
         },
         {
           "type": "FIELD",
-          "name": "format",
+          "name": "parameter",
           "content": {
             "type": "SYMBOL",
             "name": "_keyid_format_value"
@@ -1816,7 +2177,7 @@
         },
         {
           "type": "FIELD",
-          "name": "policy",
+          "name": "parameter",
           "content": {
             "type": "SYMBOL",
             "name": "_tofu_policy_value"
@@ -2232,10 +2593,10 @@
         },
         {
           "type": "FIELD",
-          "name": "origin",
+          "name": "parameter",
           "content": {
             "type": "SYMBOL",
-            "name": "_origin_value"
+            "name": "_key_origin_value"
           }
         },
         {
@@ -2261,7 +2622,7 @@
         }
       ]
     },
-    "_origin_value": {
+    "_key_origin_value": {
       "type": "TOKEN",
       "content": {
         "type": "CHOICE",
@@ -2692,10 +3053,10 @@
         },
         {
           "type": "FIELD",
-          "name": "algorithm",
+          "name": "parameter",
           "content": {
             "type": "SYMBOL",
-            "name": "_cipher_algo"
+            "name": "_cipher_algo_value"
           }
         },
         {
@@ -2717,10 +3078,10 @@
               },
               {
                 "type": "FIELD",
-                "name": "algorithm",
+                "name": "parameter",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_cipher_algo"
+                  "name": "_cipher_algo_value"
                 }
               }
             ]
@@ -2741,10 +3102,10 @@
         },
         {
           "type": "FIELD",
-          "name": "algorithm",
+          "name": "parameter",
           "content": {
             "type": "SYMBOL",
-            "name": "_hash_algo"
+            "name": "_hash_algo_value"
           }
         },
         {
@@ -2766,10 +3127,10 @@
               },
               {
                 "type": "FIELD",
-                "name": "algorithm",
+                "name": "parameter",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_hash_algo"
+                  "name": "_hash_algo_value"
                 }
               }
             ]
@@ -2790,10 +3151,10 @@
         },
         {
           "type": "FIELD",
-          "name": "algorithm",
+          "name": "parameter",
           "content": {
             "type": "SYMBOL",
-            "name": "_compression_algo"
+            "name": "_compression_algo_value"
           }
         },
         {
@@ -2815,10 +3176,10 @@
               },
               {
                 "type": "FIELD",
-                "name": "algorithm",
+                "name": "parameter",
                 "content": {
                   "type": "SYMBOL",
-                  "name": "_compression_algo"
+                  "name": "_compression_algo_value"
                 }
               }
             ]
@@ -2839,38 +3200,10 @@
         },
         {
           "type": "FIELD",
-          "name": "algorithm",
+          "name": "parameter",
           "content": {
             "type": "SYMBOL",
-            "name": "_cipher_algo"
-          }
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "STRING",
-                    "value": ","
-                  },
-                  {
-                    "type": "BLANK"
-                  }
-                ]
-              },
-              {
-                "type": "FIELD",
-                "name": "algorithm",
-                "content": {
-                  "type": "SYMBOL",
-                  "name": "_cipher_algo"
-                }
-              }
-            ]
+            "name": "_cipher_algo_value"
           }
         }
       ]
@@ -2888,38 +3221,10 @@
         },
         {
           "type": "FIELD",
-          "name": "algorithm",
+          "name": "parameter",
           "content": {
             "type": "SYMBOL",
-            "name": "_hash_algo"
-          }
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "STRING",
-                    "value": ","
-                  },
-                  {
-                    "type": "BLANK"
-                  }
-                ]
-              },
-              {
-                "type": "FIELD",
-                "name": "algorithm",
-                "content": {
-                  "type": "SYMBOL",
-                  "name": "_hash_algo"
-                }
-              }
-            ]
+            "name": "_hash_algo_value"
           }
         }
       ]
@@ -2976,7 +3281,7 @@
         },
         {
           "type": "FIELD",
-          "name": "mode",
+          "name": "parameter",
           "content": {
             "type": "SYMBOL",
             "name": "_compliance_value"
@@ -3094,17 +3399,1251 @@
       "type": "STRING",
       "value": "require-compliance"
     },
+    "_debug_level": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "debug-level"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "FIELD",
+          "name": "parameter",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_debug_level_value"
+          }
+        }
+      ]
+    },
+    "_debug_level_value": {
+      "type": "TOKEN",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "none"
+            },
+            "named": false,
+            "value": "none"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "basic"
+            },
+            "named": false,
+            "value": "basic"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "advanced"
+            },
+            "named": false,
+            "value": "advanced"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "expert"
+            },
+            "named": false,
+            "value": "expert"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "guru"
+            },
+            "named": false,
+            "value": "guru"
+          }
+        ]
+      }
+    },
+    "_debug": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "debug"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_space"
+            },
+            {
+              "type": "FIELD",
+              "name": "parameter",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_debug_flag_value"
+              }
+            },
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "STRING",
+                        "value": ","
+                      },
+                      {
+                        "type": "BLANK"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "FIELD",
+                    "name": "parameter",
+                    "content": {
+                      "type": "SYMBOL",
+                      "name": "_debug_flag_value"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "debug"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_space"
+            },
+            {
+              "type": "ALIAS",
+              "content": {
+                "type": "PATTERN",
+                "value": "(0x)?[0-9]{1,5}"
+              },
+              "named": true,
+              "value": "number"
+            }
+          ]
+        }
+      ]
+    },
+    "_debug_flag_value": {
+      "type": "TOKEN",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "packet"
+            },
+            "named": false,
+            "value": "packet"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "mpi"
+            },
+            "named": false,
+            "value": "mpi"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "crypto"
+            },
+            "named": false,
+            "value": "crypto"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "filter"
+            },
+            "named": false,
+            "value": "filter"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "iobuf"
+            },
+            "named": false,
+            "value": "iobuf"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "memory"
+            },
+            "named": false,
+            "value": "memory"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "cache"
+            },
+            "named": false,
+            "value": "cache"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "memstat"
+            },
+            "named": false,
+            "value": "memstat"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "trust"
+            },
+            "named": false,
+            "value": "trust"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "hashing"
+            },
+            "named": false,
+            "value": "hashing"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "ipc"
+            },
+            "named": false,
+            "value": "ipc"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "clock"
+            },
+            "named": false,
+            "value": "clock"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "lookup"
+            },
+            "named": false,
+            "value": "lookup"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "extprog"
+            },
+            "named": false,
+            "value": "extprog"
+          }
+        ]
+      }
+    },
+    "_debug_set_iobuf_size": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "debug-set-iobuf-size"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        }
+      ]
+    },
+    "_faked_system_time": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "faked-system-time"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "number"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "iso_time"
+                }
+              ]
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "!"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "_status_fd": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "status-fd"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        }
+      ]
+    },
+    "_status_file": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "status-file"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "_logger_fd": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "logger-fd"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        }
+      ]
+    },
+    "_logger_file": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "logger-file"
+            },
+            {
+              "type": "STRING",
+              "value": "log-file"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "_attribute_fd": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "attribute-fd"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        }
+      ]
+    },
+    "_comment": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "comment"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "_notation_format": {
+      "type": "ALIAS",
+      "content": {
+        "type": "PATTERN",
+        "value": "%[kKfsSgpc%]"
+      },
+      "named": true,
+      "value": "format"
+    },
+    "_known_notation": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "known-notation"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "_sig_policy_url": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "sig-policy-url"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "!"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_formatted_url"
+          },
+          "named": true,
+          "value": "url"
+        }
+      ]
+    },
+    "_cert_policy_url": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "cert-policy-url"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "!"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_formatted_url"
+          },
+          "named": true,
+          "value": "url"
+        }
+      ]
+    },
+    "_set_policy_url": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "set-policy-url"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "!"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_formatted_url"
+          },
+          "named": true,
+          "value": "url"
+        }
+      ]
+    },
+    "_sig_keyserver_url": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "sig-keyserver-url"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "!"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_formatted_url"
+          },
+          "named": true,
+          "value": "url"
+        }
+      ]
+    },
+    "_formatted_url": {
+      "type": "REPEAT1",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "PATTERN",
+            "value": "\\S"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_notation_format"
+          }
+        ]
+      }
+    },
+    "_set_filename": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "set-filename"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "_cipher_algo": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "cipher-algo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "FIELD",
+          "name": "parameter",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_cipher_algo_value"
+          }
+        }
+      ]
+    },
+    "_digest_algo": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "digest-algo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "FIELD",
+          "name": "parameter",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_hash_algo_value"
+          }
+        }
+      ]
+    },
+    "_compress_algo": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "compress-algo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "FIELD",
+          "name": "parameter",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_compression_algo_value"
+          }
+        }
+      ]
+    },
+    "_cert_digest_algo": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "cert-digest-algo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "FIELD",
+          "name": "parameter",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_hash_algo_value"
+          }
+        }
+      ]
+    },
+    "_disable_cipher_algo": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "disable-cipher-algo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "FIELD",
+          "name": "parameter",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_cipher_algo_value"
+          }
+        }
+      ]
+    },
+    "_disable_pubkey_algo": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "disable-pubkey-algo"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "FIELD",
+          "name": "parameter",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_pubkey_algo_value"
+          }
+        }
+      ]
+    },
+    "_passphrase_repeat": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "passphrase-repeat"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        }
+      ]
+    },
+    "_passphrase_fd": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "passphrase-fd"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        }
+      ]
+    },
+    "_passphrase_file": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "passphrase-file"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "_passphrase": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "passphrase"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "_pinentry_mode": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "pinentry-mode"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "FIELD",
+          "name": "parameter",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_pinentry_mode_value"
+          }
+        }
+      ]
+    },
+    "_pinentry_mode_value": {
+      "type": "TOKEN",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "default"
+            },
+            "named": false,
+            "value": "default"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "ask"
+            },
+            "named": false,
+            "value": "ask"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "cancel"
+            },
+            "named": false,
+            "value": "cancel"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "error"
+            },
+            "named": false,
+            "value": "error"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "loopback"
+            },
+            "named": false,
+            "value": "loopback"
+          }
+        ]
+      }
+    },
+    "_request_origin": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "request-origin"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "FIELD",
+          "name": "parameter",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_request_origin_value"
+          }
+        }
+      ]
+    },
+    "_request_origin_value": {
+      "type": "TOKEN",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "local"
+            },
+            "named": false,
+            "value": "local"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "remote"
+            },
+            "named": false,
+            "value": "remote"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "browser"
+            },
+            "named": false,
+            "value": "browser"
+          }
+        ]
+      }
+    },
+    "_command_fd": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "command-fd"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        }
+      ]
+    },
+    "_command_file": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "command-file"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "_weak_digest": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "weak-digest"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "FIELD",
+          "name": "parameter",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_hash_algo_value"
+          }
+        }
+      ]
+    },
+    "_override_session_key": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "override-session-key"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "_override_session_key_fd": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "override-session-key-fd"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number"
+        }
+      ]
+    },
+    "_default_sig_expire": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "default-sig-expire"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expire_time"
+        }
+      ]
+    },
+    "_default_cert_expire": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "default-cert-expire"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expire_time"
+        }
+      ]
+    },
+    "_default_new_key_algo": {
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "default-new-key-algo"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_space"
+          },
+          {
+            "type": "FIELD",
+            "name": "parameter",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_new_key_algo"
+            }
+          },
+          {
+            "type": "REPEAT",
+            "content": {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "STRING",
+                      "value": ","
+                    },
+                    {
+                      "type": "BLANK"
+                    }
+                  ]
+                },
+                {
+                  "type": "FIELD",
+                  "name": "parameter",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_new_key_algo"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "_new_key_algo": {
+      "type": "PATTERN",
+      "value": "[a-zA-Z0-9+/]+"
+    },
+    "_default_preference_list": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "default-preference-list"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "string"
+        }
+      ]
+    },
+    "_default_keyserver_url": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "default-keyserver-url"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "url"
+        }
+      ]
+    },
+    "_chuid": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "chuid"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_space"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "number"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "string"
+            }
+          ]
+        }
+      ]
+    },
     "key": {
       "type": "PATTERN",
       "value": "(0x)?[0-9A-Fa-f]{8,40}"
     },
     "url": {
       "type": "PATTERN",
-      "value": "(hkp|ldap)s?:\\/\\/([a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z]+(:\\d+)?"
+      "value": "(hkp|ldap)s?:\\/\\/([a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z]+(:[0-9]+)?"
     },
     "number": {
       "type": "PATTERN",
       "value": "[0-9]|[1-9][0-9]+"
+    },
+    "iso_time": {
+      "type": "PATTERN",
+      "value": "[0-9]{8}T[0-9]{6}"
+    },
+    "expire_time": {
+      "type": "TOKEN",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "PATTERN",
+            "value": "0|[1-9][0-9]*[dwmy]"
+          },
+          {
+            "type": "PATTERN",
+            "value": "[0-9]{4}-[0-9]{2}-[0-9]{2}"
+          }
+        ]
+      }
     },
     "string": {
       "type": "CHOICE",
@@ -3189,7 +4728,7 @@
       "type": "PATTERN",
       "value": "#.*"
     },
-    "_pubkey_algo": {
+    "_pubkey_algo_value": {
       "type": "TOKEN",
       "content": {
         "type": "CHOICE",
@@ -3260,7 +4799,7 @@
         ]
       }
     },
-    "_cipher_algo": {
+    "_cipher_algo_value": {
       "type": "TOKEN",
       "content": {
         "type": "CHOICE",
@@ -3269,10 +4808,37 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
+              "value": "IDEA"
+            },
+            "named": false,
+            "value": "IDEA"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "3DES"
+            },
+            "named": false,
+            "value": "3DES"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
               "value": "CAST5"
             },
             "named": false,
             "value": "CAST5"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "BLOWFISH"
+            },
+            "named": false,
+            "value": "BLOWFISH"
           },
           {
             "type": "ALIAS",
@@ -3349,7 +4915,7 @@
         ]
       }
     },
-    "_hash_algo": {
+    "_hash_algo_value": {
       "type": "TOKEN",
       "content": {
         "type": "CHOICE",
@@ -3420,7 +4986,7 @@
         ]
       }
     },
-    "_compression_algo": {
+    "_compression_algo_value": {
       "type": "TOKEN",
       "content": {
         "type": "CHOICE",

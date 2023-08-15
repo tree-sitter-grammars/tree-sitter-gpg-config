@@ -46,6 +46,7 @@ module.exports = grammar({
     ),
 
     option: $ => choice(
+      // Configuration options
       $._default_key,
       'default-recipient',
       'default-recipient-self',
@@ -117,6 +118,7 @@ module.exports = grammar({
       'no-require-cross-verification',
       'expert',
       'no-expert',
+      // Key related options
       $._recipient,
       $._hidden_recipient,
       $._recipient_file,
@@ -133,6 +135,7 @@ module.exports = grammar({
       'try-all-secrets',
       'skip-hidden-recipients',
       'no-skip-hidden-recipients',
+      // Input and Output
       'armor',
       'no-armor',
       $._output,
@@ -153,6 +156,7 @@ module.exports = grammar({
       'with-key-origin',
       'with-wkd-hash',
       'with-secret',
+      // OpenPGP options
       'textmode',
       'no-textmode',
       'force-ocb',
@@ -167,6 +171,7 @@ module.exports = grammar({
       $._s2k_digest_algo,
       $._s2k_mode,
       $._s2k_count,
+      // Compliance options
       'gnupg',
       'openpgp',
       'rfc4880',
@@ -177,7 +182,99 @@ module.exports = grammar({
       $._compliance,
       $._min_rsa_length,
       $._require_compliance,
-
+      // Esoteric options
+      'list-only',
+      'interactive',
+      $._debug_level,
+      $._debug,
+      'debug-all',
+      'debug-iolbf',
+      $._debug_set_iobuf_size,
+      'debug-allow-large-chunks',
+      'debug-ignore-expiration',
+      $._faked_system_time,
+      'full-timestrings',
+      'enable-progress-filter',
+      $._status_fd,
+      $._status_file,
+      $._logger_fd,
+      $._logger_file,
+      'log-time',
+      $._status_fd,
+      $._comment,
+      'no-comments',
+      'emit-version',
+      'no-emit-version',
+      // TODO: $._sig_notation,
+      // TODO: $._cert_notation,
+      // TODO: $._set_notation,
+      $._known_notation,
+      $._sig_policy_url,
+      $._cert_policy_url,
+      $._set_policy_url,
+      $._sig_keyserver_url,
+      $._set_filename,
+      'for-your-eyes-only',
+      'no-for-your-eyes-only',
+      'use-embedded-filename',
+      'no-use-embedded-filename',
+      $._cipher_algo,
+      $._digest_algo,
+      $._compress_algo,
+      $._cert_digest_algo,
+      $._disable_cipher_algo,
+      $._disable_pubkey_algo,
+      'throw-keyids',
+      'no-throw-keyids',
+      'not-dash-escaped',
+      'escape-from-lines',
+      'no-escape-from-lines',
+      $._passphrase_repeat,
+      $._passphrase_fd,
+      $._passphrase_file,
+      $._passphrase,
+      $._pinentry_mode,
+      'no-symkey-cache',
+      $._request_origin,
+      $._command_fd,
+      $._command_file,
+      'allow-non-selfsigned-uid',
+      'no-allow-non-selfsigned-uid',
+      'allow-freeform-uid',
+      'ignore-time-conflict',
+      'ignore-valid-from',
+      'ignore-crc-error',
+      'ignore-mdc-error',
+      'allow-old-cipher-algos',
+      'allow-weak-digest-algos',
+      $._weak_digest,
+      'allow-weak-key-signatures',
+      'override-compliance-check',
+      'no-default-keyring',
+      'no-keyring',
+      'skip-verify',
+      'with-key-data',
+      'list-signatures',
+      'list-sigs',
+      'fast-list-mode',
+      'show-session-key',
+      $._override_session_key,
+      $._override_session_key_fd,
+      'ask-sig-expire',
+      'no-ask-sig-expire',
+      $._default_sig_expire,
+      'ask-cert-expire',
+      'no-ask-cert-expire',
+      $._default_cert_expire,
+      $._default_new_key_algo,
+      'no-auto-trust-new-key',
+      'force-sign-key',
+      'forbid-gen-key',
+      'enable-special-filenames',
+      'preserve-permissions',
+      $._default_preference_list,
+      $._default_keyserver_url,
+      $._chuid,
       $._unknown_option
     ),
 
@@ -189,7 +286,7 @@ module.exports = grammar({
       ))
     )),
 
-    // GPG Configuration Options
+    // Configuration options
 
     _default_key: $ => seq(
       'default-key',
@@ -264,12 +361,14 @@ module.exports = grammar({
     ),
 
     _command: $ => choice(
-      field('content', repeat1(choice(/\S/, $.format))),
-      quoted('"', $.format),
-      quoted("'", $.format),
+      field('content', repeat1(
+        choice(/\S/, $._command_format))
+      ),
+      quoted('"', $._command_format),
+      quoted("'", $._command_format),
     ),
 
-    format: _ => /%[iIkKftTvVU%]/,
+    _command_format: $ => alias(/%[iIkKftTvVU%]/, $.format),
 
     _exec_path: $ => seq(
       'exec-path',
@@ -298,7 +397,7 @@ module.exports = grammar({
     _display_charset: $ => seq(
       'display-charset',
       $._space,
-      field('charset', $._charset_value)
+      field('parameter', $._charset_value)
     ),
 
     _charset_value: _ => token(choice(
@@ -359,7 +458,7 @@ module.exports = grammar({
     _trust_model: $ => seq(
       'trust-model',
       $._space,
-      field('model', $._model)
+      field('parameter', $._model)
     ),
 
     _model: _ => token(choice(
@@ -381,10 +480,10 @@ module.exports = grammar({
     _auto_key_locate: $ => prec.right(seq(
       'auto-key-locate',
       $._space,
-      field('mechanism', choice($._key_locate_value, $.url)),
+      field('parameter', choice($._key_locate_value, $.url)),
       repeat(seq(
         optional(','),
-        field('mechanism', choice($._key_locate_value, $.url))
+        field('parameter', choice($._key_locate_value, $.url))
       ))
     )),
 
@@ -403,7 +502,7 @@ module.exports = grammar({
     _keyid_format: $ => seq(
       'keyid-format',
       $._space,
-      field('format', $._keyid_format_value)
+      field('parameter', $._keyid_format_value)
     ),
 
     _keyid_format_value: _ => token(choice(
@@ -437,7 +536,7 @@ module.exports = grammar({
     _tofu_default_policy: $ => seq(
       'tofu-default-policy',
       $._space,
-      field('policy', $._tofu_policy_value)
+      field('parameter', $._tofu_policy_value)
     ),
 
     _tofu_policy_value: _ => token(choice(
@@ -471,6 +570,8 @@ module.exports = grammar({
       $._space,
       $.number
     ),
+
+    // Key related options
 
     _recipient: $ => seq(
       'recipient',
@@ -540,6 +641,8 @@ module.exports = grammar({
       $.string
     ),
 
+    // Input and Output
+
     _output: $ => seq(
       'output',
       $._space,
@@ -567,11 +670,11 @@ module.exports = grammar({
     _key_origin: $ => seq(
       'key-origin',
       $._space,
-      field('origin', $._origin_value),
+      field('parameter', $._key_origin_value),
       optional(seq(',', $.url))
     ),
 
-    _origin_value: _ => token(choice(
+    _key_origin_value: _ => token(choice(
       ci('self'),
       ci('file'),
       ci('url'),
@@ -636,54 +739,48 @@ module.exports = grammar({
       ci('mode1003'),
     )),
 
+    // OpenPGP options
+
     _personal_cipher_preferences: $ => seq(
       'personal-cipher-preferences',
       $._space,
-      field('algorithm', $._cipher_algo),
+      field('parameter', $._cipher_algo_value),
       repeat(seq(
         optional(','),
-        field('algorithm', $._cipher_algo)
+        field('parameter', $._cipher_algo_value)
       ))
     ),
 
     _personal_digest_preferences: $ => seq(
       'personal-digest-preferences',
       $._space,
-      field('algorithm', $._hash_algo),
+      field('parameter', $._hash_algo_value),
       repeat(seq(
         optional(','),
-        field('algorithm', $._hash_algo)
+        field('parameter', $._hash_algo_value)
       ))
     ),
 
     _personal_compress_preferences: $ => seq(
       'personal-compress-preferences',
       $._space,
-      field('algorithm', $._compression_algo),
+      field('parameter', $._compression_algo_value),
       repeat(seq(
         optional(','),
-        field('algorithm', $._compression_algo)
+        field('parameter', $._compression_algo_value)
       ))
     ),
 
     _s2k_cipher_algo: $ => seq(
       's2k-cipher-algo',
       $._space,
-      field('algorithm', $._cipher_algo),
-      repeat(seq(
-        optional(','),
-        field('algorithm', $._cipher_algo)
-      ))
+      field('parameter', $._cipher_algo_value)
     ),
 
     _s2k_digest_algo: $ => seq(
       's2k-digest-algo',
       $._space,
-      field('algorithm', $._hash_algo),
-      repeat(seq(
-        optional(','),
-        field('algorithm', $._hash_algo)
-      ))
+      field('parameter', $._hash_algo_value)
     ),
 
     _s2k_mode: $ => seq(
@@ -698,10 +795,12 @@ module.exports = grammar({
       $.number
     ),
 
+    // Compliance options
+
     _compliance: $ => seq(
       'compliance',
       $._space,
-      field('mode', $._compliance_value)
+      field('parameter', $._compliance_value)
     ),
 
     _compliance_value: _ => token(choice(
@@ -724,15 +823,327 @@ module.exports = grammar({
 
     _require_compliance: _ => 'require-compliance',
 
-    // TODO: GPG Esoteric Options
+    // Esoteric options
+
+    _debug_level: $ => seq(
+      'debug-level',
+      $._space,
+      field('parameter', $._debug_level_value)
+    ),
+
+    _debug_level_value: _ => token(choice(
+      ci('none'),
+      ci('basic'),
+      ci('advanced'),
+      ci('expert'),
+      ci('guru'),
+    )),
+
+    _debug: $ => choice(
+      seq(
+        'debug',
+        $._space,
+        field('parameter', $._debug_flag_value),
+        repeat(seq(
+          optional(','),
+          field('parameter', $._debug_flag_value)
+        ))
+      ),
+      seq(
+        'debug',
+        $._space,
+        alias(/(0x)?[0-9]{1,5}/, $.number),
+      ),
+    ),
+
+    _debug_flag_value: _ => token(choice(
+      ci('packet'),
+      ci('mpi'),
+      ci('crypto'),
+      ci('filter'),
+      ci('iobuf'),
+      ci('memory'),
+      ci('cache'),
+      ci('memstat'),
+      ci('trust'),
+      ci('hashing'),
+      ci('ipc'),
+      ci('clock'),
+      ci('lookup'),
+      ci('extprog'),
+    )),
+
+    _debug_set_iobuf_size: $ => seq(
+      'debug-set-iobuf-size',
+      $._space,
+      $.number
+    ),
+
+    _faked_system_time: $ => seq(
+      'faked-system-time',
+      $._space,
+      seq(choice($.number, $.iso_time), optional('!'))
+    ),
+
+    _status_fd: $ => seq(
+      'status-fd',
+      $._space,
+      $.number
+    ),
+
+    _status_file: $ => seq(
+      'status-file',
+      $._space,
+      $.string
+    ),
+
+    _logger_fd: $ => seq(
+      'logger-fd',
+      $._space,
+      $.number
+    ),
+
+    _logger_file: $ => seq(
+      choice('logger-file', 'log-file'),
+      $._space,
+      $.string
+    ),
+
+    _attribute_fd: $ => seq(
+      'attribute-fd',
+      $._space,
+      $.number
+    ),
+
+    _comment: $ => seq(
+      'comment',
+      $._space,
+      $.string
+    ),
+
+    // TODO: _sig_notation
+
+    // TODO: _cert_notation
+
+    // TODO: _set_notation
+
+    _notation_format: $ => alias(/%[kKfsSgpc%]/, $.format),
+
+    _known_notation: $ => seq(
+      'known-notation',
+      $._space,
+      $.string
+    ),
+
+    _sig_policy_url: $ => seq(
+      'sig-policy-url',
+      $._space,
+      optional('!'),
+      alias($._formatted_url, $.url)
+    ),
+
+    _cert_policy_url: $ => seq(
+      'cert-policy-url',
+      $._space,
+      optional('!'),
+      alias($._formatted_url, $.url)
+    ),
+
+    _set_policy_url: $ => seq(
+      'set-policy-url',
+      $._space,
+      optional('!'),
+      alias($._formatted_url, $.url)
+    ),
+
+    _sig_keyserver_url: $ => seq(
+      'sig-keyserver-url',
+      $._space,
+      optional('!'),
+      alias($._formatted_url, $.url)
+    ),
+
+    _formatted_url: $ => repeat1(choice(/\S/, $._notation_format)),
+
+    _set_filename: $ => seq(
+      'set-filename',
+      $._space,
+      $.string
+    ),
+
+    _cipher_algo: $ => seq(
+      'cipher-algo',
+      $._space,
+      field('parameter', $._cipher_algo_value),
+    ),
+
+    _digest_algo: $ => seq(
+      'digest-algo',
+      $._space,
+      field('parameter', $._hash_algo_value),
+    ),
+
+    _compress_algo: $ => seq(
+      'compress-algo',
+      $._space,
+      field('parameter', $._compression_algo_value),
+    ),
+
+    _cert_digest_algo: $ => seq(
+      'cert-digest-algo',
+      $._space,
+      field('parameter', $._hash_algo_value),
+    ),
+
+    _disable_cipher_algo: $ => seq(
+      'disable-cipher-algo',
+      $._space,
+      field('parameter', $._cipher_algo_value),
+    ),
+
+    _disable_pubkey_algo: $ => seq(
+      'disable-pubkey-algo',
+      $._space,
+      field('parameter', $._pubkey_algo_value),
+    ),
+
+    _passphrase_repeat: $ => seq(
+      'passphrase-repeat',
+      $._space,
+      $.number
+    ),
+
+    _passphrase_fd: $ => seq(
+      'passphrase-fd',
+      $._space,
+      $.number
+    ),
+
+    _passphrase_file: $ => seq(
+      'passphrase-file',
+      $._space,
+      $.string
+    ),
+
+    _passphrase: $ => seq(
+      'passphrase',
+      $._space,
+      $.string
+    ),
+
+    _pinentry_mode: $ => seq(
+      'pinentry-mode',
+      $._space,
+      field('parameter', $._pinentry_mode_value)
+    ),
+
+    _pinentry_mode_value: _ => token(choice(
+      ci('default'),
+      ci('ask'),
+      ci('cancel'),
+      ci('error'),
+      ci('loopback'),
+    )),
+
+    _request_origin: $ => seq(
+      'request-origin',
+      $._space,
+      field('parameter', $._request_origin_value)
+    ),
+
+    _request_origin_value: _ => token(choice(
+      ci('local'),
+      ci('remote'),
+      ci('browser'),
+    )),
+
+    _command_fd: $ => seq(
+      'command-fd',
+      $._space,
+      $.number
+    ),
+
+    _command_file: $ => seq(
+      'command-file',
+      $._space,
+      $.string
+    ),
+
+    _weak_digest: $ => seq(
+      'weak-digest',
+      $._space,
+      field('parameter', $._hash_algo_value)
+    ),
+
+    _override_session_key: $ => seq(
+      'override-session-key',
+      $._space,
+      $.string
+    ),
+
+    _override_session_key_fd: $ => seq(
+      'override-session-key-fd',
+      $._space,
+      $.number
+    ),
+
+    _default_sig_expire: $ => seq(
+      'default-sig-expire',
+      $._space,
+      $.expire_time
+    ),
+
+    _default_cert_expire: $ => seq(
+      'default-cert-expire',
+      $._space,
+      $.expire_time
+    ),
+
+    _default_new_key_algo: $ => prec.right(seq(
+      'default-new-key-algo',
+      $._space,
+      field('parameter', $._new_key_algo),
+      repeat(seq(
+        optional(','),
+        field('parameter', $._new_key_algo)
+      ))
+    )),
+
+    // TODO: find the allowed values
+    _new_key_algo: _ => /[a-zA-Z0-9+/]+/,
+
+    _default_preference_list: $ => seq(
+      'default-preference-list',
+      $._space,
+      $.string
+    ),
+
+    _default_keyserver_url: $ => seq(
+      'default-keyserver-url',
+      $._space,
+      $.url
+    ),
+
+    _chuid: $ => seq(
+      'chuid',
+      $._space,
+      choice($.number, $.string)
+    ),
 
     // Miscellanea
 
     key: _ => /(0x)?[0-9A-Fa-f]{8,40}/,
 
-    url: _ => /(hkp|ldap)s?:\/\/([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]+(:\d+)?/i,
+    url: _ => /(hkp|ldap)s?:\/\/([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]+(:[0-9]+)?/i,
 
     number: _ => /[0-9]|[1-9][0-9]+/,
+
+    iso_time: _ => /[0-9]{8}T[0-9]{6}/,
+
+    expire_time: _ => token(choice(
+      /0|[1-9][0-9]*[dwmy]/,
+      /[0-9]{4}-[0-9]{2}-[0-9]{2}/
+    )),
 
     string: _ => choice(
       field('content', /\S+/),
@@ -742,7 +1153,7 @@ module.exports = grammar({
 
     comment: _ => /#.*/,
 
-    _pubkey_algo: _ => token(choice(
+    _pubkey_algo_value: _ => token(choice(
       ci('RSA'),
       ci('ELG'),
       ci('DSA'),
@@ -752,8 +1163,11 @@ module.exports = grammar({
       ci('none'),
     )),
 
-    _cipher_algo: _ => token(choice(
+    _cipher_algo_value: _ => token(choice(
+      ci('IDEA'),
+      ci('3DES'),
       ci('CAST5'),
+      ci('BLOWFISH'),
       ci('AES'),
       ci('AES192'),
       ci('AES256'),
@@ -764,7 +1178,7 @@ module.exports = grammar({
       ci('none'),
     )),
 
-    _hash_algo: _ => token(choice(
+    _hash_algo_value: _ => token(choice(
       ci('SHA1'),
       ci('RIPEMD160'),
       ci('SHA256'),
@@ -774,7 +1188,7 @@ module.exports = grammar({
       ci('none'),
     )),
 
-    _compression_algo: _ => token(choice(
+    _compression_algo_value: _ => token(choice(
       ci('Uncompressed'),
       ci('ZIP'),
       ci('ZLIB'),

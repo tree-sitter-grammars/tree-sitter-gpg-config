@@ -22,22 +22,22 @@
     "type": "option",
     "named": true,
     "fields": {
-      "mechanism": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "url",
-            "named": true
-          }
-        ]
-      },
       "name": {
         "multiple": false,
         "required": false,
         "types": [
           {
             "type": "string",
+            "named": true
+          }
+        ]
+      },
+      "parameter": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "url",
             "named": true
           }
         ]
@@ -57,6 +57,14 @@
       "multiple": false,
       "required": false,
       "types": [
+        {
+          "type": "expire_time",
+          "named": true
+        },
+        {
+          "type": "iso_time",
+          "named": true
+        },
         {
           "type": "key",
           "named": true
@@ -97,6 +105,25 @@
     }
   },
   {
+    "type": "url",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "format",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "!",
+    "named": false
+  },
+  {
     "type": "\"",
     "named": false
   },
@@ -125,6 +152,26 @@
     "named": false
   },
   {
+    "type": "allow-freeform-uid",
+    "named": false
+  },
+  {
+    "type": "allow-non-selfsigned-uid",
+    "named": false
+  },
+  {
+    "type": "allow-old-cipher-algos",
+    "named": false
+  },
+  {
+    "type": "allow-weak-digest-algos",
+    "named": false
+  },
+  {
+    "type": "allow-weak-key-signatures",
+    "named": false
+  },
+  {
     "type": "always-trust",
     "named": false
   },
@@ -133,11 +180,23 @@
     "named": false
   },
   {
+    "type": "ask-cert-expire",
+    "named": false
+  },
+  {
     "type": "ask-cert-level",
     "named": false
   },
   {
+    "type": "ask-sig-expire",
+    "named": false
+  },
+  {
     "type": "assert-signer",
+    "named": false
+  },
+  {
+    "type": "attribute-fd",
     "named": false
   },
   {
@@ -165,11 +224,39 @@
     "named": false
   },
   {
+    "type": "cert-digest-algo",
+    "named": false
+  },
+  {
+    "type": "cert-policy-url",
+    "named": false
+  },
+  {
+    "type": "chuid",
+    "named": false
+  },
+  {
     "type": "chunk-size",
     "named": false
   },
   {
+    "type": "cipher-algo",
+    "named": false
+  },
+  {
     "type": "clear",
+    "named": false
+  },
+  {
+    "type": "command-fd",
+    "named": false
+  },
+  {
+    "type": "command-file",
+    "named": false
+  },
+  {
+    "type": "comment",
     "named": false
   },
   {
@@ -185,7 +272,43 @@
     "named": false
   },
   {
+    "type": "compress-algo",
+    "named": false
+  },
+  {
     "type": "compress-level",
+    "named": false
+  },
+  {
+    "type": "debug",
+    "named": false
+  },
+  {
+    "type": "debug-all",
+    "named": false
+  },
+  {
+    "type": "debug-allow-large-chunks",
+    "named": false
+  },
+  {
+    "type": "debug-ignore-expiration",
+    "named": false
+  },
+  {
+    "type": "debug-iolbf",
+    "named": false
+  },
+  {
+    "type": "debug-level",
+    "named": false
+  },
+  {
+    "type": "debug-set-iobuf-size",
+    "named": false
+  },
+  {
+    "type": "default-cert-expire",
     "named": false
   },
   {
@@ -197,6 +320,18 @@
     "named": false
   },
   {
+    "type": "default-keyserver-url",
+    "named": false
+  },
+  {
+    "type": "default-new-key-algo",
+    "named": false
+  },
+  {
+    "type": "default-preference-list",
+    "named": false
+  },
+  {
     "type": "default-recipient",
     "named": false
   },
@@ -205,7 +340,19 @@
     "named": false
   },
   {
+    "type": "default-sig-expire",
+    "named": false
+  },
+  {
+    "type": "digest-algo",
+    "named": false
+  },
+  {
     "type": "dirmngr-program",
+    "named": false
+  },
+  {
+    "type": "disable-cipher-algo",
     "named": false
   },
   {
@@ -221,11 +368,19 @@
     "named": false
   },
   {
+    "type": "disable-pubkey-algo",
+    "named": false
+  },
+  {
     "type": "disable-signer-uid",
     "named": false
   },
   {
     "type": "display-charset",
+    "named": false
+  },
+  {
+    "type": "emit-version",
     "named": false
   },
   {
@@ -237,7 +392,19 @@
     "named": false
   },
   {
+    "type": "enable-progress-filter",
+    "named": false
+  },
+  {
+    "type": "enable-special-filenames",
+    "named": false
+  },
+  {
     "type": "encrypt-to",
+    "named": false
+  },
+  {
+    "type": "escape-from-lines",
     "named": false
   },
   {
@@ -253,7 +420,27 @@
     "named": false
   },
   {
+    "type": "expire_time",
+    "named": true
+  },
+  {
     "type": "export-options",
+    "named": false
+  },
+  {
+    "type": "faked-system-time",
+    "named": false
+  },
+  {
+    "type": "fast-list-mode",
+    "named": false
+  },
+  {
+    "type": "for-your-eyes-only",
+    "named": false
+  },
+  {
+    "type": "forbid-gen-key",
     "named": false
   },
   {
@@ -265,8 +452,16 @@
     "named": false
   },
   {
+    "type": "force-sign-key",
+    "named": false
+  },
+  {
     "type": "format",
     "named": true
+  },
+  {
+    "type": "full-timestrings",
+    "named": false
   },
   {
     "type": "gnupg",
@@ -289,6 +484,22 @@
     "named": false
   },
   {
+    "type": "ignore-crc-error",
+    "named": false
+  },
+  {
+    "type": "ignore-mdc-error",
+    "named": false
+  },
+  {
+    "type": "ignore-time-conflict",
+    "named": false
+  },
+  {
+    "type": "ignore-valid-from",
+    "named": false
+  },
+  {
     "type": "import-options",
     "named": false
   },
@@ -299,6 +510,14 @@
   {
     "type": "input-size-hint",
     "named": false
+  },
+  {
+    "type": "interactive",
+    "named": false
+  },
+  {
+    "type": "iso_time",
+    "named": true
   },
   {
     "type": "key",
@@ -321,6 +540,10 @@
     "named": false
   },
   {
+    "type": "known-notation",
+    "named": false
+  },
+  {
     "type": "legacy-list-mode",
     "named": false
   },
@@ -329,7 +552,19 @@
     "named": false
   },
   {
+    "type": "list-only",
+    "named": false
+  },
+  {
     "type": "list-options",
+    "named": false
+  },
+  {
+    "type": "list-signatures",
+    "named": false
+  },
+  {
+    "type": "list-sigs",
     "named": false
   },
   {
@@ -346,6 +581,22 @@
   },
   {
     "type": "lock-once",
+    "named": false
+  },
+  {
+    "type": "log-file",
+    "named": false
+  },
+  {
+    "type": "log-time",
+    "named": false
+  },
+  {
+    "type": "logger-fd",
+    "named": false
+  },
+  {
+    "type": "logger-file",
     "named": false
   },
   {
@@ -373,11 +624,23 @@
     "named": false
   },
   {
+    "type": "no-allow-non-selfsigned-uid",
+    "named": false
+  },
+  {
     "type": "no-armor",
     "named": false
   },
   {
+    "type": "no-ask-cert-expire",
+    "named": false
+  },
+  {
     "type": "no-ask-cert-level",
+    "named": false
+  },
+  {
+    "type": "no-ask-sig-expire",
     "named": false
   },
   {
@@ -397,7 +660,15 @@
     "named": false
   },
   {
+    "type": "no-auto-trust-new-key",
+    "named": false
+  },
+  {
     "type": "no-autostart",
+    "named": false
+  },
+  {
+    "type": "no-comments",
     "named": false
   },
   {
@@ -405,7 +676,15 @@
     "named": false
   },
   {
+    "type": "no-default-keyring",
+    "named": false
+  },
+  {
     "type": "no-default-recipient",
+    "named": false
+  },
+  {
+    "type": "no-emit-version",
     "named": false
   },
   {
@@ -413,7 +692,15 @@
     "named": false
   },
   {
+    "type": "no-escape-from-lines",
+    "named": false
+  },
+  {
     "type": "no-expert",
+    "named": false
+  },
+  {
+    "type": "no-for-your-eyes-only",
     "named": false
   },
   {
@@ -426,6 +713,10 @@
   },
   {
     "type": "no-include-key-block",
+    "named": false
+  },
+  {
+    "type": "no-keyring",
     "named": false
   },
   {
@@ -461,11 +752,27 @@
     "named": false
   },
   {
+    "type": "no-symkey-cache",
+    "named": false
+  },
+  {
     "type": "no-textmode",
     "named": false
   },
   {
+    "type": "no-throw-keyids",
+    "named": false
+  },
+  {
     "type": "no-tty",
+    "named": false
+  },
+  {
+    "type": "no-use-embedded-filename",
+    "named": false
+  },
+  {
+    "type": "not-dash-escaped",
     "named": false
   },
   {
@@ -478,6 +785,34 @@
   },
   {
     "type": "output",
+    "named": false
+  },
+  {
+    "type": "override-compliance-check",
+    "named": false
+  },
+  {
+    "type": "override-session-key",
+    "named": false
+  },
+  {
+    "type": "override-session-key-fd",
+    "named": false
+  },
+  {
+    "type": "passphrase",
+    "named": false
+  },
+  {
+    "type": "passphrase-fd",
+    "named": false
+  },
+  {
+    "type": "passphrase-file",
+    "named": false
+  },
+  {
+    "type": "passphrase-repeat",
     "named": false
   },
   {
@@ -505,6 +840,14 @@
     "named": false
   },
   {
+    "type": "pinentry-mode",
+    "named": false
+  },
+  {
+    "type": "preserve-permissions",
+    "named": false
+  },
+  {
     "type": "primary-keyring",
     "named": false
   },
@@ -514,6 +857,10 @@
   },
   {
     "type": "recipient-file",
+    "named": false
+  },
+  {
+    "type": "request-origin",
     "named": false
   },
   {
@@ -561,11 +908,47 @@
     "named": false
   },
   {
+    "type": "set-filename",
+    "named": false
+  },
+  {
+    "type": "set-policy-url",
+    "named": false
+  },
+  {
+    "type": "show-session-key",
+    "named": false
+  },
+  {
+    "type": "sig-keyserver-url",
+    "named": false
+  },
+  {
+    "type": "sig-policy-url",
+    "named": false
+  },
+  {
     "type": "skip-hidden-recipients",
     "named": false
   },
   {
+    "type": "skip-verify",
+    "named": false
+  },
+  {
+    "type": "status-fd",
+    "named": false
+  },
+  {
+    "type": "status-file",
+    "named": false
+  },
+  {
     "type": "textmode",
+    "named": false
+  },
+  {
+    "type": "throw-keyids",
     "named": false
   },
   {
@@ -597,8 +980,8 @@
     "named": false
   },
   {
-    "type": "url",
-    "named": true
+    "type": "use-embedded-filename",
+    "named": false
   },
   {
     "type": "verbose",
@@ -606,6 +989,10 @@
   },
   {
     "type": "verify-options",
+    "named": false
+  },
+  {
+    "type": "weak-digest",
     "named": false
   },
   {
@@ -618,6 +1005,10 @@
   },
   {
     "type": "with-icao-spelling",
+    "named": false
+  },
+  {
+    "type": "with-key-data",
     "named": false
   },
   {
