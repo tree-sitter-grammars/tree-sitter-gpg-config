@@ -89,24 +89,19 @@
           "named": true
         },
         {
-          "type": "parameter",
-          "named": true
-        },
-        {
           "type": "string",
           "named": true
         },
         {
           "type": "url",
           "named": true
+        },
+        {
+          "type": "value",
+          "named": true
         }
       ]
     }
-  },
-  {
-    "type": "parameter",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "string",
@@ -141,6 +136,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "value",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "!",

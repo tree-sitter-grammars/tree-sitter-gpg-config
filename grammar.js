@@ -298,10 +298,10 @@ module.exports = grammar({
     _list_options: $ => prec.right(seq(
       'list-options',
       $._space,
-      alias($._list_parameter, $.parameter),
+      alias($._list_parameter, $.value),
       repeat(seq(
         optional(','),
-        alias($._list_parameter, $.parameter)
+        alias($._list_parameter, $.value)
       ))
     )),
 
@@ -327,10 +327,10 @@ module.exports = grammar({
     _verify_options: $ => prec.right(seq(
       'verify-options',
       $._space,
-      alias($._verify_parameter, $.parameter),
+      alias($._verify_parameter, $.value),
       repeat(seq(
         optional(','),
-        alias($._verify_parameter, $.parameter)
+        alias($._verify_parameter, $.value)
       ))
     )),
 
@@ -391,7 +391,7 @@ module.exports = grammar({
     _display_charset: $ => seq(
       'display-charset',
       $._space,
-      alias($._charset_value, $.parameter)
+      alias($._charset_value, $.value)
     ),
 
     _charset_value: _ => token(choice(
@@ -452,7 +452,7 @@ module.exports = grammar({
     _trust_model: $ => seq(
       'trust-model',
       $._space,
-      alias($._model, $.parameter)
+      alias($._model, $.value)
     ),
 
     _model: _ => token(choice(
@@ -496,7 +496,7 @@ module.exports = grammar({
     _keyid_format: $ => seq(
       'keyid-format',
       $._space,
-      alias($._keyid_format_value, $.parameter)
+      alias($._keyid_format_value, $.value)
     ),
 
     _keyid_format_value: _ => token(choice(
@@ -530,7 +530,7 @@ module.exports = grammar({
     _tofu_default_policy: $ => seq(
       'tofu-default-policy',
       $._space,
-      alias($._tofu_policy_value, $.parameter)
+      alias($._tofu_policy_value, $.value)
     ),
 
     _tofu_policy_value: _ => token(choice(
@@ -607,7 +607,7 @@ module.exports = grammar({
       'group',
       $._space,
       field('name', $.string),
-      token.immediate('='),
+      '=',
       field('value', $.string)
     ),
 
@@ -664,7 +664,7 @@ module.exports = grammar({
     _key_origin: $ => seq(
       'key-origin',
       $._space,
-      alias($._key_origin_value, $.parameter),
+      alias($._key_origin_value, $.value),
       optional(seq(',', $.url))
     ),
 
@@ -682,10 +682,10 @@ module.exports = grammar({
     _import_options: $ => prec.right(seq(
       'import-options',
       $._space,
-      alias($._import_parameter, $.parameter),
+      alias($._import_parameter, $.value),
       repeat(seq(
         optional(','),
-        alias($._import_parameter, $.parameter)
+        alias($._import_parameter, $.value)
       ))
     )),
 
@@ -713,10 +713,10 @@ module.exports = grammar({
     _export_options: $ => prec.right(seq(
       'export-options',
       $._space,
-      alias($._export_parameter, $.parameter),
+      alias($._export_parameter, $.value),
       repeat(seq(
         optional(','),
-        alias($._export_parameter, $.parameter)
+        alias($._export_parameter, $.value)
       ))
     )),
 
@@ -738,43 +738,43 @@ module.exports = grammar({
     _personal_cipher_preferences: $ => seq(
       'personal-cipher-preferences',
       $._space,
-      alias($._cipher_algo_value, $.parameter),
+      alias($._cipher_algo_value, $.value),
       repeat(seq(
         optional(','),
-        alias($._cipher_algo_value, $.parameter)
+        alias($._cipher_algo_value, $.value)
       ))
     ),
 
     _personal_digest_preferences: $ => seq(
       'personal-digest-preferences',
       $._space,
-      alias($._hash_algo_value, $.parameter),
+      alias($._hash_algo_value, $.value),
       repeat(seq(
         optional(','),
-        alias($._hash_algo_value, $.parameter)
+        alias($._hash_algo_value, $.value)
       ))
     ),
 
     _personal_compress_preferences: $ => seq(
       'personal-compress-preferences',
       $._space,
-      alias($._compression_algo_value, $.parameter),
+      alias($._compression_algo_value, $.value),
       repeat(seq(
         optional(','),
-        alias($._compression_algo_value, $.parameter)
+        alias($._compression_algo_value, $.value)
       ))
     ),
 
     _s2k_cipher_algo: $ => seq(
       's2k-cipher-algo',
       $._space,
-      alias($._cipher_algo_value, $.parameter)
+      alias($._cipher_algo_value, $.value)
     ),
 
     _s2k_digest_algo: $ => seq(
       's2k-digest-algo',
       $._space,
-      alias($._hash_algo_value, $.parameter)
+      alias($._hash_algo_value, $.value)
     ),
 
     _s2k_mode: $ => seq(
@@ -794,7 +794,7 @@ module.exports = grammar({
     _compliance: $ => seq(
       'compliance',
       $._space,
-      alias($._compliance_value, $.parameter)
+      alias($._compliance_value, $.value)
     ),
 
     _compliance_value: _ => token(choice(
@@ -822,7 +822,7 @@ module.exports = grammar({
     _debug_level: $ => seq(
       'debug-level',
       $._space,
-      alias($._debug_level_value, $.parameter)
+      alias($._debug_level_value, $.value)
     ),
 
     _debug_level_value: _ => token(choice(
@@ -837,10 +837,10 @@ module.exports = grammar({
       seq(
         'debug',
         $._space,
-        alias($._debug_flag_value, $.parameter),
+        alias($._debug_flag_value, $.value),
         repeat(seq(
           optional(','),
-          alias($._debug_flag_value, $.parameter)
+          alias($._debug_flag_value, $.value)
         ))
       ),
       seq(
@@ -920,7 +920,7 @@ module.exports = grammar({
       $._space,
       optional('!'),
       field('name', alias($._notation, $.string)),
-      token.immediate('='),
+      '=',
       field('value', $.string)
     ),
 
@@ -929,7 +929,7 @@ module.exports = grammar({
       $._space,
       optional('!'),
       field('name', alias($._notation, $.string)),
-      token.immediate('='),
+      '=',
       field('value', $.string)
     ),
 
@@ -938,7 +938,7 @@ module.exports = grammar({
       $._space,
       optional('!'),
       field('name', alias($._notation, $.string)),
-      token.immediate('='),
+      '=',
       field('value', $.string)
     ),
 
@@ -991,37 +991,37 @@ module.exports = grammar({
     _cipher_algo: $ => seq(
       'cipher-algo',
       $._space,
-      alias($._cipher_algo_value, $.parameter),
+      alias($._cipher_algo_value, $.value),
     ),
 
     _digest_algo: $ => seq(
       'digest-algo',
       $._space,
-      alias($._hash_algo_value, $.parameter),
+      alias($._hash_algo_value, $.value),
     ),
 
     _compress_algo: $ => seq(
       'compress-algo',
       $._space,
-      alias($._compression_algo_value, $.parameter),
+      alias($._compression_algo_value, $.value),
     ),
 
     _cert_digest_algo: $ => seq(
       'cert-digest-algo',
       $._space,
-      alias($._hash_algo_value, $.parameter),
+      alias($._hash_algo_value, $.value),
     ),
 
     _disable_cipher_algo: $ => seq(
       'disable-cipher-algo',
       $._space,
-      alias($._cipher_algo_value, $.parameter),
+      alias($._cipher_algo_value, $.value),
     ),
 
     _disable_pubkey_algo: $ => seq(
       'disable-pubkey-algo',
       $._space,
-      alias($._pubkey_algo_value, $.parameter),
+      alias($._pubkey_algo_value, $.value),
     ),
 
     _passphrase_repeat: $ => seq(
@@ -1051,7 +1051,7 @@ module.exports = grammar({
     _pinentry_mode: $ => seq(
       'pinentry-mode',
       $._space,
-      alias($._pinentry_mode_value, $.parameter)
+      alias($._pinentry_mode_value, $.value)
     ),
 
     _pinentry_mode_value: _ => token(choice(
@@ -1065,7 +1065,7 @@ module.exports = grammar({
     _request_origin: $ => seq(
       'request-origin',
       $._space,
-      alias($._request_origin_value, $.parameter)
+      alias($._request_origin_value, $.value)
     ),
 
     _request_origin_value: _ => token(choice(
@@ -1089,7 +1089,7 @@ module.exports = grammar({
     _weak_digest: $ => seq(
       'weak-digest',
       $._space,
-      alias($._hash_algo_value, $.parameter)
+      alias($._hash_algo_value, $.value)
     ),
 
     _override_session_key: $ => seq(
@@ -1119,10 +1119,10 @@ module.exports = grammar({
     _default_new_key_algo: $ => prec.right(seq(
       'default-new-key-algo',
       $._space,
-      alias($._new_key_algo, $.parameter),
+      alias($._new_key_algo, $.value),
       repeat(seq(
         optional(','),
-        alias($._new_key_algo, $.parameter)
+        alias($._new_key_algo, $.value)
       ))
     )),
 
@@ -1132,10 +1132,10 @@ module.exports = grammar({
     _default_preference_list: $ => seq(
       'default-preference-list',
       $._space,
-      alias($._default_preference_value, $.parameter),
+      alias($._default_preference_value, $.value),
       repeat(seq(
         optional(','),
-        alias($._default_preference_value, $.parameter)
+        alias($._default_preference_value, $.value)
       ))
     ),
 
