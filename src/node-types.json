@@ -47,16 +47,6 @@
           }
         ]
       },
-      "parameter": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "url",
-            "named": true
-          }
-        ]
-      },
       "value": {
         "multiple": false,
         "required": false,

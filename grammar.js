@@ -27,22 +27,32 @@ const quoted = (q, content, ...extra) =>
 const ci = (word) =>
   alias(new RegExp(word, 'i'), word);
 
+/**
+ * @param $ {GrammarSymbols<string>}
+ * @param node {SymbolRule<string>}
+ */
+const value_list = ($, node) =>
+  choice(
+    repeat(seq(',', alias(node, $.value))),
+    repeat(seq($._space, alias(node, $.value))),
+  );
+
 module.exports = grammar({
   name: 'gpg',
 
-  extras: $ => [
-    $._space,
-  ],
+  extras: _ => [],
 
   rules: {
     config: $ => repeat(
       seq(
+        optional($._space),
         optional(
           choice(
             $.comment,
             $.option
           ),
         ),
+        optional($._space),
         /\r?\n/
       )
     ),
@@ -299,10 +309,7 @@ module.exports = grammar({
       'list-options',
       $._space,
       alias($._list_parameter, $.value),
-      repeat(seq(
-        optional(','),
-        alias($._list_parameter, $.value)
-      ))
+      value_list($, $._list_parameter)
     )),
 
     _list_parameter: _ => token(choice(
@@ -328,10 +335,7 @@ module.exports = grammar({
       'verify-options',
       $._space,
       alias($._verify_parameter, $.value),
-      repeat(seq(
-        optional(','),
-        alias($._verify_parameter, $.value)
-      ))
+      value_list($, $._verify_parameter)
     )),
 
     _verify_parameter: _ => token(choice(
@@ -474,11 +478,15 @@ module.exports = grammar({
     _auto_key_locate: $ => prec.right(seq(
       'auto-key-locate',
       $._space,
-      field('parameter', choice($._key_locate_value, $.url)),
-      repeat(seq(
-        optional(','),
-        field('parameter', choice($._key_locate_value, $.url))
-      ))
+      choice(alias($._key_locate_value, $.value), $.url),
+      choice(
+        repeat(seq(',', choice(
+          alias($._key_locate_value, $.value), $.url)
+        )),
+        repeat(seq($._space, choice(
+          alias($._key_locate_value, $.value), $.url)
+        )),
+      )
     )),
 
     _key_locate_value: _ => token(choice(
@@ -683,10 +691,7 @@ module.exports = grammar({
       'import-options',
       $._space,
       alias($._import_parameter, $.value),
-      repeat(seq(
-        optional(','),
-        alias($._import_parameter, $.value)
-      ))
+      value_list($, $._import_parameter)
     )),
 
     _import_parameter: _ => token(choice(
@@ -714,10 +719,7 @@ module.exports = grammar({
       'export-options',
       $._space,
       alias($._export_parameter, $.value),
-      repeat(seq(
-        optional(','),
-        alias($._export_parameter, $.value)
-      ))
+      value_list($, $._export_parameter)
     )),
 
     _export_parameter: _ => token(choice(
@@ -735,35 +737,26 @@ module.exports = grammar({
 
     // OpenPGP options
 
-    _personal_cipher_preferences: $ => seq(
+    _personal_cipher_preferences: $ => prec.right(seq(
       'personal-cipher-preferences',
       $._space,
       alias($._cipher_algo_value, $.value),
-      repeat(seq(
-        optional(','),
-        alias($._cipher_algo_value, $.value)
-      ))
-    ),
+      value_list($, $._cipher_algo_value)
+    )),
 
-    _personal_digest_preferences: $ => seq(
+    _personal_digest_preferences: $ => prec.right(seq(
       'personal-digest-preferences',
       $._space,
       alias($._hash_algo_value, $.value),
-      repeat(seq(
-        optional(','),
-        alias($._hash_algo_value, $.value)
-      ))
-    ),
+      value_list($, $._hash_algo_value)
+    )),
 
-    _personal_compress_preferences: $ => seq(
+    _personal_compress_preferences: $ => prec.right(seq(
       'personal-compress-preferences',
       $._space,
       alias($._compression_algo_value, $.value),
-      repeat(seq(
-        optional(','),
-        alias($._compression_algo_value, $.value)
-      ))
-    ),
+      value_list($, $._compression_algo_value)
+    )),
 
     _s2k_cipher_algo: $ => seq(
       's2k-cipher-algo',
@@ -834,15 +827,12 @@ module.exports = grammar({
     )),
 
     _debug: $ => choice(
-      seq(
+      prec.right(seq(
         'debug',
         $._space,
         alias($._debug_flag_value, $.value),
-        repeat(seq(
-          optional(','),
-          alias($._debug_flag_value, $.value)
-        ))
-      ),
+        value_list($, $._debug_flag_value)
+      )),
       seq(
         'debug',
         $._space,
@@ -1120,24 +1110,18 @@ module.exports = grammar({
       'default-new-key-algo',
       $._space,
       alias($._new_key_algo, $.value),
-      repeat(seq(
-        optional(','),
-        alias($._new_key_algo, $.value)
-      ))
+      value_list($, $._new_key_algo)
     )),
 
     // TODO: find the allowed values
     _new_key_algo: _ => /[a-zA-Z0-9+/]+/,
 
-    _default_preference_list: $ => seq(
+    _default_preference_list: $ => prec.right(seq(
       'default-preference-list',
       $._space,
       alias($._default_preference_value, $.value),
-      repeat(seq(
-        optional(','),
-        alias($._default_preference_value, $.value)
-      ))
-    ),
+      value_list($, $._default_preference_value)
+    )),
 
     _default_preference_value: $ => choice(
         $._hash_algo_value,

@@ -24,4 +24,4 @@ weak-digest SHA1
       (content
         (format))))
   (option
-    (parameter)))
+    (value)))
