@@ -614,7 +614,7 @@ module.exports = grammar({
     _group: $ => seq(
       'group',
       $._space,
-      field('name', $.string),
+      alias(/[^= \t]+/, $.name),
       '=',
       field('value', $.string)
     ),
@@ -909,7 +909,7 @@ module.exports = grammar({
       'sig-notation',
       $._space,
       optional('!'),
-      field('name', alias($._notation, $.string)),
+      alias($._notation, $.name),
       '=',
       field('value', $.string)
     ),
@@ -918,7 +918,7 @@ module.exports = grammar({
       'cert-notation',
       $._space,
       optional('!'),
-      field('name', alias($._notation, $.string)),
+      alias($._notation, $.name),
       '=',
       field('value', $.string)
     ),
@@ -927,13 +927,13 @@ module.exports = grammar({
       'set-notation',
       $._space,
       optional('!'),
-      field('name', alias($._notation, $.string)),
+      alias($._notation, $.name),
       '=',
       field('value', $.string)
     ),
 
     _notation: $ => repeat1(
-      choice(/\S/, $._notation_format)
+      choice(/[^= \t]/, $._notation_format)
     ),
 
     _notation_format: $ => alias(/%[kKfsSgpc%]/, $.format),

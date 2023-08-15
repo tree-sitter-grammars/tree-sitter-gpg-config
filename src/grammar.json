@@ -2489,12 +2489,13 @@
           "name": "_space"
         },
         {
-          "type": "FIELD",
-          "name": "name",
+          "type": "ALIAS",
           "content": {
-            "type": "SYMBOL",
-            "name": "string"
-          }
+            "type": "PATTERN",
+            "value": "[^= \\t]+"
+          },
+          "named": true,
+          "value": "name"
         },
         {
           "type": "STRING",
@@ -4085,17 +4086,13 @@
           ]
         },
         {
-          "type": "FIELD",
-          "name": "name",
+          "type": "ALIAS",
           "content": {
-            "type": "ALIAS",
-            "content": {
-              "type": "SYMBOL",
-              "name": "_notation"
-            },
-            "named": true,
-            "value": "string"
-          }
+            "type": "SYMBOL",
+            "name": "_notation"
+          },
+          "named": true,
+          "value": "name"
         },
         {
           "type": "STRING",
@@ -4135,17 +4132,13 @@
           ]
         },
         {
-          "type": "FIELD",
-          "name": "name",
+          "type": "ALIAS",
           "content": {
-            "type": "ALIAS",
-            "content": {
-              "type": "SYMBOL",
-              "name": "_notation"
-            },
-            "named": true,
-            "value": "string"
-          }
+            "type": "SYMBOL",
+            "name": "_notation"
+          },
+          "named": true,
+          "value": "name"
         },
         {
           "type": "STRING",
@@ -4185,17 +4178,13 @@
           ]
         },
         {
-          "type": "FIELD",
-          "name": "name",
+          "type": "ALIAS",
           "content": {
-            "type": "ALIAS",
-            "content": {
-              "type": "SYMBOL",
-              "name": "_notation"
-            },
-            "named": true,
-            "value": "string"
-          }
+            "type": "SYMBOL",
+            "name": "_notation"
+          },
+          "named": true,
+          "value": "name"
         },
         {
           "type": "STRING",
@@ -4218,7 +4207,7 @@
         "members": [
           {
             "type": "PATTERN",
-            "value": "\\S"
+            "value": "[^= \\t]"
           },
           {
             "type": "SYMBOL",
