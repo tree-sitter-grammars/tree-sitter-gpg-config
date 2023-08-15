@@ -1208,6 +1208,6 @@ module.exports = grammar({
       ci('none'),
     )),
 
-    _space: _ => /[ \t]/,
+    _space: _ => /[ \t]+/,
   }
 });

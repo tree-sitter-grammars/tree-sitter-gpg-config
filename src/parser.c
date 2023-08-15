@@ -13658,6 +13658,8 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 3152:
       ACCEPT_TOKEN(sym__space);
+      if (lookahead == '\t' ||
+          lookahead == ' ') ADVANCE(3152);
       END_STATE();
     default:
       return false;
@@ -14133,7 +14135,6 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [aux_sym__s2k_mode_token1] = ACTIONS(1),
     [anon_sym_BANG] = ACTIONS(1),
     [aux_sym__notation_token1] = ACTIONS(1),
-    [sym__space] = ACTIONS(1),
   },
   [1] = {
     [sym_config] = STATE(288),

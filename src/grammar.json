@@ -5496,7 +5496,7 @@
     },
     "_space": {
       "type": "PATTERN",
-      "value": "[ \\t]"
+      "value": "[ \\t]+"
     }
   },
   "extras": [],
