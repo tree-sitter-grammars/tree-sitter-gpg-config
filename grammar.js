@@ -205,9 +205,9 @@ module.exports = grammar({
       'no-comments',
       'emit-version',
       'no-emit-version',
-      // TODO: $._sig_notation,
-      // TODO: $._cert_notation,
-      // TODO: $._set_notation,
+      $._sig_notation,
+      $._cert_notation,
+      $._set_notation,
       $._known_notation,
       $._sig_policy_url,
       $._cert_policy_url,
@@ -912,11 +912,36 @@ module.exports = grammar({
       $.string
     ),
 
-    // TODO: _sig_notation
+    _sig_notation: $ => seq(
+      'sig-notation',
+      $._space,
+      optional('!'),
+      field('name', alias($._notation, $.string)),
+      token.immediate('='),
+      field('value', $.string)
+    ),
 
-    // TODO: _cert_notation
+    _cert_notation: $ => seq(
+      'cert-notation',
+      $._space,
+      optional('!'),
+      field('name', alias($._notation, $.string)),
+      token.immediate('='),
+      field('value', $.string)
+    ),
 
-    // TODO: _set_notation
+    _set_notation: $ => seq(
+      'set-notation',
+      $._space,
+      optional('!'),
+      field('name', alias($._notation, $.string)),
+      token.immediate('='),
+      field('value', $.string)
+    ),
+
+    _notation: $ => repeat1(
+      choice(/\S/, $._notation_format)
+    ),
 
     _notation_format: $ => alias(/%[kKfsSgpc%]/, $.format),
 
@@ -930,31 +955,29 @@ module.exports = grammar({
       'sig-policy-url',
       $._space,
       optional('!'),
-      alias($._formatted_url, $.url)
+      alias($._notation, $.url)
     ),
 
     _cert_policy_url: $ => seq(
       'cert-policy-url',
       $._space,
       optional('!'),
-      alias($._formatted_url, $.url)
+      alias($._notation, $.url)
     ),
 
     _set_policy_url: $ => seq(
       'set-policy-url',
       $._space,
       optional('!'),
-      alias($._formatted_url, $.url)
+      alias($._notation, $.url)
     ),
 
     _sig_keyserver_url: $ => seq(
       'sig-keyserver-url',
       $._space,
       optional('!'),
-      alias($._formatted_url, $.url)
+      alias($._notation, $.url)
     ),
-
-    _formatted_url: $ => repeat1(choice(/\S/, $._notation_format)),
 
     _set_filename: $ => seq(
       'set-filename',

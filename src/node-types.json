@@ -102,6 +102,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "format",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -225,6 +235,10 @@
   },
   {
     "type": "cert-digest-algo",
+    "named": false
+  },
+  {
+    "type": "cert-notation",
     "named": false
   },
   {
@@ -912,6 +926,10 @@
     "named": false
   },
   {
+    "type": "set-notation",
+    "named": false
+  },
+  {
     "type": "set-policy-url",
     "named": false
   },
@@ -921,6 +939,10 @@
   },
   {
     "type": "sig-keyserver-url",
+    "named": false
+  },
+  {
+    "type": "sig-notation",
     "named": false
   },
   {
