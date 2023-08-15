@@ -843,7 +843,7 @@ module.exports = grammar({
       seq(
         'debug',
         $._space,
-        alias(/(0x)?[0-9]{1,5}/, $.number),
+        alias(/(0x)?[0-9a-fA-f]{1,8}/, $.number),
       ),
     ),
 
@@ -1129,7 +1129,18 @@ module.exports = grammar({
     _default_preference_list: $ => seq(
       'default-preference-list',
       $._space,
-      $.string
+      field('parameter', $._default_preference_value),
+      repeat(seq(
+        optional(','),
+        field('parameter', $._default_preference_value)
+      ))
+    ),
+
+    _default_preference_value: $ => choice(
+        $._hash_algo_value,
+        $._cipher_algo_value,
+        $._pubkey_algo_value,
+        $._compression_algo_value
     ),
 
     _default_keyserver_url: $ => seq(

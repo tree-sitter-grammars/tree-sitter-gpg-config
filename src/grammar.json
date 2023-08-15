@@ -3509,7 +3509,7 @@
               "type": "ALIAS",
               "content": {
                 "type": "PATTERN",
-                "value": "(0x)?[0-9]{1,5}"
+                "value": "(0x)?[0-9a-fA-f]{1,8}"
               },
               "named": true,
               "value": "number"
@@ -4693,8 +4693,61 @@
           "name": "_space"
         },
         {
+          "type": "FIELD",
+          "name": "parameter",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_default_preference_value"
+          }
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": ","
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              },
+              {
+                "type": "FIELD",
+                "name": "parameter",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_default_preference_value"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "_default_preference_value": {
+      "type": "CHOICE",
+      "members": [
+        {
           "type": "SYMBOL",
-          "name": "string"
+          "name": "_hash_algo_value"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_cipher_algo_value"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_pubkey_algo_value"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_compression_algo_value"
         }
       ]
     },
