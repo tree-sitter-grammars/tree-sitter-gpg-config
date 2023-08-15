@@ -21,5 +21,7 @@ weak-digest SHA1
   (option)
   (option
     (string
-      (format)))
-  (option))
+      (content
+        (format))))
+  (option
+    (parameter)))

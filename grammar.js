@@ -7,15 +7,17 @@
 
 /**
  * @param q {'"'|"'"}
+ * @param content {SymbolRule<string>}
  * @param extra {...Rule}
  */
-const quoted = (q, ...extra) =>
-  seq(q, field('content',
+const quoted = (q, content, ...extra) =>
+  seq(q, alias(
     repeat1(choice(
       new RegExp(`[^${q}]`),
       String.raw`\${q}`,
       ...extra
-    ))
+    )),
+    content
   ), q);
 
 /**
@@ -296,10 +298,10 @@ module.exports = grammar({
     _list_options: $ => prec.right(seq(
       'list-options',
       $._space,
-      field('parameter', $._list_parameter),
+      alias($._list_parameter, $.parameter),
       repeat(seq(
         optional(','),
-        field('parameter', $._list_parameter)
+        alias($._list_parameter, $.parameter)
       ))
     )),
 
@@ -325,10 +327,10 @@ module.exports = grammar({
     _verify_options: $ => prec.right(seq(
       'verify-options',
       $._space,
-      field('parameter', $._verify_parameter),
+      alias($._verify_parameter, $.parameter),
       repeat(seq(
         optional(','),
-        field('parameter', $._verify_parameter)
+        alias($._verify_parameter, $.parameter)
       ))
     )),
 
@@ -352,11 +354,12 @@ module.exports = grammar({
     ),
 
     _command: $ => choice(
-      field('content', repeat1(
-        choice(/\S/, $._command_format))
+      alias(
+        repeat1(choice(/\S/, $._command_format)),
+        $.content
       ),
-      quoted('"', $._command_format),
-      quoted("'", $._command_format),
+      quoted('"', $.content, $._command_format),
+      quoted("'", $.content, $._command_format),
     ),
 
     _command_format: $ => alias(/%[iIkKftTvVU%]/, $.format),
@@ -388,7 +391,7 @@ module.exports = grammar({
     _display_charset: $ => seq(
       'display-charset',
       $._space,
-      field('parameter', $._charset_value)
+      alias($._charset_value, $.parameter)
     ),
 
     _charset_value: _ => token(choice(
@@ -449,7 +452,7 @@ module.exports = grammar({
     _trust_model: $ => seq(
       'trust-model',
       $._space,
-      field('parameter', $._model)
+      alias($._model, $.parameter)
     ),
 
     _model: _ => token(choice(
@@ -493,7 +496,7 @@ module.exports = grammar({
     _keyid_format: $ => seq(
       'keyid-format',
       $._space,
-      field('parameter', $._keyid_format_value)
+      alias($._keyid_format_value, $.parameter)
     ),
 
     _keyid_format_value: _ => token(choice(
@@ -527,7 +530,7 @@ module.exports = grammar({
     _tofu_default_policy: $ => seq(
       'tofu-default-policy',
       $._space,
-      field('parameter', $._tofu_policy_value)
+      alias($._tofu_policy_value, $.parameter)
     ),
 
     _tofu_policy_value: _ => token(choice(
@@ -661,7 +664,7 @@ module.exports = grammar({
     _key_origin: $ => seq(
       'key-origin',
       $._space,
-      field('parameter', $._key_origin_value),
+      alias($._key_origin_value, $.parameter),
       optional(seq(',', $.url))
     ),
 
@@ -679,10 +682,10 @@ module.exports = grammar({
     _import_options: $ => prec.right(seq(
       'import-options',
       $._space,
-      field('parameter', $._import_parameter),
+      alias($._import_parameter, $.parameter),
       repeat(seq(
         optional(','),
-        field('parameter', $._import_parameter)
+        alias($._import_parameter, $.parameter)
       ))
     )),
 
@@ -710,10 +713,10 @@ module.exports = grammar({
     _export_options: $ => prec.right(seq(
       'export-options',
       $._space,
-      field('parameter', $._export_parameter),
+      alias($._export_parameter, $.parameter),
       repeat(seq(
         optional(','),
-        field('parameter', $._export_parameter)
+        alias($._export_parameter, $.parameter)
       ))
     )),
 
@@ -735,43 +738,43 @@ module.exports = grammar({
     _personal_cipher_preferences: $ => seq(
       'personal-cipher-preferences',
       $._space,
-      field('parameter', $._cipher_algo_value),
+      alias($._cipher_algo_value, $.parameter),
       repeat(seq(
         optional(','),
-        field('parameter', $._cipher_algo_value)
+        alias($._cipher_algo_value, $.parameter)
       ))
     ),
 
     _personal_digest_preferences: $ => seq(
       'personal-digest-preferences',
       $._space,
-      field('parameter', $._hash_algo_value),
+      alias($._hash_algo_value, $.parameter),
       repeat(seq(
         optional(','),
-        field('parameter', $._hash_algo_value)
+        alias($._hash_algo_value, $.parameter)
       ))
     ),
 
     _personal_compress_preferences: $ => seq(
       'personal-compress-preferences',
       $._space,
-      field('parameter', $._compression_algo_value),
+      alias($._compression_algo_value, $.parameter),
       repeat(seq(
         optional(','),
-        field('parameter', $._compression_algo_value)
+        alias($._compression_algo_value, $.parameter)
       ))
     ),
 
     _s2k_cipher_algo: $ => seq(
       's2k-cipher-algo',
       $._space,
-      field('parameter', $._cipher_algo_value)
+      alias($._cipher_algo_value, $.parameter)
     ),
 
     _s2k_digest_algo: $ => seq(
       's2k-digest-algo',
       $._space,
-      field('parameter', $._hash_algo_value)
+      alias($._hash_algo_value, $.parameter)
     ),
 
     _s2k_mode: $ => seq(
@@ -791,7 +794,7 @@ module.exports = grammar({
     _compliance: $ => seq(
       'compliance',
       $._space,
-      field('parameter', $._compliance_value)
+      alias($._compliance_value, $.parameter)
     ),
 
     _compliance_value: _ => token(choice(
@@ -819,7 +822,7 @@ module.exports = grammar({
     _debug_level: $ => seq(
       'debug-level',
       $._space,
-      field('parameter', $._debug_level_value)
+      alias($._debug_level_value, $.parameter)
     ),
 
     _debug_level_value: _ => token(choice(
@@ -834,10 +837,10 @@ module.exports = grammar({
       seq(
         'debug',
         $._space,
-        field('parameter', $._debug_flag_value),
+        alias($._debug_flag_value, $.parameter),
         repeat(seq(
           optional(','),
-          field('parameter', $._debug_flag_value)
+          alias($._debug_flag_value, $.parameter)
         ))
       ),
       seq(
@@ -988,37 +991,37 @@ module.exports = grammar({
     _cipher_algo: $ => seq(
       'cipher-algo',
       $._space,
-      field('parameter', $._cipher_algo_value),
+      alias($._cipher_algo_value, $.parameter),
     ),
 
     _digest_algo: $ => seq(
       'digest-algo',
       $._space,
-      field('parameter', $._hash_algo_value),
+      alias($._hash_algo_value, $.parameter),
     ),
 
     _compress_algo: $ => seq(
       'compress-algo',
       $._space,
-      field('parameter', $._compression_algo_value),
+      alias($._compression_algo_value, $.parameter),
     ),
 
     _cert_digest_algo: $ => seq(
       'cert-digest-algo',
       $._space,
-      field('parameter', $._hash_algo_value),
+      alias($._hash_algo_value, $.parameter),
     ),
 
     _disable_cipher_algo: $ => seq(
       'disable-cipher-algo',
       $._space,
-      field('parameter', $._cipher_algo_value),
+      alias($._cipher_algo_value, $.parameter),
     ),
 
     _disable_pubkey_algo: $ => seq(
       'disable-pubkey-algo',
       $._space,
-      field('parameter', $._pubkey_algo_value),
+      alias($._pubkey_algo_value, $.parameter),
     ),
 
     _passphrase_repeat: $ => seq(
@@ -1048,7 +1051,7 @@ module.exports = grammar({
     _pinentry_mode: $ => seq(
       'pinentry-mode',
       $._space,
-      field('parameter', $._pinentry_mode_value)
+      alias($._pinentry_mode_value, $.parameter)
     ),
 
     _pinentry_mode_value: _ => token(choice(
@@ -1062,7 +1065,7 @@ module.exports = grammar({
     _request_origin: $ => seq(
       'request-origin',
       $._space,
-      field('parameter', $._request_origin_value)
+      alias($._request_origin_value, $.parameter)
     ),
 
     _request_origin_value: _ => token(choice(
@@ -1086,7 +1089,7 @@ module.exports = grammar({
     _weak_digest: $ => seq(
       'weak-digest',
       $._space,
-      field('parameter', $._hash_algo_value)
+      alias($._hash_algo_value, $.parameter)
     ),
 
     _override_session_key: $ => seq(
@@ -1116,10 +1119,10 @@ module.exports = grammar({
     _default_new_key_algo: $ => prec.right(seq(
       'default-new-key-algo',
       $._space,
-      field('parameter', $._new_key_algo),
+      alias($._new_key_algo, $.parameter),
       repeat(seq(
         optional(','),
-        field('parameter', $._new_key_algo)
+        alias($._new_key_algo, $.parameter)
       ))
     )),
 
@@ -1129,10 +1132,10 @@ module.exports = grammar({
     _default_preference_list: $ => seq(
       'default-preference-list',
       $._space,
-      field('parameter', $._default_preference_value),
+      alias($._default_preference_value, $.parameter),
       repeat(seq(
         optional(','),
-        field('parameter', $._default_preference_value)
+        alias($._default_preference_value, $.parameter)
       ))
     ),
 
@@ -1170,10 +1173,10 @@ module.exports = grammar({
       /[0-9]{4}-[0-9]{2}-[0-9]{2}/
     )),
 
-    string: _ => choice(
-      field('content', /\S+/),
-      quoted('"'),
-      quoted("'")
+    string: $ => choice(
+      alias(/\S+/, $.content),
+      quoted('"', $.content),
+      quoted("'", $.content)
     ),
 
     comment: _ => /#.*/,
