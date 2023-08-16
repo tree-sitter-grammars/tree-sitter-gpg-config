@@ -104,7 +104,7 @@ module.exports = grammar({
       'no-auto-key-retrieve',
       $._keyid_format,
       $._keyserver,
-      // TODO: $._keyserver_options,
+      $._keyserver_options,
       $._completes_needed,
       $._marginals_needed,
       $._tofu_default_policy,
@@ -558,7 +558,32 @@ module.exports = grammar({
       $.url
     ),
 
-    // TODO: keyserver_options
+    _keyserver_options: $ => prec.right(seq(
+      'keyserver-options',
+      $._space,
+      $._keyserver_set_option,
+      choice(
+        repeat(seq(',', $._keyserver_set_option)),
+        repeat(seq($._space, $._keyserver_set_option))
+      )
+    )),
+
+    _keyserver_set_option: $ => seq(
+      optional('no-'),
+      alias(choice(
+        $._keyserver_parameter,
+        $._import_parameter,
+        $._export_parameter,
+      ), $.name),
+      optional(seq('=', field('value', $.string)))
+    ),
+
+    _keyserver_parameter: _ => token(choice(
+      ci('include-revoked'),
+      ci('include-disabled'),
+      ci('honor-keyserver-url'),
+      ci('include-subkeys'),
+    )),
 
     _completes_needed: $ => seq(
       'completes-needed',

@@ -100,7 +100,7 @@
         ]
       },
       "value": {
-        "multiple": false,
+        "multiple": true,
         "required": false,
         "types": [
           {
@@ -649,6 +649,10 @@
     "named": false
   },
   {
+    "type": "keyserver-options",
+    "named": false
+  },
+  {
     "type": "known-notation",
     "named": false
   },
@@ -734,6 +738,10 @@
   },
   {
     "type": "min-rsa-length",
+    "named": false
+  },
+  {
+    "type": "no-",
     "named": false
   },
   {
