@@ -25,3 +25,65 @@ weak-digest SHA1
         (format))))
   (option
     (value)))
+
+================================================================================
+Filter example (multiple)
+================================================================================
+
+import-filter keep-uid="uid =~ Alfa"
+import-filter keep-uid="&& uid !~ Test"
+import-filter keep-uid="|| uid =~ Alpha"
+import-filter keep-uid="uid !~ Test"
+
+--------------------------------------------------------------------------------
+
+(config
+  (option
+    (filter_name)
+    (filter_property)
+    (filter_op1)
+    (filter_value))
+  (option
+    (filter_name)
+    (filter_lc)
+    (filter_property)
+    (filter_op1)
+    (filter_value))
+  (option
+    (filter_name)
+    (filter_lc)
+    (filter_property)
+    (filter_op1)
+    (filter_value))
+  (option
+    (filter_name)
+    (filter_property)
+    (filter_op1)
+    (filter_value)))
+
+================================================================================
+Filter example (combined)
+================================================================================
+
+import-filter keep-uid="uid =~ Alfa && uid !~ Test || uid =~ Alpha && uid !~ Test"
+
+--------------------------------------------------------------------------------
+
+(config
+  (option
+    (filter_name)
+    (filter_property)
+    (filter_op1)
+    (filter_value)
+    (filter_lc)
+    (filter_property)
+    (filter_op1)
+    (filter_value)
+    (filter_lc)
+    (filter_property)
+    (filter_op1)
+    (filter_value)
+    (filter_lc)
+    (filter_property)
+    (filter_op1)
+    (filter_value)))

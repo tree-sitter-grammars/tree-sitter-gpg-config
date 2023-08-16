@@ -34,6 +34,11 @@
     }
   },
   {
+    "type": "filter_value",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "name",
     "named": true,
     "fields": {},
@@ -52,6 +57,48 @@
     "type": "option",
     "named": true,
     "fields": {
+      "expression": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "\"",
+            "named": false
+          },
+          {
+            "type": "'",
+            "named": false
+          },
+          {
+            "type": "filter_flag",
+            "named": true
+          },
+          {
+            "type": "filter_lc",
+            "named": true
+          },
+          {
+            "type": "filter_op0",
+            "named": true
+          },
+          {
+            "type": "filter_op1",
+            "named": true
+          },
+          {
+            "type": "filter_property",
+            "named": true
+          },
+          {
+            "type": "filter_scope",
+            "named": true
+          },
+          {
+            "type": "filter_value",
+            "named": true
+          }
+        ]
+      },
       "value": {
         "multiple": false,
         "required": false,
@@ -69,6 +116,10 @@
       "types": [
         {
           "type": "expire_time",
+          "named": true
+        },
+        {
+          "type": "filter_name",
           "named": true
         },
         {
@@ -446,6 +497,10 @@
     "named": true
   },
   {
+    "type": "export-filter",
+    "named": false
+  },
+  {
     "type": "export-options",
     "named": false
   },
@@ -456,6 +511,34 @@
   {
     "type": "fast-list-mode",
     "named": false
+  },
+  {
+    "type": "filter_flag",
+    "named": true
+  },
+  {
+    "type": "filter_lc",
+    "named": true
+  },
+  {
+    "type": "filter_name",
+    "named": true
+  },
+  {
+    "type": "filter_op0",
+    "named": true
+  },
+  {
+    "type": "filter_op1",
+    "named": true
+  },
+  {
+    "type": "filter_property",
+    "named": true
+  },
+  {
+    "type": "filter_scope",
+    "named": true
   },
   {
     "type": "for-your-eyes-only",
@@ -522,6 +605,10 @@
     "named": false
   },
   {
+    "type": "import-filter",
+    "named": false
+  },
+  {
     "type": "import-options",
     "named": false
   },
@@ -571,6 +658,10 @@
   },
   {
     "type": "limit-card-insert-tries",
+    "named": false
+  },
+  {
+    "type": "list-filter",
     "named": false
   },
   {

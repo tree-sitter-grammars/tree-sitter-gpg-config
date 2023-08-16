@@ -3,6 +3,7 @@
  * @author ObserverOfTime
  * @license MIT
  * @see {@link https://www.gnupg.org/documentation/manuals/gnupg/GPG-Options.html|GPG Options}
+ * @see {@link https://www.gnupg.org/documentation/manuals/gnupg/GPG-Examples.html#FILTER-EXPRESSIONS|Filter expressions}
  */
 
 /**
@@ -65,7 +66,7 @@ module.exports = grammar({
       'no-default-recipient',
       'verbose',
       'no-tty',
-      // TODO: $._list_filter,
+      $._list_filter,
       $._list_options,
       $._verify_options,
       'enable-large-rsa',
@@ -156,8 +157,8 @@ module.exports = grammar({
       $._input_size_hint,
       $._key_origin,
       $._import_options,
-      // TODO: $._import_filter,
-      // TODO: $._export_filter,
+      $._import_filter,
+      $._export_filter,
       $._export_options,
       'with-colons',
       'legacy-list-mode',
@@ -303,7 +304,43 @@ module.exports = grammar({
       $.string
     ),
 
-    // TODO: list_filter
+    _list_filter: $ => prec.right(seq(
+      'list-filter',
+      $._space,
+      alias($._list_filter_name, $.filter_name),
+      '=',
+      field('expression', $._filter_expression)
+    )),
+
+    _list_filter_name: _ => token(ci('select')),
+
+    _filter_expression: $ => seq(
+      choice(
+        seq('"', $._filter_expression_inner, '"'),
+        seq("'", $._filter_expression_inner, "'")
+      )
+    ),
+
+    _filter_expression_inner: $ => prec.right(seq(
+      optional(seq(optional($._space), $.filter_lc)),
+      repeat1(seq(
+        optional($._space),
+        repeat(seq($.filter_flag, $._space)),
+        optional($.filter_scope),
+        $.filter_property,
+        optional($._space),
+        choice(
+          seq(
+            $.filter_op1,
+            optional($._space),
+            $.filter_value,
+          ),
+          $.filter_op0
+        ),
+        optional($._space),
+        optional(seq($.filter_lc, optional($._space))),
+      ))
+    )),
 
     _list_options: $ => prec.right(seq(
       'list-options',
@@ -711,9 +748,31 @@ module.exports = grammar({
       ci('import-restore'),
     )),
 
-    // TODO: import_filter
+    _import_filter: $ => prec.right(seq(
+      'import-filter',
+      $._space,
+      alias($._import_filter_name, $.filter_name),
+      '=',
+      field('expression', $._filter_expression)
+    )),
 
-    // TODO: export_filter
+    _import_filter_name: _ => token(choice(
+      ci('keep-uid'),
+      ci('drop-sig'),
+    )),
+
+    _export_filter: $ => prec.right(seq(
+      'export-filter',
+      $._space,
+      alias($._export_filter_name, $.filter_name),
+      '=',
+      field('expression', $._filter_expression)
+    )),
+
+    _export_filter_name: _ => token(choice(
+      ci('keep-uid'),
+      ci('drop-subkey'),
+    )),
 
     _export_options: $ => prec.right(seq(
       'export-options',
@@ -1162,6 +1221,68 @@ module.exports = grammar({
       quoted('"', $.content),
       quoted("'", $.content)
     ),
+
+    filter_scope: _ => token(choice(
+      ci('pub/'),
+      ci('sub/'),
+      ci('uid/'),
+      ci('sig/'),
+    )),
+
+    filter_property: _ => token(choice(
+      ci('uid'),
+      ci('mbox'),
+      ci('algostr'),
+      ci('key_algo'),
+      ci('key_size'),
+      ci('key_created'),
+      ci('key_created_d'),
+      ci('key_expires'),
+      ci('key_expires_d'),
+      ci('fpr'),
+      ci('expired'),
+      ci('revoked'),
+      ci('disabled'),
+      ci('secret'),
+      ci('usage'),
+      ci('sig_created'),
+      ci('sig_created_d'),
+      ci('sig_algo'),
+      ci('sig_digest_algo'),
+      ci('origin'),
+      ci('lastupd'),
+      ci('url'),
+    )),
+
+    filter_lc: _ => token(choice('&&', '||')),
+
+    filter_op1: _ => token(choice(
+      '=~',
+      '!~',
+      '=',
+      '<>',
+      '==',
+      '!=',
+      '<=',
+      '<',
+      '>=',
+      '>=',
+      '-le',
+      '-lt',
+      '-gt',
+      '-ge',
+    )),
+
+    filter_op0: _ => token(choice(
+      '-n',
+      '-z',
+      '-t',
+      '-f',
+    )),
+
+    filter_flag: _ => token(choice('--', '-c', '-t')),
+
+    filter_value: _ => prec.left(-1, repeat1(/./)),
 
     comment: _ => /#.*/,
 
