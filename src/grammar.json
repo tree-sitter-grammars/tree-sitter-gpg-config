@@ -4329,7 +4329,7 @@
               "type": "ALIAS",
               "content": {
                 "type": "PATTERN",
-                "value": "(0x)?[0-9a-fA-f]{1,8}"
+                "value": "(0[xX])?[0-9a-fA-f]{1,8}"
               },
               "named": true,
               "value": "number"
@@ -5648,7 +5648,7 @@
     },
     "key": {
       "type": "PATTERN",
-      "value": "(0x)?[0-9A-Fa-f]{8,40}"
+      "value": "(0[xX])?[0-9A-Fa-f]{8,40}"
     },
     "url": {
       "type": "PATTERN",

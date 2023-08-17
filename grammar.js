@@ -920,7 +920,7 @@ module.exports = grammar({
       seq(
         'debug',
         $._space,
-        alias(/(0x)?[0-9a-fA-f]{1,8}/, $.number),
+        alias(/(0[xX])?[0-9a-fA-f]{1,8}/, $.number),
       ),
     ),
 
@@ -1228,7 +1228,7 @@ module.exports = grammar({
 
     // Miscellanea
 
-    key: _ => /(0x)?[0-9A-Fa-f]{8,40}/,
+    key: _ => /(0[xX])?[0-9A-Fa-f]{8,40}/,
 
     url: _ => /(hkp|ldap)s?:\/\/([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]+(:[0-9]+)?/i,
 
