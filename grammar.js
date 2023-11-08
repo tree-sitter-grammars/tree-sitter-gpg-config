@@ -2,8 +2,6 @@
  * @file Tree-sitter grammar definition
  * @author ObserverOfTime
  * @license MIT
- * @see {@link https://www.gnupg.org/documentation/manuals/gnupg/GPG-Options.html|GPG Options}
- * @see {@link https://www.gnupg.org/documentation/manuals/gnupg/GPG-Examples.html#FILTER-EXPRESSIONS|Filter expressions}
  */
 
 /**
