@@ -1,18 +1,17 @@
 [package]
 name = "tree-sitter-gpg-config"
 description = "GPG config grammar for the tree-sitter parsing library"
-version = "0.1.2"
+version = "0.2.0"
 keywords = ["incremental", "parsing", "gpg"]
 categories = ["parsing", "text-editors"]
-repository = "https://github.com/ObserverOfTime/tree-sitter-gpg-config"
-edition = "2018"
+repository = "https://github.com/tree-sitter-grammars/tree-sitter-gpg-config"
+edition = "2021"
 license = "MIT"
 
 build = "bindings/rust/build.rs"
 include = [
   "bindings/rust/*",
   "grammar.js",
-  "queries/*",
   "src/*",
 ]
 
@@ -20,7 +19,7 @@ include = [
 path = "bindings/rust/lib.rs"
 
 [dependencies]
-tree-sitter = "~0.20.3"
+tree-sitter = "~0.20.10"
 
 [build-dependencies]
 cc = "1.0"

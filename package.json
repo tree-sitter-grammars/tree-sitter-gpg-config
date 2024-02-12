@@ -1,9 +1,9 @@
 {
   "name": "tree-sitter-gpg-config",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "license": "MIT",
   "description": "GPG config grammar for tree-sitter",
-  "repository": "ObserverOfTime/tree-sitter-gpg-config",
+  "repository": "tree-sitter-grammars/tree-sitter-gpg-config",
   "author": {
     "name": "ObserverOfTime",
     "email": "chronobserver@disroot.org",
@@ -22,10 +22,10 @@
   },
   "main": "bindings/node",
   "dependencies": {
-    "nan": "^2.17.0"
+    "nan": "^2.18.0"
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.20.8"
+    "tree-sitter-cli": "~0.21.0-pre-release-1"
   },
   "tree-sitter": [
     {
