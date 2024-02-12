@@ -2647,6 +2647,60 @@
             },
             "named": false,
             "value": "include-subkeys"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "[tT][iI][mM][eE][oO][uU][tT]"
+            },
+            "named": false,
+            "value": "timeout"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "[hH][tT][tT][pP][--][pP][rR][oO][xX][yY]"
+            },
+            "named": false,
+            "value": "http-proxy"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "[vV][eE][rR][bB][oO][sS][eE]"
+            },
+            "named": false,
+            "value": "verbose"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "[dD][eE][bB][uU][gG]"
+            },
+            "named": false,
+            "value": "debug"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "[cC][hH][eE][cC][kK][--][cC][eE][rR][tT]"
+            },
+            "named": false,
+            "value": "check-cert"
+          },
+          {
+            "type": "ALIAS",
+            "content": {
+              "type": "PATTERN",
+              "value": "[cC][aA][--][cC][eE][rR][tT][--][fF][iI][lL][eE]"
+            },
+            "named": false,
+            "value": "ca-cert-file"
           }
         ]
       }
@@ -5652,7 +5706,8 @@
     },
     "url": {
       "type": "PATTERN",
-      "value": "(hkp|ldap)s?:\\/\\/([a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z]+(:[0-9]+)?"
+      "value": "(hkp|ldap)s?:\\/\\/([a-z0-9]+(-[a-z0-9]+)*\\.)+[a-z]+(:[0-9]+)?",
+      "flags": "i"
     },
     "number": {
       "type": "PATTERN",

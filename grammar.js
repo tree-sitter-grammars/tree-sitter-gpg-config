@@ -589,6 +589,12 @@ module.exports = grammar({
       ci('include-disabled'),
       ci('honor-keyserver-url'),
       ci('include-subkeys'),
+      ci('timeout'),
+      ci('http-proxy'),
+      ci('verbose'),
+      ci('debug'),
+      ci('check-cert'),
+      ci('ca-cert-file'),
     )),
 
     _completes_needed: $ => seq(
