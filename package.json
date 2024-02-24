@@ -30,6 +30,7 @@
   "tree-sitter": [
     {
       "scope": "text.gpg",
+      "highlights": "queries/highlights.scm",
       "file-types": ["gpg.conf"]
     }
   ]
