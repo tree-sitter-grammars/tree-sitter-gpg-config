@@ -1033,7 +1033,8 @@
         "type": "ALIAS",
         "content": {
           "type": "PATTERN",
-          "value": "[sS][eE][lL][eE][cC][tT]"
+          "value": "select",
+          "flags": "i"
         },
         "named": false,
         "value": "select"
@@ -1342,7 +1343,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][pP][hH][oO][tT][oO][sS]"
+              "value": "show-photos",
+              "flags": "i"
             },
             "named": false,
             "value": "show-photos"
@@ -1351,7 +1353,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][uU][sS][aA][gG][eE]"
+              "value": "show-usage",
+              "flags": "i"
             },
             "named": false,
             "value": "show-usage"
@@ -1360,7 +1363,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][pP][oO][lL][iI][cC][yY][--][uU][rR][lL][sS]"
+              "value": "show-policy-urls",
+              "flags": "i"
             },
             "named": false,
             "value": "show-policy-urls"
@@ -1369,7 +1373,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][nN][oO][tT][aA][tT][iI][oO][nN][sS]"
+              "value": "show-notations",
+              "flags": "i"
             },
             "named": false,
             "value": "show-notations"
@@ -1378,7 +1383,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][sS][tT][dD][--][nN][oO][tT][aA][tT][iI][oO][nN][sS]"
+              "value": "show-std-notations",
+              "flags": "i"
             },
             "named": false,
             "value": "show-std-notations"
@@ -1387,7 +1393,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][uU][sS][eE][rR][--][nN][oO][tT][aA][tT][iI][oO][nN][sS]"
+              "value": "show-user-notations",
+              "flags": "i"
             },
             "named": false,
             "value": "show-user-notations"
@@ -1396,7 +1403,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][kK][eE][yY][sS][eE][rR][vV][eE][rR][--][uU][rR][lL][sS]"
+              "value": "show-keyserver-urls",
+              "flags": "i"
             },
             "named": false,
             "value": "show-keyserver-urls"
@@ -1405,7 +1413,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][uU][iI][dD][--][vV][aA][lL][iI][dD][iI][tT][yY]"
+              "value": "show-uid-validity",
+              "flags": "i"
             },
             "named": false,
             "value": "show-uid-validity"
@@ -1414,7 +1423,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][uU][nN][uU][sS][aA][bB][lL][eE][--][uU][iI][dD][sS]"
+              "value": "show-unusable-uids",
+              "flags": "i"
             },
             "named": false,
             "value": "show-unusable-uids"
@@ -1423,7 +1433,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][uU][nN][uU][sS][aA][bB][lL][eE][--][sS][uU][bB][kK][eE][yY][sS]"
+              "value": "show-unusable-subkeys",
+              "flags": "i"
             },
             "named": false,
             "value": "show-unusable-subkeys"
@@ -1432,7 +1443,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][uU][nN][uU][sS][aA][bB][lL][eE][--][sS][iI][gG][sS]"
+              "value": "show-unusable-sigs",
+              "flags": "i"
             },
             "named": false,
             "value": "show-unusable-sigs"
@@ -1441,7 +1453,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][kK][eE][yY][rR][iI][nN][gG]"
+              "value": "show-keyring",
+              "flags": "i"
             },
             "named": false,
             "value": "show-keyring"
@@ -1450,7 +1463,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][sS][iI][gG][--][eE][xX][pP][iI][rR][eE]"
+              "value": "show-sig-expire",
+              "flags": "i"
             },
             "named": false,
             "value": "show-sig-expire"
@@ -1459,7 +1473,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][sS][iI][gG][--][sS][uU][bB][pP][aA][cC][kK][eE][tT][sS]"
+              "value": "show-sig-subpackets",
+              "flags": "i"
             },
             "named": false,
             "value": "show-sig-subpackets"
@@ -1468,7 +1483,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][oO][nN][lL][yY][--][fF][pP][rR][--][mM][bB][oO][xX]"
+              "value": "show-only-fpr-mbox",
+              "flags": "i"
             },
             "named": false,
             "value": "show-only-fpr-mbox"
@@ -1477,7 +1493,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][oO][rR][tT][--][sS][iI][gG][sS]"
+              "value": "sort-sigs",
+              "flags": "i"
             },
             "named": false,
             "value": "sort-sigs"
@@ -1567,7 +1584,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][pP][hH][oO][tT][oO][sS]"
+              "value": "show-photos",
+              "flags": "i"
             },
             "named": false,
             "value": "show-photos"
@@ -1576,7 +1594,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][uU][sS][aA][gG][eE]"
+              "value": "show-usage",
+              "flags": "i"
             },
             "named": false,
             "value": "show-usage"
@@ -1585,7 +1604,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][pP][oO][lL][iI][cC][yY][--][uU][rR][lL][sS]"
+              "value": "show-policy-urls",
+              "flags": "i"
             },
             "named": false,
             "value": "show-policy-urls"
@@ -1594,7 +1614,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][nN][oO][tT][aA][tT][iI][oO][nN][sS]"
+              "value": "show-notations",
+              "flags": "i"
             },
             "named": false,
             "value": "show-notations"
@@ -1603,7 +1624,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][sS][tT][dD][--][nN][oO][tT][aA][tT][iI][oO][nN][sS]"
+              "value": "show-std-notations",
+              "flags": "i"
             },
             "named": false,
             "value": "show-std-notations"
@@ -1612,7 +1634,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][uU][sS][eE][rR][--][nN][oO][tT][aA][tT][iI][oO][nN][sS]"
+              "value": "show-user-notations",
+              "flags": "i"
             },
             "named": false,
             "value": "show-user-notations"
@@ -1621,7 +1644,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][kK][eE][yY][sS][eE][rR][vV][eE][rR][--][uU][rR][lL][sS]"
+              "value": "show-keyserver-urls",
+              "flags": "i"
             },
             "named": false,
             "value": "show-keyserver-urls"
@@ -1630,7 +1654,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][uU][iI][dD][--][vV][aA][lL][iI][dD][iI][tT][yY]"
+              "value": "show-uid-validity",
+              "flags": "i"
             },
             "named": false,
             "value": "show-uid-validity"
@@ -1639,7 +1664,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][uU][nN][uU][sS][aA][bB][lL][eE][--][uU][iI][dD][sS]"
+              "value": "show-unusable-uids",
+              "flags": "i"
             },
             "named": false,
             "value": "show-unusable-uids"
@@ -1648,7 +1674,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][pP][rR][iI][mM][aA][rR][yY][--][uU][iI][dD][--][oO][nN][lL][yY]"
+              "value": "show-primary-uid-only",
+              "flags": "i"
             },
             "named": false,
             "value": "show-primary-uid-only"
@@ -1888,7 +1915,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[iI][sS][oO][--][88][88][55][99][--][11]"
+              "value": "iso-8859-1",
+              "flags": "i"
             },
             "named": false,
             "value": "iso-8859-1"
@@ -1897,7 +1925,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[iI][sS][oO][--][88][88][55][99][--][22]"
+              "value": "iso-8859-2",
+              "flags": "i"
             },
             "named": false,
             "value": "iso-8859-2"
@@ -1906,7 +1935,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[iI][sS][oO][--][88][88][55][99][--][11][55]"
+              "value": "iso-8859-15",
+              "flags": "i"
             },
             "named": false,
             "value": "iso-8859-15"
@@ -1915,7 +1945,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[kK][oO][iI][88][--][rR]"
+              "value": "koi8-r",
+              "flags": "i"
             },
             "named": false,
             "value": "koi8-r"
@@ -1924,7 +1955,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[uU][tT][fF][--][88]"
+              "value": "utf-8",
+              "flags": "i"
             },
             "named": false,
             "value": "utf-8"
@@ -2070,7 +2102,8 @@
                   "type": "ALIAS",
                   "content": {
                     "type": "PATTERN",
-                    "value": "[sS][eE][nN][sS][iI][tT][iI][vV][eE][::]"
+                    "value": "sensitive:",
+                    "flags": "i"
                   },
                   "named": false,
                   "value": "sensitive:"
@@ -2085,7 +2118,8 @@
               "type": "ALIAS",
               "content": {
                 "type": "PATTERN",
-                "value": "[cC][lL][eE][aA][rR]"
+                "value": "clear",
+                "flags": "i"
               },
               "named": false,
               "value": "clear"
@@ -2125,7 +2159,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[pP][gG][pP]"
+              "value": "pgp",
+              "flags": "i"
             },
             "named": false,
             "value": "pgp"
@@ -2134,7 +2169,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[cC][lL][aA][sS][sS][iI][cC]"
+              "value": "classic",
+              "flags": "i"
             },
             "named": false,
             "value": "classic"
@@ -2143,7 +2179,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[tT][oO][fF][uU]"
+              "value": "tofu",
+              "flags": "i"
             },
             "named": false,
             "value": "tofu"
@@ -2152,7 +2189,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[tT][oO][fF][uU][++][pP][gG][pP]"
+              "value": "tofu+pgp",
+              "flags": "i"
             },
             "named": false,
             "value": "tofu+pgp"
@@ -2161,7 +2199,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[dD][iI][rR][eE][cC][tT]"
+              "value": "direct",
+              "flags": "i"
             },
             "named": false,
             "value": "direct"
@@ -2170,7 +2209,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[aA][lL][wW][aA][yY][sS]"
+              "value": "always",
+              "flags": "i"
             },
             "named": false,
             "value": "always"
@@ -2179,7 +2219,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[aA][uU][tT][oO]"
+              "value": "auto",
+              "flags": "i"
             },
             "named": false,
             "value": "auto"
@@ -2313,7 +2354,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[cC][eE][rR][tT]"
+              "value": "cert",
+              "flags": "i"
             },
             "named": false,
             "value": "cert"
@@ -2322,7 +2364,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[dD][aA][nN][eE]"
+              "value": "dane",
+              "flags": "i"
             },
             "named": false,
             "value": "dane"
@@ -2331,7 +2374,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[wW][kK][dD]"
+              "value": "wkd",
+              "flags": "i"
             },
             "named": false,
             "value": "wkd"
@@ -2340,7 +2384,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[lL][dD][aA][pP]"
+              "value": "ldap",
+              "flags": "i"
             },
             "named": false,
             "value": "ldap"
@@ -2349,7 +2394,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[nN][tT][dD][sS]"
+              "value": "ntds",
+              "flags": "i"
             },
             "named": false,
             "value": "ntds"
@@ -2358,7 +2404,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[kK][eE][yY][sS][eE][rR][vV][eE][rR]"
+              "value": "keyserver",
+              "flags": "i"
             },
             "named": false,
             "value": "keyserver"
@@ -2367,7 +2414,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[lL][oO][cC][aA][lL]"
+              "value": "local",
+              "flags": "i"
             },
             "named": false,
             "value": "local"
@@ -2376,7 +2424,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[nN][oO][dD][eE][fF][aA][uU][lL][tT]"
+              "value": "nodefault",
+              "flags": "i"
             },
             "named": false,
             "value": "nodefault"
@@ -2385,7 +2434,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[cC][lL][eE][aA][rR]"
+              "value": "clear",
+              "flags": "i"
             },
             "named": false,
             "value": "clear"
@@ -2424,7 +2474,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[nN][oO][nN][eE]"
+              "value": "none",
+              "flags": "i"
             },
             "named": false,
             "value": "none"
@@ -2433,7 +2484,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][rR][tT]"
+              "value": "short",
+              "flags": "i"
             },
             "named": false,
             "value": "short"
@@ -2442,7 +2494,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[00][xX][sS][hH][oO][rR][tT]"
+              "value": "0xshort",
+              "flags": "i"
             },
             "named": false,
             "value": "0xshort"
@@ -2451,7 +2504,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[lL][oO][nN][gG]"
+              "value": "long",
+              "flags": "i"
             },
             "named": false,
             "value": "long"
@@ -2460,7 +2514,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[00][xX][lL][oO][nN][gG]"
+              "value": "0xlong",
+              "flags": "i"
             },
             "named": false,
             "value": "0xlong"
@@ -2616,7 +2671,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[iI][nN][cC][lL][uU][dD][eE][--][rR][eE][vV][oO][kK][eE][dD]"
+              "value": "include-revoked",
+              "flags": "i"
             },
             "named": false,
             "value": "include-revoked"
@@ -2625,7 +2681,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[iI][nN][cC][lL][uU][dD][eE][--][dD][iI][sS][aA][bB][lL][eE][dD]"
+              "value": "include-disabled",
+              "flags": "i"
             },
             "named": false,
             "value": "include-disabled"
@@ -2634,7 +2691,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[hH][oO][nN][oO][rR][--][kK][eE][yY][sS][eE][rR][vV][eE][rR][--][uU][rR][lL]"
+              "value": "honor-keyserver-url",
+              "flags": "i"
             },
             "named": false,
             "value": "honor-keyserver-url"
@@ -2643,7 +2701,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[iI][nN][cC][lL][uU][dD][eE][--][sS][uU][bB][kK][eE][yY][sS]"
+              "value": "include-subkeys",
+              "flags": "i"
             },
             "named": false,
             "value": "include-subkeys"
@@ -2652,7 +2711,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[tT][iI][mM][eE][oO][uU][tT]"
+              "value": "timeout",
+              "flags": "i"
             },
             "named": false,
             "value": "timeout"
@@ -2661,7 +2721,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[hH][tT][tT][pP][--][pP][rR][oO][xX][yY]"
+              "value": "http-proxy",
+              "flags": "i"
             },
             "named": false,
             "value": "http-proxy"
@@ -2670,7 +2731,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[vV][eE][rR][bB][oO][sS][eE]"
+              "value": "verbose",
+              "flags": "i"
             },
             "named": false,
             "value": "verbose"
@@ -2679,7 +2741,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[dD][eE][bB][uU][gG]"
+              "value": "debug",
+              "flags": "i"
             },
             "named": false,
             "value": "debug"
@@ -2688,7 +2751,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[cC][hH][eE][cC][kK][--][cC][eE][rR][tT]"
+              "value": "check-cert",
+              "flags": "i"
             },
             "named": false,
             "value": "check-cert"
@@ -2697,7 +2761,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[cC][aA][--][cC][eE][rR][tT][--][fF][iI][lL][eE]"
+              "value": "ca-cert-file",
+              "flags": "i"
             },
             "named": false,
             "value": "ca-cert-file"
@@ -2770,7 +2835,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[aA][uU][tT][oO]"
+              "value": "auto",
+              "flags": "i"
             },
             "named": false,
             "value": "auto"
@@ -2779,7 +2845,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[gG][oO][oO][dD]"
+              "value": "good",
+              "flags": "i"
             },
             "named": false,
             "value": "good"
@@ -2788,7 +2855,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[uU][nN][kK][nN][oO][wW][nN]"
+              "value": "unknown",
+              "flags": "i"
             },
             "named": false,
             "value": "unknown"
@@ -2797,7 +2865,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[bB][aA][dD]"
+              "value": "bad",
+              "flags": "i"
             },
             "named": false,
             "value": "bad"
@@ -2806,7 +2875,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[aA][sS][kK]"
+              "value": "ask",
+              "flags": "i"
             },
             "named": false,
             "value": "ask"
@@ -3206,7 +3276,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][eE][lL][fF]"
+              "value": "self",
+              "flags": "i"
             },
             "named": false,
             "value": "self"
@@ -3215,7 +3286,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[fF][iI][lL][eE]"
+              "value": "file",
+              "flags": "i"
             },
             "named": false,
             "value": "file"
@@ -3224,7 +3296,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[uU][rR][lL]"
+              "value": "url",
+              "flags": "i"
             },
             "named": false,
             "value": "url"
@@ -3233,7 +3306,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[wW][kK][dD]"
+              "value": "wkd",
+              "flags": "i"
             },
             "named": false,
             "value": "wkd"
@@ -3242,7 +3316,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[dD][aA][nN][eE]"
+              "value": "dane",
+              "flags": "i"
             },
             "named": false,
             "value": "dane"
@@ -3251,7 +3326,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[kK][sS][--][pP][rR][eE][fF]"
+              "value": "ks-pref",
+              "flags": "i"
             },
             "named": false,
             "value": "ks-pref"
@@ -3260,7 +3336,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[kK][sS]"
+              "value": "ks",
+              "flags": "i"
             },
             "named": false,
             "value": "ks"
@@ -3269,7 +3346,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[uU][nN][kK][nN][oO][wW][nN]"
+              "value": "unknown",
+              "flags": "i"
             },
             "named": false,
             "value": "unknown"
@@ -3359,7 +3437,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[iI][mM][pP][oO][rR][tT][--][lL][oO][cC][aA][lL][--][sS][iI][gG][sS]"
+              "value": "import-local-sigs",
+              "flags": "i"
             },
             "named": false,
             "value": "import-local-sigs"
@@ -3368,7 +3447,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[kK][eE][eE][pP][--][oO][wW][nN][eE][rR][tT][rR][uU][sS][tT]"
+              "value": "keep-ownertrust",
+              "flags": "i"
             },
             "named": false,
             "value": "keep-ownertrust"
@@ -3377,7 +3457,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[rR][eE][pP][aA][iI][rR][--][pP][kK][sS][--][sS][uU][bB][kK][eE][yY][--][bB][uU][gG]"
+              "value": "repair-pks-subkey-bug",
+              "flags": "i"
             },
             "named": false,
             "value": "repair-pks-subkey-bug"
@@ -3386,7 +3467,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[iI][mM][pP][oO][rR][tT][--][sS][hH][oO][wW]"
+              "value": "import-show",
+              "flags": "i"
             },
             "named": false,
             "value": "import-show"
@@ -3395,7 +3477,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][hH][oO][wW][--][oO][nN][lL][yY]"
+              "value": "show-only",
+              "flags": "i"
             },
             "named": false,
             "value": "show-only"
@@ -3404,7 +3487,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[iI][mM][pP][oO][rR][tT][--][eE][xX][pP][oO][rR][tT]"
+              "value": "import-export",
+              "flags": "i"
             },
             "named": false,
             "value": "import-export"
@@ -3413,7 +3497,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[mM][eE][rR][gG][eE][--][oO][nN][lL][yY]"
+              "value": "merge-only",
+              "flags": "i"
             },
             "named": false,
             "value": "merge-only"
@@ -3422,7 +3507,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[iI][mM][pP][oO][rR][tT][--][cC][lL][eE][aA][nN]"
+              "value": "import-clean",
+              "flags": "i"
             },
             "named": false,
             "value": "import-clean"
@@ -3431,7 +3517,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][eE][lL][fF][--][sS][iI][gG][sS][--][oO][nN][lL][yY]"
+              "value": "self-sigs-only",
+              "flags": "i"
             },
             "named": false,
             "value": "self-sigs-only"
@@ -3440,7 +3527,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[rR][eE][pP][aA][iI][rR][--][kK][eE][yY][sS]"
+              "value": "repair-keys",
+              "flags": "i"
             },
             "named": false,
             "value": "repair-keys"
@@ -3449,7 +3537,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[bB][uU][lL][kK][--][iI][mM][pP][oO][rR][tT]"
+              "value": "bulk-import",
+              "flags": "i"
             },
             "named": false,
             "value": "bulk-import"
@@ -3458,7 +3547,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[iI][mM][pP][oO][rR][tT][--][mM][iI][nN][iI][mM][aA][lL]"
+              "value": "import-minimal",
+              "flags": "i"
             },
             "named": false,
             "value": "import-minimal"
@@ -3467,7 +3557,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[rR][eE][sS][tT][oO][rR][eE]"
+              "value": "restore",
+              "flags": "i"
             },
             "named": false,
             "value": "restore"
@@ -3476,7 +3567,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[iI][mM][pP][oO][rR][tT][--][rR][eE][sS][tT][oO][rR][eE]"
+              "value": "import-restore",
+              "flags": "i"
             },
             "named": false,
             "value": "import-restore"
@@ -3531,7 +3623,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[kK][eE][eE][pP][--][uU][iI][dD]"
+              "value": "keep-uid",
+              "flags": "i"
             },
             "named": false,
             "value": "keep-uid"
@@ -3540,7 +3633,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[dD][rR][oO][pP][--][sS][iI][gG]"
+              "value": "drop-sig",
+              "flags": "i"
             },
             "named": false,
             "value": "drop-sig"
@@ -3595,7 +3689,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[kK][eE][eE][pP][--][uU][iI][dD]"
+              "value": "keep-uid",
+              "flags": "i"
             },
             "named": false,
             "value": "keep-uid"
@@ -3604,7 +3699,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[dD][rR][oO][pP][--][sS][uU][bB][kK][eE][yY]"
+              "value": "drop-subkey",
+              "flags": "i"
             },
             "named": false,
             "value": "drop-subkey"
@@ -3694,7 +3790,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[eE][xX][pP][oO][rR][tT][--][lL][oO][cC][aA][lL][--][sS][iI][gG][sS]"
+              "value": "export-local-sigs",
+              "flags": "i"
             },
             "named": false,
             "value": "export-local-sigs"
@@ -3703,7 +3800,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[eE][xX][pP][oO][rR][tT][--][aA][tT][tT][rR][iI][bB][uU][tT][eE][sS]"
+              "value": "export-attributes",
+              "flags": "i"
             },
             "named": false,
             "value": "export-attributes"
@@ -3712,7 +3810,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[eE][xX][pP][oO][rR][tT][--][sS][eE][nN][sS][iI][tT][iI][vV][eE][--][rR][eE][vV][kK][eE][yY][sS]"
+              "value": "export-sensitive-revkeys",
+              "flags": "i"
             },
             "named": false,
             "value": "export-sensitive-revkeys"
@@ -3721,7 +3820,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[bB][aA][cC][kK][uU][pP]"
+              "value": "backup",
+              "flags": "i"
             },
             "named": false,
             "value": "backup"
@@ -3730,7 +3830,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[eE][xX][pP][oO][rR][tT][--][bB][aA][cC][kK][uU][pP]"
+              "value": "export-backup",
+              "flags": "i"
             },
             "named": false,
             "value": "export-backup"
@@ -3739,7 +3840,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[eE][xX][pP][oO][rR][tT][--][cC][lL][eE][aA][nN]"
+              "value": "export-clean",
+              "flags": "i"
             },
             "named": false,
             "value": "export-clean"
@@ -3748,7 +3850,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[eE][xX][pP][oO][rR][tT][--][mM][iI][nN][iI][mM][aA][lL]"
+              "value": "export-minimal",
+              "flags": "i"
             },
             "named": false,
             "value": "export-minimal"
@@ -3757,7 +3860,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[eE][xX][pP][oO][rR][tT][--][rR][eE][vV][oO][cC][sS]"
+              "value": "export-revocs",
+              "flags": "i"
             },
             "named": false,
             "value": "export-revocs"
@@ -3766,7 +3870,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[eE][xX][pP][oO][rR][tT][--][dD][aA][nN][eE]"
+              "value": "export-dane",
+              "flags": "i"
             },
             "named": false,
             "value": "export-dane"
@@ -3775,7 +3880,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[mM][oO][dD][eE][11][00][00][33]"
+              "value": "mode1003",
+              "flags": "i"
             },
             "named": false,
             "value": "mode1003"
@@ -4116,7 +4222,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[gG][nN][uU][pP][gG]"
+              "value": "gnupg",
+              "flags": "i"
             },
             "named": false,
             "value": "gnupg"
@@ -4125,7 +4232,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[oO][pP][eE][nN][pP][gG][pP]"
+              "value": "openpgp",
+              "flags": "i"
             },
             "named": false,
             "value": "openpgp"
@@ -4134,7 +4242,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[rR][fF][cC][44][88][88][00][bB][iI][sS]"
+              "value": "rfc4880bis",
+              "flags": "i"
             },
             "named": false,
             "value": "rfc4880bis"
@@ -4143,7 +4252,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[rR][fF][cC][44][88][88][00]"
+              "value": "rfc4880",
+              "flags": "i"
             },
             "named": false,
             "value": "rfc4880"
@@ -4152,7 +4262,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[rR][fF][cC][22][44][44][00]"
+              "value": "rfc2440",
+              "flags": "i"
             },
             "named": false,
             "value": "rfc2440"
@@ -4161,7 +4272,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[pP][gG][pP][66]"
+              "value": "pgp6",
+              "flags": "i"
             },
             "named": false,
             "value": "pgp6"
@@ -4170,7 +4282,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[pP][gG][pP][77]"
+              "value": "pgp7",
+              "flags": "i"
             },
             "named": false,
             "value": "pgp7"
@@ -4179,7 +4292,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[pP][gG][pP][88]"
+              "value": "pgp8",
+              "flags": "i"
             },
             "named": false,
             "value": "pgp8"
@@ -4188,7 +4302,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[dD][eE][--][vV][sS]"
+              "value": "de-vs",
+              "flags": "i"
             },
             "named": false,
             "value": "de-vs"
@@ -4248,7 +4363,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[nN][oO][nN][eE]"
+              "value": "none",
+              "flags": "i"
             },
             "named": false,
             "value": "none"
@@ -4257,7 +4373,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[bB][aA][sS][iI][cC]"
+              "value": "basic",
+              "flags": "i"
             },
             "named": false,
             "value": "basic"
@@ -4266,7 +4383,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[aA][dD][vV][aA][nN][cC][eE][dD]"
+              "value": "advanced",
+              "flags": "i"
             },
             "named": false,
             "value": "advanced"
@@ -4275,7 +4393,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[eE][xX][pP][eE][rR][tT]"
+              "value": "expert",
+              "flags": "i"
             },
             "named": false,
             "value": "expert"
@@ -4284,7 +4403,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[gG][uU][rR][uU]"
+              "value": "guru",
+              "flags": "i"
             },
             "named": false,
             "value": "guru"
@@ -4401,7 +4521,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[pP][aA][cC][kK][eE][tT]"
+              "value": "packet",
+              "flags": "i"
             },
             "named": false,
             "value": "packet"
@@ -4410,7 +4531,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[mM][pP][iI]"
+              "value": "mpi",
+              "flags": "i"
             },
             "named": false,
             "value": "mpi"
@@ -4419,7 +4541,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[cC][rR][yY][pP][tT][oO]"
+              "value": "crypto",
+              "flags": "i"
             },
             "named": false,
             "value": "crypto"
@@ -4428,7 +4551,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[fF][iI][lL][tT][eE][rR]"
+              "value": "filter",
+              "flags": "i"
             },
             "named": false,
             "value": "filter"
@@ -4437,7 +4561,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[iI][oO][bB][uU][fF]"
+              "value": "iobuf",
+              "flags": "i"
             },
             "named": false,
             "value": "iobuf"
@@ -4446,7 +4571,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[mM][eE][mM][oO][rR][yY]"
+              "value": "memory",
+              "flags": "i"
             },
             "named": false,
             "value": "memory"
@@ -4455,7 +4581,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[cC][aA][cC][hH][eE]"
+              "value": "cache",
+              "flags": "i"
             },
             "named": false,
             "value": "cache"
@@ -4464,7 +4591,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[mM][eE][mM][sS][tT][aA][tT]"
+              "value": "memstat",
+              "flags": "i"
             },
             "named": false,
             "value": "memstat"
@@ -4473,7 +4601,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[tT][rR][uU][sS][tT]"
+              "value": "trust",
+              "flags": "i"
             },
             "named": false,
             "value": "trust"
@@ -4482,7 +4611,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[hH][aA][sS][hH][iI][nN][gG]"
+              "value": "hashing",
+              "flags": "i"
             },
             "named": false,
             "value": "hashing"
@@ -4491,7 +4621,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[iI][pP][cC]"
+              "value": "ipc",
+              "flags": "i"
             },
             "named": false,
             "value": "ipc"
@@ -4500,7 +4631,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[cC][lL][oO][cC][kK]"
+              "value": "clock",
+              "flags": "i"
             },
             "named": false,
             "value": "clock"
@@ -4509,7 +4641,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[lL][oO][oO][kK][uU][pP]"
+              "value": "lookup",
+              "flags": "i"
             },
             "named": false,
             "value": "lookup"
@@ -4518,7 +4651,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[eE][xX][tT][pP][rR][oO][gG]"
+              "value": "extprog",
+              "flags": "i"
             },
             "named": false,
             "value": "extprog"
@@ -5261,7 +5395,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[dD][eE][fF][aA][uU][lL][tT]"
+              "value": "default",
+              "flags": "i"
             },
             "named": false,
             "value": "default"
@@ -5270,7 +5405,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[aA][sS][kK]"
+              "value": "ask",
+              "flags": "i"
             },
             "named": false,
             "value": "ask"
@@ -5279,7 +5415,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[cC][aA][nN][cC][eE][lL]"
+              "value": "cancel",
+              "flags": "i"
             },
             "named": false,
             "value": "cancel"
@@ -5288,7 +5425,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[eE][rR][rR][oO][rR]"
+              "value": "error",
+              "flags": "i"
             },
             "named": false,
             "value": "error"
@@ -5297,7 +5435,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[lL][oO][oO][pP][bB][aA][cC][kK]"
+              "value": "loopback",
+              "flags": "i"
             },
             "named": false,
             "value": "loopback"
@@ -5336,7 +5475,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[lL][oO][cC][aA][lL]"
+              "value": "local",
+              "flags": "i"
             },
             "named": false,
             "value": "local"
@@ -5345,7 +5485,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[rR][eE][mM][oO][tT][eE]"
+              "value": "remote",
+              "flags": "i"
             },
             "named": false,
             "value": "remote"
@@ -5354,7 +5495,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[bB][rR][oO][wW][sS][eE][rR]"
+              "value": "browser",
+              "flags": "i"
             },
             "named": false,
             "value": "browser"
@@ -5824,7 +5966,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[pP][uU][bB][//]"
+              "value": "pub\\/",
+              "flags": "i"
             },
             "named": false,
             "value": "pub/"
@@ -5833,7 +5976,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][uU][bB][//]"
+              "value": "sub\\/",
+              "flags": "i"
             },
             "named": false,
             "value": "sub/"
@@ -5842,7 +5986,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[uU][iI][dD][//]"
+              "value": "uid\\/",
+              "flags": "i"
             },
             "named": false,
             "value": "uid/"
@@ -5851,7 +5996,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][iI][gG][//]"
+              "value": "sig\\/",
+              "flags": "i"
             },
             "named": false,
             "value": "sig/"
@@ -5868,7 +6014,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[uU][iI][dD]"
+              "value": "uid",
+              "flags": "i"
             },
             "named": false,
             "value": "uid"
@@ -5877,7 +6024,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[mM][bB][oO][xX]"
+              "value": "mbox",
+              "flags": "i"
             },
             "named": false,
             "value": "mbox"
@@ -5886,7 +6034,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[aA][lL][gG][oO][sS][tT][rR]"
+              "value": "algostr",
+              "flags": "i"
             },
             "named": false,
             "value": "algostr"
@@ -5895,7 +6044,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[kK][eE][yY][__][aA][lL][gG][oO]"
+              "value": "key_algo",
+              "flags": "i"
             },
             "named": false,
             "value": "key_algo"
@@ -5904,7 +6054,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[kK][eE][yY][__][sS][iI][zZ][eE]"
+              "value": "key_size",
+              "flags": "i"
             },
             "named": false,
             "value": "key_size"
@@ -5913,7 +6064,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[kK][eE][yY][__][cC][rR][eE][aA][tT][eE][dD]"
+              "value": "key_created",
+              "flags": "i"
             },
             "named": false,
             "value": "key_created"
@@ -5922,7 +6074,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[kK][eE][yY][__][cC][rR][eE][aA][tT][eE][dD][__][dD]"
+              "value": "key_created_d",
+              "flags": "i"
             },
             "named": false,
             "value": "key_created_d"
@@ -5931,7 +6084,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[kK][eE][yY][__][eE][xX][pP][iI][rR][eE][sS]"
+              "value": "key_expires",
+              "flags": "i"
             },
             "named": false,
             "value": "key_expires"
@@ -5940,7 +6094,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[kK][eE][yY][__][eE][xX][pP][iI][rR][eE][sS][__][dD]"
+              "value": "key_expires_d",
+              "flags": "i"
             },
             "named": false,
             "value": "key_expires_d"
@@ -5949,7 +6104,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[fF][pP][rR]"
+              "value": "fpr",
+              "flags": "i"
             },
             "named": false,
             "value": "fpr"
@@ -5958,7 +6114,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[eE][xX][pP][iI][rR][eE][dD]"
+              "value": "expired",
+              "flags": "i"
             },
             "named": false,
             "value": "expired"
@@ -5967,7 +6124,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[rR][eE][vV][oO][kK][eE][dD]"
+              "value": "revoked",
+              "flags": "i"
             },
             "named": false,
             "value": "revoked"
@@ -5976,7 +6134,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[dD][iI][sS][aA][bB][lL][eE][dD]"
+              "value": "disabled",
+              "flags": "i"
             },
             "named": false,
             "value": "disabled"
@@ -5985,7 +6144,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][eE][cC][rR][eE][tT]"
+              "value": "secret",
+              "flags": "i"
             },
             "named": false,
             "value": "secret"
@@ -5994,7 +6154,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[uU][sS][aA][gG][eE]"
+              "value": "usage",
+              "flags": "i"
             },
             "named": false,
             "value": "usage"
@@ -6003,7 +6164,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][iI][gG][__][cC][rR][eE][aA][tT][eE][dD]"
+              "value": "sig_created",
+              "flags": "i"
             },
             "named": false,
             "value": "sig_created"
@@ -6012,7 +6174,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][iI][gG][__][cC][rR][eE][aA][tT][eE][dD][__][dD]"
+              "value": "sig_created_d",
+              "flags": "i"
             },
             "named": false,
             "value": "sig_created_d"
@@ -6021,7 +6184,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][iI][gG][__][aA][lL][gG][oO]"
+              "value": "sig_algo",
+              "flags": "i"
             },
             "named": false,
             "value": "sig_algo"
@@ -6030,7 +6194,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[sS][iI][gG][__][dD][iI][gG][eE][sS][tT][__][aA][lL][gG][oO]"
+              "value": "sig_digest_algo",
+              "flags": "i"
             },
             "named": false,
             "value": "sig_digest_algo"
@@ -6039,7 +6204,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[oO][rR][iI][gG][iI][nN]"
+              "value": "origin",
+              "flags": "i"
             },
             "named": false,
             "value": "origin"
@@ -6048,7 +6214,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[lL][aA][sS][tT][uU][pP][dD]"
+              "value": "lastupd",
+              "flags": "i"
             },
             "named": false,
             "value": "lastupd"
@@ -6057,7 +6224,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[uU][rR][lL]"
+              "value": "url",
+              "flags": "i"
             },
             "named": false,
             "value": "url"
@@ -6213,7 +6381,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[RR][SS][AA]"
+              "value": "RSA",
+              "flags": "i"
             },
             "named": false,
             "value": "RSA"
@@ -6222,7 +6391,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[EE][LL][GG]"
+              "value": "ELG",
+              "flags": "i"
             },
             "named": false,
             "value": "ELG"
@@ -6231,7 +6401,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[DD][SS][AA]"
+              "value": "DSA",
+              "flags": "i"
             },
             "named": false,
             "value": "DSA"
@@ -6240,7 +6411,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[EE][CC][DD][HH]"
+              "value": "ECDH",
+              "flags": "i"
             },
             "named": false,
             "value": "ECDH"
@@ -6249,7 +6421,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[EE][CC][DD][SS][AA]"
+              "value": "ECDSA",
+              "flags": "i"
             },
             "named": false,
             "value": "ECDSA"
@@ -6258,7 +6431,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[EE][DD][DD][SS][AA]"
+              "value": "EDDSA",
+              "flags": "i"
             },
             "named": false,
             "value": "EDDSA"
@@ -6267,7 +6441,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[nN][oO][nN][eE]"
+              "value": "none",
+              "flags": "i"
             },
             "named": false,
             "value": "none"
@@ -6284,7 +6459,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[II][DD][EE][AA]"
+              "value": "IDEA",
+              "flags": "i"
             },
             "named": false,
             "value": "IDEA"
@@ -6293,7 +6469,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[33][DD][EE][SS]"
+              "value": "3DES",
+              "flags": "i"
             },
             "named": false,
             "value": "3DES"
@@ -6302,7 +6479,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[CC][AA][SS][TT][55]"
+              "value": "CAST5",
+              "flags": "i"
             },
             "named": false,
             "value": "CAST5"
@@ -6311,7 +6489,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[BB][LL][OO][WW][FF][II][SS][HH]"
+              "value": "BLOWFISH",
+              "flags": "i"
             },
             "named": false,
             "value": "BLOWFISH"
@@ -6320,7 +6499,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[AA][EE][SS]"
+              "value": "AES",
+              "flags": "i"
             },
             "named": false,
             "value": "AES"
@@ -6329,7 +6509,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[AA][EE][SS][11][99][22]"
+              "value": "AES192",
+              "flags": "i"
             },
             "named": false,
             "value": "AES192"
@@ -6338,7 +6519,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[AA][EE][SS][22][55][66]"
+              "value": "AES256",
+              "flags": "i"
             },
             "named": false,
             "value": "AES256"
@@ -6347,7 +6529,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[TT][WW][OO][FF][II][SS][HH]"
+              "value": "TWOFISH",
+              "flags": "i"
             },
             "named": false,
             "value": "TWOFISH"
@@ -6356,7 +6539,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[CC][AA][MM][EE][LL][LL][II][AA][11][22][88]"
+              "value": "CAMELLIA128",
+              "flags": "i"
             },
             "named": false,
             "value": "CAMELLIA128"
@@ -6365,7 +6549,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[CC][AA][MM][EE][LL][LL][II][AA][11][99][22]"
+              "value": "CAMELLIA192",
+              "flags": "i"
             },
             "named": false,
             "value": "CAMELLIA192"
@@ -6374,7 +6559,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[CC][AA][MM][EE][LL][LL][II][AA][22][55][66]"
+              "value": "CAMELLIA256",
+              "flags": "i"
             },
             "named": false,
             "value": "CAMELLIA256"
@@ -6383,7 +6569,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[nN][oO][nN][eE]"
+              "value": "none",
+              "flags": "i"
             },
             "named": false,
             "value": "none"
@@ -6400,7 +6587,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[SS][HH][AA][11]"
+              "value": "SHA1",
+              "flags": "i"
             },
             "named": false,
             "value": "SHA1"
@@ -6409,7 +6597,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[RR][II][PP][EE][MM][DD][11][66][00]"
+              "value": "RIPEMD160",
+              "flags": "i"
             },
             "named": false,
             "value": "RIPEMD160"
@@ -6418,7 +6607,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[SS][HH][AA][22][55][66]"
+              "value": "SHA256",
+              "flags": "i"
             },
             "named": false,
             "value": "SHA256"
@@ -6427,7 +6617,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[SS][HH][AA][33][88][44]"
+              "value": "SHA384",
+              "flags": "i"
             },
             "named": false,
             "value": "SHA384"
@@ -6436,7 +6627,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[SS][HH][AA][55][11][22]"
+              "value": "SHA512",
+              "flags": "i"
             },
             "named": false,
             "value": "SHA512"
@@ -6445,7 +6637,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[SS][HH][AA][22][22][44]"
+              "value": "SHA224",
+              "flags": "i"
             },
             "named": false,
             "value": "SHA224"
@@ -6454,7 +6647,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[nN][oO][nN][eE]"
+              "value": "none",
+              "flags": "i"
             },
             "named": false,
             "value": "none"
@@ -6471,7 +6665,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[UU][nN][cC][oO][mM][pP][rR][eE][sS][sS][eE][dD]"
+              "value": "Uncompressed",
+              "flags": "i"
             },
             "named": false,
             "value": "Uncompressed"
@@ -6480,7 +6675,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[ZZ][II][PP]"
+              "value": "ZIP",
+              "flags": "i"
             },
             "named": false,
             "value": "ZIP"
@@ -6489,7 +6685,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[ZZ][LL][II][BB]"
+              "value": "ZLIB",
+              "flags": "i"
             },
             "named": false,
             "value": "ZLIB"
@@ -6498,7 +6695,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[BB][ZZ][II][PP][22]"
+              "value": "BZIP2",
+              "flags": "i"
             },
             "named": false,
             "value": "BZIP2"
@@ -6507,7 +6705,8 @@
             "type": "ALIAS",
             "content": {
               "type": "PATTERN",
-              "value": "[nN][oO][nN][eE]"
+              "value": "none",
+              "flags": "i"
             },
             "named": false,
             "value": "none"

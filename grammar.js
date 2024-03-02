@@ -24,15 +24,7 @@ const quoted = (q, content, ...extra) =>
  * @param word {string}
  */
 const ci = (word) =>
-  alias(
-    new RegExp(
-      word.split('')
-      .map(l => `[${l}${l.toUpperCase()}]`)
-      .join('')
-    ),
-    word
-  );
-
+  alias(new RegExp(word, 'i'), word);
 
 /**
  * @param $ {GrammarSymbols<string>}
