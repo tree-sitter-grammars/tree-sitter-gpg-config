@@ -6,12 +6,14 @@ on:
     paths:
       - grammar.js
       - src/**
+      - test/**
       - bindings/**
       - binding.gyp
   pull_request:
     paths:
       - grammar.js
       - src/**
+      - test/**
       - bindings/**
       - binding.gyp
 
@@ -28,11 +30,11 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-14]
     steps:
-      - name: Set up repository
-        uses: tree-sitter/parser-setup-action@v1.1
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          node-version: ${{vars.NODE_VERSION}}
+          submodules: true
+      - name: Set up tree-sitter
+        uses: tree-sitter/setup-action/cli@v2
       - name: Run tests
-        uses: tree-sitter/parser-test-action@v1.2
-        with:
-          test-library: ${{runner.os == 'Linux'}}
+        uses: tree-sitter/parser-test-action@v2

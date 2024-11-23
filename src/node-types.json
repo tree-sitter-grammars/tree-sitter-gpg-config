@@ -2,6 +2,7 @@
   {
     "type": "config",
     "named": true,
+    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -265,10 +266,6 @@
     "named": false
   },
   {
-    "type": "attribute-fd",
-    "named": false
-  },
-  {
     "type": "auto-check-trustdb",
     "named": false
   },
@@ -330,11 +327,11 @@
   },
   {
     "type": "comment",
-    "named": true
+    "named": false
   },
   {
     "type": "comment",
-    "named": false
+    "named": true
   },
   {
     "type": "completes-needed",
@@ -893,6 +890,10 @@
     "named": false
   },
   {
+    "type": "no-utf8-strings",
+    "named": false
+  },
+  {
     "type": "not-dash-escaped",
     "named": false
   },
@@ -982,6 +983,10 @@
   },
   {
     "type": "request-origin",
+    "named": false
+  },
+  {
+    "type": "require-compliance",
     "named": false
   },
   {
@@ -1110,6 +1115,10 @@
   },
   {
     "type": "use-embedded-filename",
+    "named": false
+  },
+  {
+    "type": "utf8-strings",
     "named": false
   },
   {
