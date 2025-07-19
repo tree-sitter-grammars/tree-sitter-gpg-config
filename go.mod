@@ -1,4 +1,4 @@
-module github.com/tree-sitter/tree-sitter-gpg-config
+module github.com/tree-sitter-grammars/tree-sitter-gpg-config
 
 go 1.22
 

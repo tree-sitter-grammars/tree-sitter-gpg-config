@@ -1,5 +1,5 @@
-#ifndef TREE_SITTER_GPG_CONFIG_H_
-#define TREE_SITTER_GPG_CONFIG_H_
+#ifndef TREE_SITTER_GPG_H_
+#define TREE_SITTER_GPG_H_
 
 typedef struct TSLanguage TSLanguage;
 
@@ -13,4 +13,4 @@ const TSLanguage *tree_sitter_gpg(void);
 }
 #endif
 
-#endif // TREE_SITTER_GPG_CONFIG_H_
+#endif // TREE_SITTER_GPG_H_

@@ -1,16 +1,13 @@
 {
-  "name": "tree-sitter-gpg-config",
+  "name": "tree-sitter-gpg",
   "version": "0.3.0",
   "description": "GPG config grammar for tree-sitter",
   "repository": "https://github.com/tree-sitter-grammars/tree-sitter-gpg-config",
+  "funding": "https://github.com/sponsors/ObserverOfTime",
   "license": "MIT",
   "author": {
     "name": "ObserverOfTime",
     "email": "chronobserver@disroot.org"
-  },
-  "funding": {
-    "url": "https://github.com/sponsors/ObserverOfTime",
-    "type": "github"
   },
   "main": "bindings/node",
   "types": "bindings/node",
@@ -31,15 +28,15 @@
     "*.wasm"
   ],
   "dependencies": {
-    "node-addon-api": "^8.2.1",
-    "node-gyp-build": "^4.8.2"
+    "node-addon-api": "^8.3.1",
+    "node-gyp-build": "^4.8.4"
   },
   "devDependencies": {
     "prebuildify": "^6.0.1",
-    "tree-sitter-cli": "^0.24.4"
+    "tree-sitter-cli": "^0.25.8"
   },
   "peerDependencies": {
-    "tree-sitter": "^0.21.1"
+    "tree-sitter": "^0.22.4"
   },
   "peerDependenciesMeta": {
     "tree-sitter": {
