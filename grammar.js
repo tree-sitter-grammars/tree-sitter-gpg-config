@@ -4,6 +4,9 @@
  * @license MIT
  */
 
+/// <reference types="tree-sitter-cli/dsl" />
+// @ts-check
+
 /**
  * @param q {'"'|"'"}
  * @param content {SymbolRule<string>}

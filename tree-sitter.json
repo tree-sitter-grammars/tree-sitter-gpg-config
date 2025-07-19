@@ -4,13 +4,14 @@
     {
       "name": "gpg",
       "camelcase": "GPG",
-      "path": ".",
+      "title": "GPG config",
       "scope": "source.gpg",
       "file-types": [
         "gpg.conf"
       ],
       "injection-regex": "^gpg$",
-      "highlights": "queries/highlights.scm"
+      "highlights": "queries/highlights.scm",
+      "class-name": "TreeSitterGPG"
     }
   ],
   "metadata": {
@@ -24,7 +25,8 @@
       }
     ],
     "links": {
-      "repository": "https://github.com/tree-sitter-grammars/tree-sitter-gpg-config"
+      "repository": "https://github.com/tree-sitter-grammars/tree-sitter-gpg-config",
+      "funding": "https://github.com/sponsors/ObserverOfTime"
     }
   }
 }
