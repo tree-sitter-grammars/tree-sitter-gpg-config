@@ -1,0 +1,698 @@
+// GPG config grammar for tree-sitter (native DSL).
+// Translated from grammar.js.
+
+macro ci(word: str_t) rule_t { alias(regexp(word, "i"), word) }
+
+// JS: quoted(q, content, ...extra). The JS escape literal is `String.raw`\${q}``
+// which produces the LITERAL 5-char string `\${q}` (NOT interpolated, since
+// String.raw preserves the `\$` raw form). Reproduce that literally to match.
+// All callers pass $.content as the alias target, so we hardcode it. The DSL
+// can't pass a bare-ident alias target through a macro param.
+macro quoted_dq() rule_t {
+    seq("\"", alias(repeat1(choice(regexp(r#"[^"]"#), "\\${q}")), content), "\"")
+}
+macro quoted_sq() rule_t {
+    seq("'", alias(repeat1(choice(regexp(r"[^']"), "\\${q}")), content), "'")
+}
+macro quoted_dq_extra(extra: rule_t) rule_t {
+    seq("\"", alias(repeat1(choice(regexp(r#"[^"]"#), "\\${q}", extra)), content), "\"")
+}
+macro quoted_sq_extra(extra: rule_t) rule_t {
+    seq("'", alias(repeat1(choice(regexp(r"[^']"), "\\${q}", extra)), content), "'")
+}
+
+// JS: value_list($, node) - comma- OR space-separated repeats.
+macro value_list(node: rule_t) rule_t {
+    choice(
+        repeat(seq(",", alias(node, value))),
+        repeat(seq(_space, alias(node, value))),
+    )
+}
+
+// Boilerplate: keyword + space + value
+macro kw_str(word: str_t) rule_t { seq(word, _space, string) }
+macro kw_num(word: str_t) rule_t { seq(word, _space, number) }
+macro kw_key(word: str_t) rule_t { seq(word, _space, key) }
+macro kw_url(word: str_t) rule_t { seq(word, _space, url) }
+// keyword + value rule aliased to `value`
+macro kw_val(word: str_t, body: rule_t) rule_t {
+    seq(word, _space, alias(body, value))
+}
+// filter directive: list-filter / import-filter / export-filter
+macro kw_filter(word: str_t, name_body: rule_t) rule_t {
+    prec_right(0, seq(
+        word, _space,
+        alias(name_body, filter_name),
+        "=",
+        field(expression, _filter_expression),
+    ))
+}
+// "options" parameter list: e.g. list-options X, Y, Z
+macro kw_param_list(word: str_t, p: rule_t) rule_t {
+    prec_right(0, seq(
+        word, _space,
+        alias(p, value),
+        value_list(p),
+    ))
+}
+// "*-notation" style: optional !, then name = string
+macro kw_notation(word: str_t) rule_t {
+    seq(word, _space, optional("!"), alias(_notation, name), "=", field(value, string))
+}
+macro kw_notation_url(word: str_t) rule_t {
+    seq(word, _space, optional("!"), alias(_notation, url))
+}
+
+grammar {
+    language: "gpg",
+    extras: [],
+}
+
+rule config {
+    repeat(seq(
+        optional(_space),
+        optional(choice(comment, option)),
+        optional(_space),
+        regexp(r"\r?\n"),
+    ))
+}
+
+rule option {
+    choice(
+        _default_key, "default-recipient", "default-recipient-self",
+        "no-default-recipient", "verbose", "no-tty",
+        _list_filter, _list_options, _verify_options,
+        "enable-large-rsa", "disable-large-rsa",
+        "enable-dsa2", "disable-dsa2",
+        _photo_viewer, _exec_path, _keyring, _primary_keyring,
+        _trustdb_name, _display_charset,
+        _utf8_strings, _no_utf8_strings,
+        _compress_level, _bzip2_compress_level,
+        "no-compress", "bzip2-decompress-lowmem",
+        "mangle-dos-filenames", "no-mangle-dos-filenames",
+        "ask-cert-level", "no-ask-cert-level",
+        _default_cert_level, _min_cert_level,
+        _trusted_key, _add_desig_revoker,
+        _trust_model, "always-trust",
+        _assert_signer, _auto_key_locate, "no-auto-key-locate",
+        "auto-key-import", "no-auto-key-import",
+        "auto-key-retrieve", "no-auto-key-retrieve",
+        _keyid_format, _keyserver, _keyserver_options,
+        _completes_needed, _marginals_needed,
+        _tofu_default_policy, _max_cert_depth,
+        "no-sig-cache", "auto-check-trustdb", "no-auto-check-trustdb",
+        _agent_program, _dirmngr_program, "disable-dirmngr",
+        "no-autostart", "lock-once", "lock-multiple", "lock-never",
+        "exit-on-status-write-error",
+        _limit_card_insert_tries,
+        "no-random-seed-file", "no-greeting",
+        "no-secmem-warning", "no-permission-warning",
+        "require-secmem", "no-require-secmem",
+        "require-cross-verification", "no-require-cross-verification",
+        "expert", "no-expert",
+        _recipient, _hidden_recipient,
+        _recipient_file, _hidden_recipient_file,
+        _encrypt_to, _hidden_encrypt_to, "no-encrypt-to",
+        _group, _ungroup, "no-groups",
+        _local_user, _sender, _try_secret_name,
+        "try-all-secrets",
+        "skip-hidden-recipients", "no-skip-hidden-recipients",
+        "armor", "no-armor",
+        _output, _max_output, _chunk_size, _input_size_hint,
+        _key_origin, _import_options, _import_filter,
+        _export_filter, _export_options,
+        "with-colons", "legacy-list-mode",
+        "with-fingerprint", "with-subkey-fingerprint",
+        "with-icao-spelling", "with-keygrip",
+        "with-key-origin", "with-wkd-hash", "with-secret",
+        "textmode", "no-textmode", "force-ocb", "force-aead",
+        "disable-signer-uid",
+        "include-key-block", "no-include-key-block",
+        _personal_cipher_preferences, _personal_digest_preferences,
+        _personal_compress_preferences,
+        _s2k_cipher_algo, _s2k_digest_algo, _s2k_mode, _s2k_count,
+        "gnupg", "openpgp", "rfc4880", "rfc4880bis", "rfc2440",
+        "pgp7", "pgp8",
+        _compliance, _min_rsa_length, _require_compliance,
+        "list-only", "interactive",
+        _debug_level, _debug,
+        "debug-all", "debug-iolbf",
+        _debug_set_iobuf_size,
+        "debug-allow-large-chunks", "debug-ignore-expiration",
+        _faked_system_time, "full-timestrings",
+        "enable-progress-filter",
+        _status_fd, _status_file, _logger_fd, _logger_file,
+        "log-time",
+        _status_fd,
+        _comment, "no-comments", "emit-version", "no-emit-version",
+        _sig_notation, _cert_notation, _set_notation, _known_notation,
+        _sig_policy_url, _cert_policy_url, _set_policy_url, _sig_keyserver_url,
+        _set_filename,
+        "for-your-eyes-only", "no-for-your-eyes-only",
+        "use-embedded-filename", "no-use-embedded-filename",
+        _cipher_algo, _digest_algo, _compress_algo, _cert_digest_algo,
+        _disable_cipher_algo, _disable_pubkey_algo,
+        "throw-keyids", "no-throw-keyids",
+        "not-dash-escaped", "escape-from-lines", "no-escape-from-lines",
+        _passphrase_repeat, _passphrase_fd, _passphrase_file, _passphrase,
+        _pinentry_mode, "no-symkey-cache",
+        _request_origin, _command_fd, _command_file,
+        "allow-non-selfsigned-uid", "no-allow-non-selfsigned-uid",
+        "allow-freeform-uid",
+        "ignore-time-conflict", "ignore-valid-from",
+        "ignore-crc-error", "ignore-mdc-error",
+        "allow-old-cipher-algos", "allow-weak-digest-algos",
+        _weak_digest, "allow-weak-key-signatures",
+        "override-compliance-check",
+        "no-default-keyring", "no-keyring", "skip-verify",
+        "with-key-data", "list-signatures", "list-sigs",
+        "fast-list-mode", "show-session-key",
+        _override_session_key, _override_session_key_fd,
+        "ask-sig-expire", "no-ask-sig-expire",
+        _default_sig_expire,
+        "ask-cert-expire", "no-ask-cert-expire",
+        _default_cert_expire,
+        _default_new_key_algo, "no-auto-trust-new-key",
+        "force-sign-key", "forbid-gen-key",
+        "enable-special-filenames", "preserve-permissions",
+        _default_preference_list, _default_keyserver_url, _chuid,
+    )
+}
+
+rule _default_key { kw_key("default-key") }
+rule _default_recipient { kw_str("default-recipient") }
+
+rule _list_filter { kw_filter("list-filter", _list_filter_name) }
+
+rule _list_filter_name { token(ci("select")) }
+
+rule _filter_expression {
+    seq(choice(
+        seq("\"", _filter_expression_inner, "\""),
+        seq("'", _filter_expression_inner, "'"),
+    ))
+}
+
+rule _filter_expression_inner {
+    prec_right(0, seq(
+        optional(seq(optional(_space), filter_lc)),
+        repeat1(seq(
+            optional(_space),
+            repeat(seq(filter_flag, _space)),
+            optional(filter_scope),
+            filter_property,
+            optional(_space),
+            choice(
+                seq(filter_op1, optional(_space), filter_value),
+                filter_op0,
+            ),
+            optional(_space),
+            optional(seq(filter_lc, optional(_space))),
+        )),
+    ))
+}
+
+rule _list_options { kw_param_list("list-options", _list_parameter) }
+
+rule _list_parameter {
+    token(choice(
+        ci("show-photos"), ci("show-usage"), ci("show-policy-urls"),
+        ci("show-notations"), ci("show-std-notations"), ci("show-user-notations"),
+        ci("show-keyserver-urls"), ci("show-uid-validity"),
+        ci("show-unusable-uids"), ci("show-unusable-subkeys"),
+        ci("show-unusable-sigs"), ci("show-keyring"),
+        ci("show-sig-expire"), ci("show-sig-subpackets"),
+        ci("show-only-fpr-mbox"), ci("sort-sigs"),
+    ))
+}
+
+rule _verify_options { kw_param_list("verify-options", _verify_parameter) }
+
+rule _verify_parameter {
+    token(choice(
+        ci("show-photos"), ci("show-usage"), ci("show-policy-urls"),
+        ci("show-notations"), ci("show-std-notations"), ci("show-user-notations"),
+        ci("show-keyserver-urls"), ci("show-uid-validity"),
+        ci("show-unusable-uids"), ci("show-primary-uid-only"),
+    ))
+}
+
+rule _photo_viewer { seq("photo-viewer", _space, alias(_command, string)) }
+
+rule _command {
+    choice(
+        alias(repeat1(choice(regexp(r"\S"), _command_format)), content),
+        quoted_dq_extra(_command_format),
+        quoted_sq_extra(_command_format),
+    )
+}
+
+rule _command_format { alias(regexp(r"%[iIkKftTvVU%]"), format) }
+
+rule _exec_path { kw_str("exec-path") }
+rule _keyring { kw_str("keyring") }
+rule _primary_keyring { kw_str("primary-keyring") }
+rule _trustdb_name { kw_str("trustdb-name") }
+
+rule _display_charset { kw_val("display-charset", _charset_value) }
+
+rule _charset_value {
+    token(choice(
+        ci("iso-8859-1"), ci("iso-8859-2"), ci("iso-8859-15"),
+        ci("koi8-r"), ci("utf-8"),
+    ))
+}
+
+rule _utf8_strings { "utf8-strings" }
+rule _no_utf8_strings { "no-utf8-strings" }
+
+rule _compress_level {
+    seq("compress-level", _space, alias(regexp(r"-1|[0-9]"), number))
+}
+rule _bzip2_compress_level {
+    seq("bzip2-compress-level", _space, alias(regexp(r"-1|[0-9]"), number))
+}
+rule _default_cert_level {
+    seq("default-cert-level", _space, alias(regexp(r"[0-3]"), number))
+}
+rule _min_cert_level {
+    seq("min-cert-level", _space, alias(regexp(r"[0-3]"), number))
+}
+
+rule _trusted_key { kw_key("trusted-key") }
+
+rule _add_desig_revoker {
+    seq("add-desig-revoker", _space, choice(
+        key,
+        seq(ci("sensitive:"), key),
+        ci("clear"),
+    ))
+}
+
+rule _trust_model { kw_val("trust-model", _model) }
+
+rule _model {
+    token(choice(
+        ci("pgp"), ci("classic"), ci("tofu"), ci("tofu+pgp"),
+        ci("direct"), ci("always"), ci("auto"),
+    ))
+}
+
+rule _assert_signer { kw_str("assert-signer") }
+
+rule _auto_key_locate {
+    prec_right(0, seq(
+        "auto-key-locate",
+        _space,
+        choice(alias(_key_locate_value, value), url),
+        choice(
+            repeat(seq(",", choice(alias(_key_locate_value, value), url))),
+            repeat(seq(_space, choice(alias(_key_locate_value, value), url))),
+        ),
+    ))
+}
+
+rule _key_locate_value {
+    token(choice(
+        ci("cert"), ci("dane"), ci("wkd"), ci("ldap"), ci("ntds"),
+        ci("keyserver"), ci("local"), ci("nodefault"), ci("clear"),
+    ))
+}
+
+rule _keyid_format { kw_val("keyid-format", _keyid_format_value) }
+
+rule _keyid_format_value {
+    token(choice(
+        ci("none"), ci("short"), ci("0xshort"), ci("long"), ci("0xlong"),
+    ))
+}
+
+rule _keyserver { kw_url("keyserver") }
+
+rule _keyserver_options {
+    prec_right(0, seq(
+        "keyserver-options",
+        _space,
+        _keyserver_set_option,
+        choice(
+            repeat(seq(",", _keyserver_set_option)),
+            repeat(seq(_space, _keyserver_set_option)),
+        ),
+    ))
+}
+
+rule _keyserver_set_option {
+    seq(
+        optional("no-"),
+        alias(choice(_keyserver_parameter, _import_parameter, _export_parameter), name),
+        optional(seq("=", field(value, string))),
+    )
+}
+
+rule _keyserver_parameter {
+    token(choice(
+        ci("include-revoked"), ci("include-disabled"),
+        ci("honor-keyserver-url"), ci("include-subkeys"),
+        ci("timeout"), ci("http-proxy"),
+        ci("verbose"), ci("debug"),
+        ci("check-cert"), ci("ca-cert-file"),
+    ))
+}
+
+rule _completes_needed { kw_num("completes-needed") }
+rule _marginals_needed { kw_num("marginals-needed") }
+
+rule _tofu_default_policy { kw_val("tofu-default-policy", _tofu_policy_value) }
+
+rule _tofu_policy_value {
+    token(choice(ci("auto"), ci("good"), ci("unknown"), ci("bad"), ci("ask")))
+}
+
+rule _max_cert_depth { kw_num("max-cert-depth") }
+
+rule _agent_program { kw_str("agent-program") }
+rule _dirmngr_program { kw_str("dirmngr-program") }
+
+rule _limit_card_insert_tries { kw_num("limit-card-insert-tries") }
+
+rule _recipient { kw_str("recipient") }
+rule _hidden_recipient { kw_str("hidden-recipient") }
+rule _recipient_file { kw_str("recipient-file") }
+rule _hidden_recipient_file { kw_str("hidden-recipient-file") }
+rule _encrypt_to { kw_str("encrypt-to") }
+rule _hidden_encrypt_to { kw_str("hidden-encrypt-to") }
+
+rule _group {
+    seq("group", _space, alias(regexp(r"[^= \t]+"), name), "=", field(value, string))
+}
+
+rule _ungroup { kw_str("ungroup") }
+rule _local_user { kw_str("local-user") }
+rule _sender { kw_str("sender") }
+rule _try_secret_name { kw_str("try-secret-name") }
+
+rule _output { kw_str("output") }
+rule _max_output { kw_num("max-output") }
+rule _chunk_size { kw_num("chunk-size") }
+rule _input_size_hint { kw_num("input-size-hint") }
+
+rule _key_origin {
+    seq(
+        "key-origin",
+        _space,
+        alias(_key_origin_value, value),
+        optional(seq(",", url)),
+    )
+}
+
+rule _key_origin_value {
+    token(choice(
+        ci("self"), ci("file"), ci("url"), ci("wkd"), ci("dane"),
+        ci("ks-pref"), ci("ks"), ci("unknown"),
+    ))
+}
+
+rule _import_options { kw_param_list("import-options", _import_parameter) }
+
+rule _import_parameter {
+    token(choice(
+        ci("import-local-sigs"), ci("keep-ownertrust"),
+        ci("repair-pks-subkey-bug"), ci("import-show"),
+        ci("show-only"), ci("import-export"),
+        ci("merge-only"), ci("import-clean"),
+        ci("self-sigs-only"), ci("repair-keys"),
+        ci("bulk-import"), ci("import-minimal"),
+        ci("restore"), ci("import-restore"),
+    ))
+}
+
+rule _import_filter { kw_filter("import-filter", _import_filter_name) }
+
+rule _import_filter_name {
+    token(choice(ci("keep-uid"), ci("drop-sig")))
+}
+
+rule _export_filter { kw_filter("export-filter", _export_filter_name) }
+
+rule _export_filter_name {
+    token(choice(ci("keep-uid"), ci("drop-subkey")))
+}
+
+rule _export_options { kw_param_list("export-options", _export_parameter) }
+
+rule _export_parameter {
+    token(choice(
+        ci("export-local-sigs"), ci("export-attributes"),
+        ci("export-sensitive-revkeys"),
+        ci("backup"), ci("export-backup"),
+        ci("export-clean"), ci("export-minimal"),
+        ci("export-revocs"), ci("export-dane"),
+        ci("mode1003"),
+    ))
+}
+
+rule _personal_cipher_preferences {
+    kw_param_list("personal-cipher-preferences", _cipher_algo_value)
+}
+rule _personal_digest_preferences {
+    kw_param_list("personal-digest-preferences", _hash_algo_value)
+}
+rule _personal_compress_preferences {
+    kw_param_list("personal-compress-preferences", _compression_algo_value)
+}
+
+rule _s2k_cipher_algo { kw_val("s2k-cipher-algo", _cipher_algo_value) }
+rule _s2k_digest_algo { kw_val("s2k-digest-algo", _hash_algo_value) }
+
+rule _s2k_mode {
+    seq("s2k-mode", _space, alias(regexp(r"[013]"), number))
+}
+rule _s2k_count { kw_num("s2k-count") }
+
+rule _compliance { kw_val("compliance", _compliance_value) }
+
+rule _compliance_value {
+    token(choice(
+        ci("gnupg"), ci("openpgp"), ci("rfc4880bis"),
+        ci("rfc4880"), ci("rfc2440"),
+        ci("pgp6"), ci("pgp7"), ci("pgp8"), ci("de-vs"),
+    ))
+}
+
+rule _min_rsa_length { kw_num("min-rsa-length") }
+
+rule _require_compliance { "require-compliance" }
+
+rule _debug_level { kw_val("debug-level", _debug_level_value) }
+
+rule _debug_level_value {
+    token(choice(
+        ci("none"), ci("basic"), ci("advanced"), ci("expert"), ci("guru"),
+    ))
+}
+
+rule _debug {
+    choice(
+        prec_right(0, seq(
+            "debug",
+            _space,
+            alias(_debug_flag_value, value),
+            value_list(_debug_flag_value),
+        )),
+        seq("debug", _space, alias(regexp(r"(0[xX])?[0-9a-fA-f]{1,8}"), number)),
+    )
+}
+
+rule _debug_flag_value {
+    token(choice(
+        ci("packet"), ci("mpi"), ci("crypto"), ci("filter"), ci("iobuf"),
+        ci("memory"), ci("cache"), ci("memstat"), ci("trust"),
+        ci("hashing"), ci("ipc"), ci("clock"), ci("lookup"), ci("extprog"),
+    ))
+}
+
+rule _debug_set_iobuf_size { kw_num("debug-set-iobuf-size") }
+
+rule _faked_system_time {
+    seq(
+        "faked-system-time",
+        _space,
+        seq(choice(number, iso_time), optional("!")),
+    )
+}
+
+rule _status_fd { kw_num("status-fd") }
+rule _status_file { kw_str("status-file") }
+rule _logger_fd { kw_num("logger-fd") }
+
+rule _logger_file { seq(choice("logger-file", "log-file"), _space, string) }
+
+rule _attribute_fd { kw_num("attribute-fd") }
+
+rule _comment { kw_str("comment") }
+
+rule _sig_notation { kw_notation("sig-notation") }
+rule _cert_notation { kw_notation("cert-notation") }
+rule _set_notation { kw_notation("set-notation") }
+
+rule _notation { repeat1(choice(regexp(r"[^= \t]"), _notation_format)) }
+
+rule _notation_format { alias(regexp(r"%[kKfsSgpc%]"), format) }
+
+rule _known_notation { kw_str("known-notation") }
+
+rule _sig_policy_url { kw_notation_url("sig-policy-url") }
+rule _cert_policy_url { kw_notation_url("cert-policy-url") }
+rule _set_policy_url { kw_notation_url("set-policy-url") }
+rule _sig_keyserver_url { kw_notation_url("sig-keyserver-url") }
+
+rule _set_filename { kw_str("set-filename") }
+
+rule _cipher_algo { kw_val("cipher-algo", _cipher_algo_value) }
+rule _digest_algo { kw_val("digest-algo", _hash_algo_value) }
+rule _compress_algo { kw_val("compress-algo", _compression_algo_value) }
+rule _cert_digest_algo { kw_val("cert-digest-algo", _hash_algo_value) }
+rule _disable_cipher_algo { kw_val("disable-cipher-algo", _cipher_algo_value) }
+rule _disable_pubkey_algo { kw_val("disable-pubkey-algo", _pubkey_algo_value) }
+
+rule _passphrase_repeat { kw_num("passphrase-repeat") }
+rule _passphrase_fd { kw_num("passphrase-fd") }
+rule _passphrase_file { kw_str("passphrase-file") }
+rule _passphrase { kw_str("passphrase") }
+
+rule _pinentry_mode { kw_val("pinentry-mode", _pinentry_mode_value) }
+
+rule _pinentry_mode_value {
+    token(choice(
+        ci("default"), ci("ask"), ci("cancel"), ci("error"), ci("loopback"),
+    ))
+}
+
+rule _request_origin { kw_val("request-origin", _request_origin_value) }
+
+rule _request_origin_value {
+    token(choice(ci("local"), ci("remote"), ci("browser")))
+}
+
+rule _command_fd { kw_num("command-fd") }
+rule _command_file { kw_str("command-file") }
+
+rule _weak_digest { kw_val("weak-digest", _hash_algo_value) }
+
+rule _override_session_key { kw_str("override-session-key") }
+rule _override_session_key_fd { kw_num("override-session-key-fd") }
+
+rule _default_sig_expire { seq("default-sig-expire", _space, expire_time) }
+rule _default_cert_expire { seq("default-cert-expire", _space, expire_time) }
+
+rule _default_new_key_algo {
+    kw_param_list("default-new-key-algo", _new_key_algo)
+}
+
+rule _new_key_algo { regexp(r"[a-zA-Z0-9+/]+") }
+
+rule _default_preference_list {
+    kw_param_list("default-preference-list", _default_preference_value)
+}
+
+rule _default_preference_value {
+    choice(_hash_algo_value, _cipher_algo_value,
+        _pubkey_algo_value, _compression_algo_value)
+}
+
+rule _default_keyserver_url { kw_url("default-keyserver-url") }
+
+rule _chuid { seq("chuid", _space, choice(number, string)) }
+
+rule key { regexp(r"(0[xX])?[0-9A-Fa-f]{8,40}") }
+
+rule url {
+    regexp(r"(hkp|ldap)s?:\/\/([a-z0-9]+(-[a-z0-9]+)*\.)+[a-z]+(:[0-9]+)?", "i")
+}
+
+rule number { regexp(r"[0-9]|[1-9][0-9]+") }
+
+rule iso_time { regexp(r"[0-9]{8}T[0-9]{6}") }
+
+rule expire_time {
+    token(choice(
+        regexp(r"0|[1-9][0-9]*[dwmy]"),
+        regexp(r"[0-9]{4}-[0-9]{2}-[0-9]{2}"),
+    ))
+}
+
+rule string {
+    choice(
+        alias(regexp(r"\S+"), content),
+        quoted_dq(),
+        quoted_sq(),
+    )
+}
+
+rule filter_scope {
+    token(choice(ci("pub/"), ci("sub/"), ci("uid/"), ci("sig/")))
+}
+
+rule filter_property {
+    token(choice(
+        ci("uid"), ci("mbox"), ci("algostr"),
+        ci("key_algo"), ci("key_size"),
+        ci("key_created"), ci("key_created_d"),
+        ci("key_expires"), ci("key_expires_d"),
+        ci("fpr"), ci("expired"), ci("revoked"), ci("disabled"),
+        ci("secret"), ci("usage"),
+        ci("sig_created"), ci("sig_created_d"),
+        ci("sig_algo"), ci("sig_digest_algo"),
+        ci("origin"), ci("lastupd"), ci("url"),
+    ))
+}
+
+rule filter_lc { token(choice("&&", "||")) }
+
+rule filter_op1 {
+    token(choice(
+        "=~", "!~", "=", "<>", "==", "!=",
+        "<=", "<", ">=", ">=",
+        "-le", "-lt", "-gt", "-ge",
+    ))
+}
+
+rule filter_op0 { token(choice("-n", "-z", "-t", "-f")) }
+rule filter_flag { token(choice("--", "-c", "-t")) }
+
+rule filter_value { prec_left(-1, repeat1(regexp(r"."))) }
+
+rule comment { regexp(r"#.*") }
+
+rule _pubkey_algo_value {
+    token(choice(
+        ci("RSA"), ci("ELG"), ci("DSA"),
+        ci("ECDH"), ci("ECDSA"), ci("EDDSA"), ci("none"),
+    ))
+}
+
+rule _cipher_algo_value {
+    token(choice(
+        ci("IDEA"), ci("3DES"), ci("CAST5"), ci("BLOWFISH"),
+        ci("AES"), ci("AES192"), ci("AES256"),
+        ci("TWOFISH"),
+        ci("CAMELLIA128"), ci("CAMELLIA192"), ci("CAMELLIA256"),
+        ci("none"),
+    ))
+}
+
+rule _hash_algo_value {
+    token(choice(
+        ci("SHA1"), ci("RIPEMD160"),
+        ci("SHA256"), ci("SHA384"), ci("SHA512"), ci("SHA224"),
+        ci("none"),
+    ))
+}
+
+rule _compression_algo_value {
+    token(choice(
+        ci("Uncompressed"), ci("ZIP"), ci("ZLIB"), ci("BZIP2"), ci("none"),
+    ))
+}
+
+rule _space { regexp(r"[ \t]+") }
